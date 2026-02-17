@@ -1,0 +1,5 @@
+,question,calc_pattern,code_calc_pattern,scale,pred_scale,sign_error,x100_flag,error_code,cluster
+18,What was the difference in net profit between both FYs?,-#-#,#-#,thousand,percent,False,0,scale_error,24
+128,What was the change in the (Loss)/profit before taxation from 2018 to 2019?,-#-#,#-#,million,,False,0,scale_error,24
+167,What is the change in the Green tariff from FY18 to FY19 for UK and Ireland only?,-#-#,#-#,,thousand,False,0,scale_error,24
+451,What is the increase / (decrease) in the Adjusted EBITDA margin from 2018 to 2019?,#%-#%,#-#,percent,million,False,0,scale_error,24
