@@ -1,0 +1,514 @@
+,Unnamed: 0,ts,qid,question,derivation,calc_pattern,code_calc_pattern,pred,pred_scale,answer,scale,value_match,selection_success,sign_error,is_parenth_in_table,has_code_abs,error_text,value_list,code,selected_values,needed_values,exact_match,error_code,ratio,x100_flag,scale_mismatch,value_mismatch,value_nan,cluster
+31,31,1771424253.5898547,58adf6c4-41ae-4f3f-84cb-cf3469a80ce4,What was the percentage change in Total Other operating expenses between 2018 and 2019?,($166.3-$513.3)/$513.3,(#-#)/#,nan,-67.6,million,-67.6,percent,0,True,False,False,False,,"[{'number_value': 94.2, 'scale': '', 'category': 'Impairment charges', 'header1': '2019 (1)'}, {'number_value': 394.0, 'scale': '', 'category': 'Impairment charges', 'header1': '2018'}, {'number_value': 211.4, 'scale': '', 'category': 'Impairment charges', 'header1': '2017 (2)'}, {'number_value': 45.1, 'scale': '', 'category': 'Net losses on sales or disposals of assets', 'header1': '2019 (1)'}, {'number_value': 85.6, 'scale': '', 'category': 'Net losses on sales or disposals of assets', 'header1': '2018'}, {'number_value': 32.8, 'scale': '', 'category': 'Net losses on sales or disposals of assets', 'header1': '2017 (2)'}, {'number_value': 27.0, 'scale': '', 'category': 'Other operating expenses', 'header1': '2019 (1)'}, {'number_value': 33.7, 'scale': '', 'category': 'Other operating expenses', 'header1': '2018'}, {'number_value': 11.8, 'scale': '', 'category': 'Other operating expenses', 'header1': '2017 (2)'}, {'number_value': 166.3, 'scale': '', 'category': 'Total Other operating expenses', 'header1': '2019 (1)'}, {'number_value': 513.3, 'scale': '', 'category': 'Total Other operating expenses', 'header1': '2018'}, {'number_value': 256.0, 'scale': '', 'category': 'Total Other operating expenses', 'header1': '2017 (2)'}]","def run(value_list):
+    """"""
+    Calculates the percentage change in Total Other operating expenses between 2018 and 2019.
+
+    Args:
+        value_list: A list of dictionaries, where each dictionary represents a financial value.
+
+    Returns:
+        A tuple containing the percentage change as a float (rounded to two decimal places) and the scale.
+    """"""
+    total_other_operating_expenses_2018 = None
+    total_other_operating_expenses_2019 = None
+
+    for item in value_list:
+        if item['category'] == 'Total Other operating expenses' and item['header1'] == '2018':
+            total_other_operating_expenses_2018 = item['number_value']
+        elif item['category'] == 'Total Other operating expenses' and item['header1'] == '2019 (1)':
+            total_other_operating_expenses_2019 = item['number_value']
+
+    if total_other_operating_expenses_2018 is not None and total_other_operating_expenses_2019 is not None:
+        percentage_change = ((total_other_operating_expenses_2019 - total_other_operating_expenses_2018) / total_other_operating_expenses_2018) * 100
+        return (round(percentage_change, 2), '')
+    else:
+        return (None, '')
+","[513.3, 166.3, -67.60179232417688]","[166.3, 513.3, 513.3]",False,scale_error,1.000000000014793,0,True,False,False,37
+45,45,1771424321.391299,74183d5d-7633-43b5-bd7b-f0894fbe2299,What was the percentage change in Total (loan) in 2019 from 2018?,(828.8-885.3)/885.3,(#-#)/#,nan,-6.38,million,-6.38,percent,0,True,False,False,False,,"[{'number_value': 1801.5, 'scale': 'million', 'category': 'Vessel values including newbuildings (broker values)', 'header1': '2019', 'header2': 'USD million'}, {'number_value': 1675.1, 'scale': 'million', 'category': 'Vessel values including newbuildings (broker values)', 'header1': '2018', 'header2': 'USD million'}, {'number_value': 1661.1, 'scale': 'million', 'category': 'Vessel values including newbuildings (broker values)', 'header1': '2017', 'header2': 'USD million'}, {'number_value': 1801.5, 'scale': 'million', 'category': 'Total (value)', 'header1': '2019', 'header2': 'USD million'}, {'number_value': 1675.1, 'scale': 'million', 'category': 'Total (value)', 'header1': '2018', 'header2': 'USD million'}, {'number_value': 1661.1, 'scale': 'million', 'category': 'Total (value)', 'header1': '2017', 'header2': 'USD million'}, {'number_value': 863.4, 'scale': 'million', 'category': 'Borrowings', 'header1': '2019', 'header2': 'USD million'}, {'number_value': 754.7, 'scale': 'million', 'category': 'Borrowings', 'header1': '2018', 'header2': 'USD million'}, {'number_value': 753.9, 'scale': 'million', 'category': 'Borrowings', 'header1': '2017', 'header2': 'USD million'}, {'number_value': -8.7, 'scale': 'million', 'category': '- Hereof debt regarding Land and buildings & Other plant and operating equipment', 'header1': '2019', 'header2': 'USD million'}, {'number_value': 51.2, 'scale': 'million', 'category': 'Committed CAPEX on newbuildings', 'header1': '2019', 'header2': 'USD million'}, {'number_value': 258.0, 'scale': 'million', 'category': 'Committed CAPEX on newbuildings', 'header1': '2018', 'header2': 'USD million'}, {'number_value': 306.9, 'scale': 'million', 'category': 'Committed CAPEX on newbuildings', 'header1': '2017', 'header2': 'USD million'}, {'number_value': -4.6, 'scale': 'million', 'category': 'Loans receivables', 'header1': '2019', 'header2': 'USD million'}, {'number_value': -72.5, 'scale': 'million', 'category': 'Cash and cash equivalents, including restricted cash', 'header1': '2019', 'header2': 'USD million'}, {'number_value': -127.4, 'scale': 'million', 'category': 'Cash and cash equivalents, including restricted cash', 'header1': '2018', 'header2': 'USD million'}, {'number_value': -134.2, 'scale': 'million', 'category': 'Cash and cash equivalents, including restricted cash', 'header1': '2017', 'header2': 'USD million'}, {'number_value': 828.8, 'scale': 'million', 'category': 'Total (loan)', 'header1': '2019', 'header2': 'USD million'}, {'number_value': 885.3, 'scale': 'million', 'category': 'Total (loan)', 'header1': '2018', 'header2': 'USD million'}, {'number_value': 926.6, 'scale': 'million', 'category': 'Total (loan)', 'header1': '2017', 'header2': 'USD million'}, {'number_value': 46.0, 'scale': 'million', 'category': 'Loan-to-value (LTV) ratio', 'header1': '2019', 'header2': 'USD million'}, {'number_value': 52.9, 'scale': 'million', 'category': 'Loan-to-value (LTV) ratio', 'header1': '2018', 'header2': 'USD million'}, {'number_value': 55.8, 'scale': 'million', 'category': 'Loan-to-value (LTV) ratio', 'header1': '2017', 'header2': 'USD million'}]","def run(value_list):
+    """"""
+    Calculates the percentage change in Total (loan) from 2018 to 2019.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple containing the percentage change as a float (rounded to two decimal places)
+        and the scale of the value (e.g., 'million').  Returns (None, None) if data is not found.
+    """"""
+    total_loan_2019 = None
+    total_loan_2018 = None
+
+    for item in value_list:
+        if item['category'] == 'Total (loan)' and item['header1'] == '2019':
+            total_loan_2019 = item['number_value']
+        if item['category'] == 'Total (loan)' and item['header1'] == '2018':
+            total_loan_2018 = item['number_value']
+
+    if total_loan_2019 is not None and total_loan_2018 is not None:
+        percentage_change = ((total_loan_2019 - total_loan_2018) / total_loan_2018) * 100
+        return (round(percentage_change, 2), 'million')
+    else:
+        return (None, None)
+","[828.8, 885.3, -6.382017395233254]","[828.8, 885.3, 885.3]",False,scale_error,1.0000000001567397,0,True,False,False,37
+67,67,1771424417.006417,8a21f821-eaf6-421a-8c67-795e7e2d1f61,What was the percentage change in Adjusted EBITDA between 2018 and 2019?,"(108,307-93,081)/93,081",(#-#)/#,nan,16.36,,16.36,percent,0,True,False,True,False,,"[{'number_value': 53330.0, 'scale': '', 'category': 'Net income', 'header1': 'Adjusted EBITDA:', 'header2': '2019', 'header3': 'Year Ended December 31,', 'header4': 'Adjusted EBITDA:'}, {'number_value': 21524.0, 'scale': '', 'category': 'Net income', 'header1': 'Adjusted EBITDA:', 'header2': '2018', 'header3': 'Year Ended December 31,', 'header4': 'Adjusted EBITDA:'}, {'number_value': 29251.0, 'scale': '', 'category': 'Net income', 'header1': 'Adjusted EBITDA:', 'header2': '2017', 'header3': 'Year Ended December 31,', 'header4': 'Adjusted EBITDA:'}, {'number_value': -8483.0, 'scale': '', 'category': 'Interest expense, interest income and other income, net', 'header1': 'Adjustments:', 'header2': '2019', 'header3': 'Year Ended December 31,', 'header4': 'Adjustments:'}, {'number_value': 503.0, 'scale': '', 'category': 'Interest expense, interest income and other income, net', 'header1': 'Adjustments:', 'header2': '2018', 'header3': 'Year Ended December 31,', 'header4': 'Adjustments:'}, {'number_value': 1133.0, 'scale': '', 'category': 'Interest expense, interest income and other income, net', 'header1': 'Adjustments:', 'header2': '2017', 'header3': 'Year Ended December 31,', 'header4': 'Adjustments:'}, {'number_value': 5566.0, 'scale': '', 'category': 'Provision for / (benefit from) income taxes', 'header1': 'Adjustments:', 'header2': '2019', 'header3': 'Year Ended December 31,', 'header4': 'Adjustments:'}, {'number_value': -9825.0, 'scale': '', 'category': 'Provision for / (benefit from) income taxes', 'header1': 'Adjustments:', 'header2': '2018', 'header3': 'Year Ended December 31,', 'header4': 'Adjustments:'}, {'number_value': 2990.0, 'scale': '', 'category': 'Provision for / (benefit from) income taxes', 'header1': 'Adjustments:', 'header2': '2017', 'header3': 'Year Ended December 31,', 'header4': 'Adjustments:'}, {'number_value': 22134.0, 'scale': '', 'category': 'Amortization and depreciation expense', 'header1': 'Adjustments:', 'header2': '2019', 'header3': 'Year Ended December 31,', 'header4': 'Adjustments:'}, {'number_value': 21721.0, 'scale': '', 'category': 'Amortization and depreciation expense', 'header1': 'Adjustments:', 'header2': '2018', 'header3': 'Year Ended December 31,', 'header4': 'Adjustments:'}, {'number_value': 17734.0, 'scale': '', 'category': 'Amortization and depreciation expense', 'header1': 'Adjustments:', 'header2': '2017', 'header3': 'Year Ended December 31,', 'header4': 'Adjustments:'}, {'number_value': 20603.0, 'scale': '', 'category': 'Stock-based compensation expense', 'header1': 'Adjustments:', 'header2': '2019', 'header3': 'Year Ended December 31,', 'header4': 'Adjustments:'}, {'number_value': 13429.0, 'scale': '', 'category': 'Stock-based compensation expense', 'header1': 'Adjustments:', 'header2': '2018', 'header3': 'Year Ended December 31,', 'header4': 'Adjustments:'}, {'number_value': 7413.0, 'scale': '', 'category': 'Stock-based compensation expense', 'header1': 'Adjustments:', 'header2': '2017', 'header3': 'Year Ended December 31,', 'header4': 'Adjustments:'}, {'number_value': 2403.0, 'scale': '', 'category': 'Acquisition-related expense', 'header1': 'Adjustments:', 'header2': '2019', 'header3': 'Year Ended December 31,', 'header4': 'Adjustments:'}, {'number_value': 5895.0, 'scale': '', 'category': 'Acquisition-related expense', 'header1': 'Adjustments:', 'header2': '2017', 'header3': 'Year Ended December 31,', 'header4': 'Adjustments:'}, {'number_value': 12754.0, 'scale': '', 'category': 'Litigation expense', 'header1': 'Adjustments:', 'header2': '2019', 'header3': 'Year Ended December 31,', 'header4': 'Adjustments:'}, {'number_value': 45729.0, 'scale': '', 'category': 'Litigation expense', 'header1': 'Adjustments:', 'header2': '2018', 'header3': 'Year Ended December 31,', 'header4': 'Adjustments:'}, {'number_value': 7212.0, 'scale': '', 'category': 'Litigation expense', 'header1': 'Adjustments:', 'header2': '2017', 'header3': 'Year Ended December 31,', 'header4': 'Adjustments:'}, {'number_value': 54977.0, 'scale': '', 'category': 'Total adjustments', 'header1': 'Adjustments:', 'header2': '2019', 'header3': 'Year Ended December 31,', 'header4': 'Adjustments:'}, {'number_value': 71557.0, 'scale': '', 'category': 'Total adjustments', 'header1': 'Adjustments:', 'header2': '2018', 'header3': 'Year Ended December 31,', 'header4': 'Adjustments:'}, {'number_value': 42377.0, 'scale': '', 'category': 'Total adjustments', 'header1': 'Adjustments:', 'header2': '2017', 'header3': 'Year Ended December 31,', 'header4': 'Adjustments:'}, {'number_value': 108307.0, 'scale': '', 'category': 'Adjusted EBITDA', 'header1': 'Adjustments:', 'header2': '2019', 'header3': 'Year Ended December 31,', 'header4': 'Adjustments:'}, {'number_value': 93081.0, 'scale': '', 'category': 'Adjusted EBITDA', 'header1': 'Adjustments:', 'header2': '2018', 'header3': 'Year Ended December 31,', 'header4': 'Adjustments:'}, {'number_value': 71628.0, 'scale': '', 'category': 'Adjusted EBITDA', 'header1': 'Adjustments:', 'header2': '2017', 'header3': 'Year Ended December 31,', 'header4': 'Adjustments:'}]","def run(value_list):
+    """"""
+    Calculates the percentage change in Adjusted EBITDA between 2018 and 2019.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple containing the percentage change as a float (rounded to two decimal places)
+        and the scale (empty string).
+    """"""
+    ebitda_2018 = None
+    ebitda_2019 = None
+
+    for item in value_list:
+        if item['category'] == 'Adjusted EBITDA' and item['header2'] == '2018':
+            ebitda_2018 = item['number_value']
+        elif item['category'] == 'Adjusted EBITDA' and item['header2'] == '2019':
+            ebitda_2019 = item['number_value']
+
+    if ebitda_2018 is not None and ebitda_2019 is not None:
+        percentage_change = ((ebitda_2019 - ebitda_2018) / ebitda_2018) * 100
+        return (round(percentage_change, 2), '')
+    else:
+        return (None, '')
+","[93081.0, 108307.0, 16.357795898196194]","[108307.0, 93081.0, 93081.0]",False,scale_error,0.9999999999388753,0,True,False,False,37
+90,90,1771424527.307196,3561fe2c-d1b1-4968-9d89-b6fa2d24bbe7,What is the percentage change in the long-lived assets in Korea from 2018 to 2019?,"(28,200-24,312)/24,312",(#-#)/#,nan,15.99,,15.99,percent,0,True,False,False,False,,"[{'number_value': 933054.0, 'scale': 'thousand', 'category': 'United States', 'header1': 'Long-lived assets:', 'header2': '(inthousands)', 'header3': '2019', 'header4': 'Long-lived assets:'}, {'number_value': 784469.0, 'scale': 'thousand', 'category': 'United States', 'header1': 'Long-lived assets:', 'header2': '(inthousands)', 'header3': '2018', 'header4': 'Long-lived assets:'}, {'number_value': 575264.0, 'scale': 'thousand', 'category': 'United States', 'header1': 'Long-lived assets:', 'header2': '(inthousands)', 'header3': '2017', 'header4': 'Long-lived assets:'}, {'number_value': 72928.0, 'scale': 'thousand', 'category': 'Europe', 'header1': 'Long-lived assets:', 'header2': '(inthousands)', 'header3': '2019', 'header4': 'Long-lived assets:'}, {'number_value': 73336.0, 'scale': 'thousand', 'category': 'Europe', 'header1': 'Long-lived assets:', 'header2': '(inthousands)', 'header3': '2018', 'header4': 'Long-lived assets:'}, {'number_value': 77211.0, 'scale': 'thousand', 'category': 'Europe', 'header1': 'Long-lived assets:', 'header2': '(inthousands)', 'header3': '2017', 'header4': 'Long-lived assets:'}, {'number_value': 28200.0, 'scale': 'thousand', 'category': 'Korea', 'header1': 'Long-lived assets:', 'header2': '(inthousands)', 'header3': '2019', 'header4': 'Long-lived assets:'}, {'number_value': 24312.0, 'scale': 'thousand', 'category': 'Korea', 'header1': 'Long-lived assets:', 'header2': '(inthousands)', 'header3': '2018', 'header4': 'Long-lived assets:'}, {'number_value': 19982.0, 'scale': 'thousand', 'category': 'Korea', 'header1': 'Long-lived assets:', 'header2': '(inthousands)', 'header3': '2017', 'header4': 'Long-lived assets:'}, {'number_value': 6844.0, 'scale': 'thousand', 'category': 'China', 'header1': 'Long-lived assets:', 'header2': '(inthousands)', 'header3': '2019', 'header4': 'Long-lived assets:'}, {'number_value': 5466.0, 'scale': 'thousand', 'category': 'China', 'header1': 'Long-lived assets:', 'header2': '(inthousands)', 'header3': '2018', 'header4': 'Long-lived assets:'}, {'number_value': 1906.0, 'scale': 'thousand', 'category': 'China', 'header1': 'Long-lived assets:', 'header2': '(inthousands)', 'header3': '2017', 'header4': 'Long-lived assets:'}, {'number_value': 6759.0, 'scale': 'thousand', 'category': 'Taiwan', 'header1': 'Long-lived assets:', 'header2': '(inthousands)', 'header3': '2019', 'header4': 'Long-lived assets:'}, {'number_value': 7922.0, 'scale': 'thousand', 'category': 'Taiwan', 'header1': 'Long-lived assets:', 'header2': '(inthousands)', 'header3': '2018', 'header4': 'Long-lived assets:'}, {'number_value': 7970.0, 'scale': 'thousand', 'category': 'Taiwan', 'header1': 'Long-lived assets:', 'header2': '(inthousands)', 'header3': '2017', 'header4': 'Long-lived assets:'}, {'number_value': 5750.0, 'scale': 'thousand', 'category': 'Japan', 'header1': 'Long-lived assets:', 'header2': '(inthousands)', 'header3': '2019', 'header4': 'Long-lived assets:'}, {'number_value': 3327.0, 'scale': 'thousand', 'category': 'Japan', 'header1': 'Long-lived assets:', 'header2': '(inthousands)', 'header3': '2018', 'header4': 'Long-lived assets:'}, {'number_value': 1083.0, 'scale': 'thousand', 'category': 'Japan', 'header1': 'Long-lived assets:', 'header2': '(inthousands)', 'header3': '2017', 'header4': 'Long-lived assets:'}, {'number_value': 5542.0, 'scale': 'thousand', 'category': 'Southeast Asia', 'header1': 'Long-lived assets:', 'header2': '(inthousands)', 'header3': '2019', 'header4': 'Long-lived assets:'}, {'number_value': 3715.0, 'scale': 'thousand', 'category': 'Southeast Asia', 'header1': 'Long-lived assets:', 'header2': '(inthousands)', 'header3': '2018', 'header4': 'Long-lived assets:'}, {'number_value': 2179.0, 'scale': 'thousand', 'category': 'Southeast Asia', 'header1': 'Long-lived assets:', 'header2': '(inthousands)', 'header3': '2017', 'header4': 'Long-lived assets:'}, {'number_value': 1059077.0, 'scale': 'thousand', 'category': '', 'header1': 'Long-lived assets:', 'header2': '(inthousands)', 'header3': '2019', 'header4': 'Long-lived assets:'}, {'number_value': 902547.0, 'scale': 'thousand', 'category': '', 'header1': 'Long-lived assets:', 'header2': '(inthousands)', 'header3': '2018', 'header4': 'Long-lived assets:'}, {'number_value': 685595.0, 'scale': 'thousand', 'category': '', 'header1': 'Long-lived assets:', 'header2': '(inthousands)', 'header3': '2017', 'header4': 'Long-lived assets:'}]","def run(value_list):
+    """"""
+    Calculates the percentage change in long-lived assets in Korea from 2018 to 2019.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple containing the percentage change as a float (rounded to two decimal places) and the scale.
+    """"""
+    
+    try:
+        assets_2018 = None
+        assets_2019 = None
+
+        for item in value_list:
+            if item['category'] == 'Korea' and item['header1'] == 'Long-lived assets:' and item['header3'] == '2018':
+                assets_2018 = item['number_value']
+            if item['category'] == 'Korea' and item['header1'] == 'Long-lived assets:' and item['header3'] == '2019':
+                assets_2019 = item['number_value']
+
+        if assets_2018 is not None and assets_2019 is not None:
+            change = assets_2019 - assets_2018
+            percentage_change = (change / assets_2018) * 100
+            return (round(percentage_change, 2), 'thoousand')
+        else:
+            return (None, None)
+
+    except Exception as e:
+        return (None, None)
+","[24312.0, 28200.0, 3888.0, 15.992102665350444]","[28200.0, 24312.0, 24312.0]",False,scale_error,0.9999999999374609,0,True,False,False,37
+120,120,1771424677.5637991,c5757bb4-a312-48ed-a244-29932669363c,What was the percentage change in Earnings before interest and taxes EBIT in 2018/2019 from 2017/2018?,(828-713)/713,(#-#)/#,nan,16.13,million,16.13,percent,0,True,False,False,False,,"[{'number_value': 713.0, 'scale': 'million', 'category': 'Earnings before interest and taxes EBIT', 'header1': '2017/2018', 'header2': '€ million'}, {'number_value': 828.0, 'scale': 'million', 'category': 'Earnings before interest and taxes EBIT', 'header1': '2018/2019', 'header2': '€ million'}, {'number_value': 0.0, 'scale': 'million', 'category': 'Earnings share of non-operating companies recognised at equity', 'header1': '2017/2018', 'header2': '€ million'}, {'number_value': 0.0, 'scale': 'million', 'category': 'Earnings share of non-operating companies recognised at equity', 'header1': '2018/2019', 'header2': '€ million'}, {'number_value': 0.0, 'scale': 'million', 'category': 'Other investment result', 'header1': '2017/2018', 'header2': '€ million'}, {'number_value': -1.0, 'scale': 'million', 'category': 'Other investment result', 'header1': '2018/2019', 'header2': '€ million'}, {'number_value': -136.0, 'scale': 'million', 'category': 'Interest income/expenses (interest result)', 'header1': '2017/2018', 'header2': '€ million'}, {'number_value': -119.0, 'scale': 'million', 'category': 'Interest income/expenses (interest result)', 'header1': '2018/2019', 'header2': '€ million'}, {'number_value': -2.0, 'scale': 'million', 'category': 'Other financial result', 'header1': '2017/2018', 'header2': '€ million'}, {'number_value': 1.0, 'scale': 'million', 'category': 'Other financial result', 'header1': '2018/2019', 'header2': '€ million'}, {'number_value': -137.0, 'scale': 'million', 'category': 'Net financial result', 'header1': '2017/2018', 'header2': '€ million'}, {'number_value': -119.0, 'scale': 'million', 'category': 'Net financial result', 'header1': '2018/2019', 'header2': '€ million'}, {'number_value': 576.0, 'scale': 'million', 'category': 'Earnings before taxes EBT', 'header1': '2017/2018', 'header2': '€ million'}, {'number_value': 709.0, 'scale': 'million', 'category': 'Earnings before taxes EBT', 'header1': '2018/2019', 'header2': '€ million'}, {'number_value': -216.0, 'scale': 'million', 'category': 'Income taxes', 'header1': '2017/2018', 'header2': '€ million'}, {'number_value': -298.0, 'scale': 'million', 'category': 'Income taxes', 'header1': '2018/2019', 'header2': '€ million'}, {'number_value': 359.0, 'scale': 'million', 'category': 'Profit or loss for the period from continuing operations', 'header1': '2017/2018', 'header2': '€ million'}, {'number_value': 411.0, 'scale': 'million', 'category': 'Profit or loss for the period from continuing operations', 'header1': '2018/2019', 'header2': '€ million'}, {'number_value': -22.0, 'scale': 'million', 'category': 'Profit or loss for the period from discontinued operations after taxes', 'header1': '2017/2018', 'header2': '€ million'}, {'number_value': -526.0, 'scale': 'million', 'category': 'Profit or loss for the period from discontinued operations after taxes', 'header1': '2018/2019', 'header2': '€ million'}, {'number_value': 337.0, 'scale': 'million', 'category': 'Profit or loss for the period', 'header1': '2017/2018', 'header2': '€ million'}, {'number_value': -115.0, 'scale': 'million', 'category': 'Profit or loss for the period', 'header1': '2018/2019', 'header2': '€ million'}]","def run(value_list):
+    """"""
+    Calculates the percentage change in Earnings before interest and taxes EBIT in 2018/2019 from 2017/2018.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple containing the percentage change as a float (rounded to two decimal places) and the scale.
+    """"""
+    
+    ebit_2017_2018 = None
+    ebit_2018_2019 = None
+
+    for item in value_list:
+        if item['category'] == 'Earnings before interest and taxes EBIT' and item['header1'] == '2017/2018':
+            ebit_2017_2018 = item['number_value']
+        elif item['category'] == 'Earnings before interest and taxes EBIT' and item['header1'] == '2018/2019':
+            ebit_2018_2019 = item['number_value']
+
+    if ebit_2017_2018 is not None and ebit_2018_2019 is not None:
+        percentage_change = ((ebit_2018_2019 - ebit_2017_2018) / ebit_2017_2018) * 100
+        return (round(percentage_change, 2), 'million')
+    else:
+        return (None, '')
+","[713.0, 828.0, 16.129032258064516]","[828.0, 713.0, 713.0]",False,scale_error,0.9999999999380037,0,True,False,False,37
+182,182,1771424970.9351606,e172ba38-34fa-477b-b535-bac8d65756fb,What is the percentage change in revenues from 2018 to 2019?,"(68,024-67,314)/67,314",(#-#)/#,nan,1.05,,1.05,percent,0,True,False,False,False,,"[{'number_value': 68024.0, 'scale': 'thousand', 'category': 'Revenues', 'header1': '(In thousands)', 'header2': '2019', 'header3': 'Year Ended December 31,', 'header4': '(In thousands)'}, {'number_value': 67314.0, 'scale': 'thousand', 'category': 'Revenues', 'header1': '(In thousands)', 'header2': '2018', 'header3': 'Year Ended December 31,', 'header4': '(In thousands)'}, {'number_value': 12491.0, 'scale': 'thousand', 'category': 'Income from operations', 'header1': '(In thousands)', 'header2': '2019', 'header3': 'Year Ended December 31,', 'header4': '(In thousands)'}, {'number_value': 9587.0, 'scale': 'thousand', 'category': 'Income from operations', 'header1': '(In thousands)', 'header2': '2018', 'header3': 'Year Ended December 31,', 'header4': '(In thousands)'}, {'number_value': 18.0, 'scale': 'thousand', 'category': 'Income from operations as a % of revenues', 'header1': '(In thousands)', 'header2': '2019', 'header3': 'Year Ended December 31,', 'header4': '(In thousands)'}, {'number_value': 14.0, 'scale': 'thousand', 'category': 'Income from operations as a % of revenues', 'header1': '(In thousands)', 'header2': '2018', 'header3': 'Year Ended December 31,', 'header4': '(In thousands)'}]","def run(value_list):
+    """"""
+    Calculates the percentage change in revenues from 2018 to 2019.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple containing the percentage change as a float (rounded to two decimal places)
+        and the scale of the revenue data.
+    """"""
+    revenue_2019 = None
+    revenue_2018 = None
+
+    for item in value_list:
+        if item['category'] == 'Revenues' and item['header2'] == '2019':
+            revenue_2019 = item['number_value']
+        if item['category'] == 'Revenues' and item['header2'] == '2018':
+            revenue_2018 = item['number_value']
+
+    if revenue_2019 is not None and revenue_2018 is not None:
+        percentage_change = ((revenue_2019 - revenue_2018) / revenue_2018) * 100
+        return (round(percentage_change, 2), 'thoousand')
+    else:
+        return (None, '')
+","[68024.0, 67314.0, 1.0547582969367442]","[68024.0, 67314.0, 67314.0]",False,scale_error,0.9999999990476189,0,True,False,False,37
+183,183,1771424975.9678776,398246d7-5500-4560-8a8f-220a782b05e5,What was the percentage change in net inventories between 2018 and 2019?,"(42,237-43,486)/43,486",(#-#)/#,nan,-2.87,,-2.87,percent,0,True,False,True,False,,"[{'number_value': 9447.0, 'scale': '', 'category': 'Finished goods', 'header1': '2019', 'header2': 'As of December 31,'}, {'number_value': 10995.0, 'scale': '', 'category': 'Finished goods', 'header1': '2018', 'header2': 'As of December 31,'}, {'number_value': 14954.0, 'scale': '', 'category': 'Work-in-process', 'header1': '2019', 'header2': 'As of December 31,'}, {'number_value': 12129.0, 'scale': '', 'category': 'Work-in-process', 'header1': '2018', 'header2': 'As of December 31,'}, {'number_value': 23363.0, 'scale': '', 'category': 'Raw materials', 'header1': '2019', 'header2': 'As of December 31,'}, {'number_value': 25746.0, 'scale': '', 'category': 'Raw materials', 'header1': '2018', 'header2': 'As of December 31,'}, {'number_value': -5527.0, 'scale': '', 'category': 'Less: Inventory reserves', 'header1': '2019', 'header2': 'As of December 31,'}, {'number_value': -5384.0, 'scale': '', 'category': 'Less: Inventory reserves', 'header1': '2018', 'header2': 'As of December 31,'}, {'number_value': 42237.0, 'scale': '', 'category': 'Inventories, net', 'header1': '2019', 'header2': 'As of December 31,'}, {'number_value': 43486.0, 'scale': '', 'category': 'Inventories, net', 'header1': '2018', 'header2': 'As of December 31,'}]","def run(value_list):
+    """"""
+    Calculates the percentage change in net inventories between 2018 and 2019.
+
+    Args:
+        value_list: A list of dictionaries, where each dictionary represents a financial value.
+
+    Returns:
+        A tuple containing the percentage change as a float (rounded to two decimal places) and the scale.
+    """"""
+    
+    inventory_net_2019 = None
+    inventory_net_2018 = None
+
+    for item in value_list:
+        if item['category'] == 'Inventories, net' and item['header1'] == '2019':
+            inventory_net_2019 = item['number_value']
+        if item['category'] == 'Inventories, net' and item['header1'] == '2018':
+            inventory_net_2018 = item['number_value']
+
+    if inventory_net_2019 is not None and inventory_net_2018 is not None:
+        percentage_change = ((inventory_net_2019 - inventory_net_2018) / inventory_net_2018) * 100
+        return (round(percentage_change, 2), '')
+    else:
+        return (None, '')
+","[42237.0, 43486.0, -2.872188750402428]","[42237.0, 43486.0, 43486.0]",False,scale_error,1.0000000003484322,0,True,False,False,37
+225,225,1771425168.1449175,54dd0e9e-c525-4bea-8bd7-b292e9dd9be3,What is the percentage change in the net investment in finance lease from 2018 to 2019?,(0.8-1.2)/1.2,(#-#)/#,nan,-33.33,million,-33.33,percent,0,True,False,False,False,,"[{'number_value': 0.8, 'scale': 'million', 'category': 'Net investment in finance lease', 'header1': '2019', 'header2': '£ million'}, {'number_value': 1.2, 'scale': 'million', 'category': 'Net investment in finance lease', 'header1': '2018', 'header2': '£ million'}, {'number_value': 0.3, 'scale': 'million', 'category': 'Amounts owed by members of Peel', 'header1': '2019', 'header2': '£ million'}, {'number_value': 0.3, 'scale': 'million', 'category': 'Amounts owed by members of Peel', 'header1': '2018', 'header2': '£ million'}, {'number_value': -0.1, 'scale': 'million', 'category': 'Amounts owed to members of Peel', 'header1': '2019', 'header2': '£ million'}, {'number_value': -0.1, 'scale': 'million', 'category': 'Amounts owed to members of Peel', 'header1': '2018', 'header2': '£ million'}]","def run(value_list):
+    """"""
+    Calculates the percentage change in net investment in finance lease from 2018 to 2019.
+
+    Args:
+        value_list: A list of dictionaries, where each dictionary represents a financial value.
+
+    Returns:
+        A tuple containing the percentage change as a float (rounded to two decimal places) and the scale.
+    """"""
+    try:
+        investment_2019 = next((item['number_value'] for item in value_list if item['category'] == 'Net investment in finance lease' and item['header1'] == '2019'), 0.0)
+        investment_2018 = next((item['number_value'] for item in value_list if item['category'] == 'Net investment in finance lease' and item['header1'] == '2018'), 0.0)
+
+        if investment_2018 == 0:
+            return (0.00, 'million')
+
+        percentage_change = ((investment_2019 - investment_2018) / investment_2018) * 100
+        return (round(percentage_change, 2), 'million')
+    except StopIteration:
+        return (0.00, 'million')
+","[0.8, 1.2, -33.33333333333333]","[0.8, 1.2, 1.2]",False,scale_error,1.000000000030003,0,True,False,False,37
+247,247,1771425282.3262818,634122ee-5fb5-4e38-a552-5673e23987cf,What was the percentage change in the amount in APJ in 2019 from 2018?,(98.7-103.6)/103.6,(#-#)/#,nan,-4.73,million,-4.73,percent,0,True,False,False,False,,"[{'number_value': 273.6, 'scale': 'million', 'category': 'Americas', 'header1': '$ million', 'header2': '31 March 2019'}, {'number_value': 288.2, 'scale': 'million', 'category': 'Americas', 'header1': '$ million', 'header2': '31 March 2018'}, {'number_value': 413.0, 'scale': 'million', 'category': 'EMEA', 'header1': '$ million', 'header2': '31 March 2019'}, {'number_value': 434.2, 'scale': 'million', 'category': 'EMEA', 'header1': '$ million', 'header2': '31 March 2018'}, {'number_value': 98.7, 'scale': 'million', 'category': 'APJ', 'header1': '$ million', 'header2': '31 March 2019'}, {'number_value': 103.6, 'scale': 'million', 'category': 'APJ', 'header1': '$ million', 'header2': '31 March 2018'}, {'number_value': 785.3, 'scale': 'million', 'category': '', 'header1': '$ million', 'header2': '31 March 2019'}, {'number_value': 826.0, 'scale': 'million', 'category': '', 'header1': '$ million', 'header2': '31 March 2018'}]","def run(value_list):
+    """"""
+    Calculates the percentage change in the amount in APJ in 2019 from 2018.
+
+    Args:
+        value_list: A list of dictionaries, where each dictionary represents a financial value.
+
+    Returns:
+        A tuple containing the percentage change as a float (rounded to two decimal places) and the scale.
+    """"""
+
+    apj_2019 = None
+    apj_2018 = None
+
+    for item in value_list:
+        if item['category'] == 'APJ' and item['header2'] == '31 March 2019':
+            apj_2019 = item['number_value']
+        if item['category'] == 'APJ' and item['header2'] == '31 March 2018':
+            apj_2018 = item['number_value']
+
+    if apj_2019 is not None and apj_2018 is not None:
+        percentage_change = ((apj_2019 - apj_2018) / apj_2018) * 100
+        return (round(percentage_change, 2), 'million')
+    else:
+        return (None, None)
+","[98.7, 103.6, -4.729729729729722]","[98.7, 103.6, 103.6]",False,scale_error,1.0000000002114164,0,True,False,False,37
+271,271,1771425401.1172764,0ae9262d-c0fd-4b56-b896-2b37f90810bc,What was the percentage change in the amount for Ireland?,(0.4-0.5)/0.5,(#-#)/#,nan,-20.0,million,-20.0,percent,0,True,False,False,False,,"[{'number_value': 24.5, 'scale': 'million', 'category': 'UK', 'header1': '£ million', 'header2': '2019'}, {'number_value': 24.9, 'scale': 'million', 'category': 'UK', 'header1': '£ million', 'header2': '2018'}, {'number_value': 0.4, 'scale': 'million', 'category': 'Ireland', 'header1': '£ million', 'header2': '2019'}, {'number_value': 0.5, 'scale': 'million', 'category': 'Ireland', 'header1': '£ million', 'header2': '2018'}, {'number_value': 24.9, 'scale': 'million', 'category': 'Total', 'header1': '£ million', 'header2': '2019'}, {'number_value': 25.4, 'scale': 'million', 'category': 'Total', 'header1': '£ million', 'header2': '2018'}]","def run(value_list):
+    """"""
+    Calculates the percentage change in the amount for Ireland.
+
+    Args:
+        value_list: A list of dictionaries, where each dictionary represents a financial value.
+
+    Returns:
+        A tuple containing the percentage change as a float (rounded to two decimal places) and the scale.
+    """"""
+    
+    ireland_2019 = None
+    ireland_2018 = None
+
+    for item in value_list:
+        if item['category'] == 'Ireland' and item['header2'] == '2019':
+            ireland_2019 = item['number_value']
+        if item['category'] == 'Ireland' and item['header2'] == '2018':
+            ireland_2018 = item['number_value']
+
+    if ireland_2018 is not None and ireland_2019 is not None:
+        percentage_change = ((ireland_2019 - ireland_2018) / ireland_2018) * 100
+        return (round(percentage_change, 2), 'million')
+    else:
+        return (None, None)
+","[0.4, 0.5, -19.999999999999996]","[0.4, 0.5, 0.5]",False,scale_error,1.00000000005,0,True,False,False,37
+272,272,1771425407.0463743,e4f21617-1a84-40e4-bdf0-671df88cb862,"What is the percentage change in the working capital adjustment at June 30 and December 31, 2019?",(18-38)/38 ,(#-#)/#,nan,-52.63,,-52.63,percent,0,True,False,True,False,,"[{'number_value': 3795.0, 'scale': '', 'category': 'Cash', 'header1': 'Estimated at June 30, 2019'}, {'number_value': 3795.0, 'scale': '', 'category': 'Cash', 'header1': 'Final as of December 31, 2019'}, {'number_value': -38.0, 'scale': '', 'category': 'Working capital adjustment to purchase price', 'header1': 'Estimated at June 30, 2019'}, {'number_value': 20.0, 'scale': '', 'category': 'Working capital adjustment to purchase price', 'header1': 'Adjustments'}, {'number_value': -18.0, 'scale': '', 'category': 'Working capital adjustment to purchase price', 'header1': 'Final as of December 31, 2019'}, {'number_value': 3757.0, 'scale': '', 'category': 'Total fair value of consideration transferred', 'header1': 'Estimated at June 30, 2019'}, {'number_value': 20.0, 'scale': '', 'category': 'Total fair value of consideration transferred', 'header1': 'Adjustments'}, {'number_value': 3777.0, 'scale': '', 'category': 'Total fair value of consideration transferred', 'header1': 'Final as of December 31, 2019'}, {'number_value': 591.0, 'scale': '', 'category': 'Accounts receivable', 'header1': 'Estimated at June 30, 2019'}, {'number_value': 591.0, 'scale': '', 'category': 'Accounts receivable', 'header1': 'Final as of December 31, 2019'}, {'number_value': 149.0, 'scale': '', 'category': 'Inventories', 'header1': 'Estimated at June 30, 2019'}, {'number_value': 149.0, 'scale': '', 'category': 'Inventories', 'header1': 'Final as of December 31, 2019'}, {'number_value': 4.0, 'scale': '', 'category': 'Deposits and other current assets', 'header1': 'Estimated at June 30, 2019'}, {'number_value': 8.0, 'scale': '', 'category': 'Deposits and other current assets', 'header1': 'Adjustments'}, {'number_value': 12.0, 'scale': '', 'category': 'Deposits and other current assets', 'header1': 'Final as of December 31, 2019'}, {'number_value': 1560.0, 'scale': '', 'category': 'Property and equipment', 'header1': 'Estimated at June 30, 2019'}, {'number_value': 1560.0, 'scale': '', 'category': 'Property and equipment', 'header1': 'Final as of December 31, 2019'}, {'number_value': 930.0, 'scale': '', 'category': 'Customer relationship', 'header1': 'Estimated at June 30, 2019'}, {'number_value': 930.0, 'scale': '', 'category': 'Customer relationship', 'header1': 'Final as of December 31, 2019'}, {'number_value': 35.0, 'scale': '', 'category': 'Other finite-lived intangible assets', 'header1': 'Estimated at June 30, 2019'}, {'number_value': 35.0, 'scale': '', 'category': 'Other finite-lived intangible assets', 'header1': 'Final as of December 31, 2019'}, {'number_value': -219.0, 'scale': '', 'category': 'Accounts payable', 'header1': 'Estimated at June 30, 2019'}, {'number_value': -219.0, 'scale': '', 'category': 'Accounts payable', 'header1': 'Final as of December 31, 2019'}, {'number_value': -18.0, 'scale': '', 'category': 'Finance lease liabilities', 'header1': 'Estimated at June 30, 2019'}, {'number_value': -18.0, 'scale': '', 'category': 'Finance lease liabilities', 'header1': 'Final as of December 31, 2019'}, {'number_value': 3032.0, 'scale': '', 'category': 'Net recognized amounts of identifiable assets acquired and liabilities assumed', 'header1': 'Estimated at June 30, 2019'}, {'number_value': 8.0, 'scale': '', 'category': 'Net recognized amounts of identifiable assets acquired and liabilities assumed', 'header1': 'Adjustments'}, {'number_value': 3040.0, 'scale': '', 'category': 'Net recognized amounts of identifiable assets acquired and liabilities assumed', 'header1': 'Final as of December 31, 2019'}, {'number_value': 725.0, 'scale': '', 'category': 'Goodwill', 'header1': 'Estimated at June 30, 2019'}, {'number_value': 12.0, 'scale': '', 'category': 'Goodwill', 'header1': 'Adjustments'}, {'number_value': 737.0, 'scale': '', 'category': 'Goodwill', 'header1': 'Final as of December 31, 2019'}]","def run(value_list):
+    """"""
+    Calculates the percentage change in the working capital adjustment 
+    between June 30 and December 31, 2019.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple containing the percentage change (float with two decimal places) 
+        and the scale (string).
+    """"""
+    
+    june_30_wc_adjustment = None
+    dec_31_wc_adjustment = None
+
+    for item in value_list:
+        if item['category'] == 'Working capital adjustment to purchase price' and item['header1'] == 'Estimated at June 30, 2019':
+            june_30_wc_adjustment = item['number_value']
+        elif item['category'] == 'Working capital adjustment to purchase price' and item['header1'] == 'Final as of December 31, 2019':
+            dec_31_wc_adjustment = item['number_value']
+
+    if june_30_wc_adjustment is not None and dec_31_wc_adjustment is not None:
+        percentage_change = ((dec_31_wc_adjustment - june_30_wc_adjustment) / june_30_wc_adjustment) * 100
+        return (round(percentage_change, 2), '')
+    else:
+        return (None, '')
+","[-38.0, -18.0, -52.63157894736842]",[],False,scale_error,1.0000000000190006,0,True,False,False,37
+285,285,1771425474.805217,6befb6ea-a586-43d2-80bd-14f0721dd6f1,What is the percentage change in the total other non-current assets between 2018 and 2019?,"(41,846 - 8,620)/8,620 ",(#-#)/#,nan,385.45,,385.45,percent,0,True,False,False,False,,"[{'number_value': 33014.0, 'scale': '', 'category': 'Right of use assets', 'header1': 'December 31, 2019'}, {'number_value': 3297.0, 'scale': '', 'category': 'Deferred contract acquisition costs', 'header1': 'December 31, 2019'}, {'number_value': 3184.0, 'scale': '', 'category': 'Deferred contract acquisition costs', 'header1': 'December 31, 2018'}, {'number_value': 2338.0, 'scale': '', 'category': 'Deposits', 'header1': 'December 31, 2019'}, {'number_value': 1975.0, 'scale': '', 'category': 'Deposits', 'header1': 'December 31, 2018'}, {'number_value': 3197.0, 'scale': '', 'category': 'Other', 'header1': 'December 31, 2019'}, {'number_value': 3461.0, 'scale': '', 'category': 'Other', 'header1': 'December 31, 2018'}, {'number_value': 41846.0, 'scale': '', 'category': 'Total other non-current assets', 'header1': 'December 31, 2019'}, {'number_value': 8620.0, 'scale': '', 'category': 'Total other non-current assets', 'header1': 'December 31, 2018'}]","def run(value_list):
+    """"""
+    Calculates the percentage change in total other non-current assets between 2018 and 2019.
+
+    Args:
+        value_list: A list of dictionaries, where each dictionary represents a financial value.
+
+    Returns:
+        A tuple containing the percentage change as a float (rounded to two decimal places) and the scale.
+    """"""
+    total_other_non_current_assets_2018 = None
+    total_other_non_current_assets_2019 = None
+
+    for item in value_list:
+        if item['category'] == 'Total other non-current assets' and item['header1'] == 'December 31, 2018':
+            total_other_non_current_assets_2018 = item['number_value']
+        if item['category'] == 'Total other non-current assets' and item['header1'] == 'December 31, 2019':
+            total_other_non_current_assets_2019 = item['number_value']
+
+    if total_other_non_current_assets_2018 is not None and total_other_non_current_assets_2019 is not None:
+        percentage_change = ((total_other_non_current_assets_2019 - total_other_non_current_assets_2018) / total_other_non_current_assets_2018) * 100
+        scale = """"  # No specific scale is mentioned in the question
+        return (round(percentage_change, 2), scale)
+    else:
+        return (None, """")
+","[8620.0, 41846.0, 385.4524361948956]","[41846.0, 8620.0, 8620.0]",False,scale_error,0.9999999999974056,0,True,False,False,37
+294,294,1771425520.2455482,070a9fb1-6d17-40ba-b34e-82d0fe14037b,What is the percentage change in the research and development costs incurred from 2018 to 2019?,"(18,478-17,793)/17,793",(#-#)/#,nan,3.85,,3.85,percent,0,True,False,False,False,,"[{'number_value': 244.0, 'scale': '', 'category': 'Costs associated with acquisitions', 'header1': 'Included in professional advice expense', 'header2': 'Profit before income tax includes the following specific expenses:', 'header3': 'US$000', 'header4': '2019', 'header5': 'Consolidated', 'header6': 'Consolidated', 'header7': 'Profit before income tax includes the following specific expenses:', 'header8': 'Included in professional advice expense'}, {'number_value': 572.0, 'scale': '', 'category': 'Costs associated with acquisitions', 'header1': 'Included in professional advice expense', 'header2': 'Profit before income tax includes the following specific expenses:', 'header3': 'US$000', 'header4': '2018', 'header5': 'Consolidated', 'header6': 'Consolidated', 'header7': 'Profit before income tax includes the following specific expenses:', 'header8': 'Included in professional advice expense'}, {'number_value': 1.0, 'scale': '', 'category': 'Interest and finance charges paid/payable', 'header1': 'Finance costs', 'header2': 'Profit before income tax includes the following specific expenses:', 'header3': 'US$000', 'header4': '2019', 'header5': 'Consolidated', 'header6': 'Consolidated', 'header7': 'Profit before income tax includes the following specific expenses:', 'header8': 'Finance costs'}, {'number_value': 2.0, 'scale': '', 'category': 'Interest and finance charges paid/payable', 'header1': 'Finance costs', 'header2': 'Profit before income tax includes the following specific expenses:', 'header3': 'US$000', 'header4': '2018', 'header5': 'Consolidated', 'header6': 'Consolidated', 'header7': 'Profit before income tax includes the following specific expenses:', 'header8': 'Finance costs'}, {'number_value': 199.0, 'scale': '', 'category': 'Unwinding of the discount on provisions', 'header1': 'Finance costs', 'header2': 'Profit before income tax includes the following specific expenses:', 'header3': 'US$000', 'header4': '2019', 'header5': 'Consolidated', 'header6': 'Consolidated', 'header7': 'Profit before income tax includes the following specific expenses:', 'header8': 'Finance costs'}, {'number_value': 60.0, 'scale': '', 'category': 'Unwinding of the discount on provisions', 'header1': 'Finance costs', 'header2': 'Profit before income tax includes the following specific expenses:', 'header3': 'US$000', 'header4': '2018', 'header5': 'Consolidated', 'header6': 'Consolidated', 'header7': 'Profit before income tax includes the following specific expenses:', 'header8': 'Finance costs'}, {'number_value': 200.0, 'scale': '', 'category': 'Finance costs expensed', 'header1': 'Finance costs', 'header2': 'Profit before income tax includes the following specific expenses:', 'header3': 'US$000', 'header4': '2019', 'header5': 'Consolidated', 'header6': 'Consolidated', 'header7': 'Profit before income tax includes the following specific expenses:', 'header8': 'Finance costs'}, {'number_value': 62.0, 'scale': '', 'category': 'Finance costs expensed', 'header1': 'Finance costs', 'header2': 'Profit before income tax includes the following specific expenses:', 'header3': 'US$000', 'header4': '2018', 'header5': 'Consolidated', 'header6': 'Consolidated', 'header7': 'Profit before income tax includes the following specific expenses:', 'header8': 'Finance costs'}, {'number_value': 4339.0, 'scale': '', 'category': 'Office rent', 'header1': 'Operating leases included in income statement', 'header2': 'Profit before income tax includes the following specific expenses:', 'header3': 'US$000', 'header4': '2019', 'header5': 'Consolidated', 'header6': 'Consolidated', 'header7': 'Profit before income tax includes the following specific expenses:', 'header8': 'Operating leases included in income statement'}, {'number_value': 3538.0, 'scale': '', 'category': 'Office rent', 'header1': 'Operating leases included in income statement', 'header2': 'Profit before income tax includes the following specific expenses:', 'header3': 'US$000', 'header4': '2018', 'header5': 'Consolidated', 'header6': 'Consolidated', 'header7': 'Profit before income tax includes the following specific expenses:', 'header8': 'Operating leases included in income statement'}, {'number_value': 12.0, 'scale': '', 'category': 'Equipment', 'header1': 'Operating leases included in income statement', 'header2': 'Profit before income tax includes the following specific expenses:', 'header3': 'US$000', 'header4': '2019', 'header5': 'Consolidated', 'header6': 'Consolidated', 'header7': 'Profit before income tax includes the following specific expenses:', 'header8': 'Operating leases included in income statement'}, {'number_value': 16.0, 'scale': '', 'category': 'Equipment', 'header1': 'Operating leases included in income statement', 'header2': 'Profit before income tax includes the following specific expenses:', 'header3': 'US$000', 'header4': '2018', 'header5': 'Consolidated', 'header6': 'Consolidated', 'header7': 'Profit before income tax includes the following specific expenses:', 'header8': 'Operating leases included in income statement'}, {'number_value': 51.0, 'scale': '', 'category': 'Motor vehicle', 'header1': 'Operating leases included in income statement', 'header2': 'Profit before income tax includes the following specific expenses:', 'header3': 'US$000', 'header4': '2019', 'header5': 'Consolidated', 'header6': 'Consolidated', 'header7': 'Profit before income tax includes the following specific expenses:', 'header8': 'Operating leases included in income statement'}, {'number_value': 96.0, 'scale': '', 'category': 'Motor vehicle', 'header1': 'Operating leases included in income statement', 'header2': 'Profit before income tax includes the following specific expenses:', 'header3': 'US$000', 'header4': '2018', 'header5': 'Consolidated', 'header6': 'Consolidated', 'header7': 'Profit before income tax includes the following specific expenses:', 'header8': 'Operating leases included in income statement'}, {'number_value': 4402.0, 'scale': '', 'category': 'Total expense relating to operating leases', 'header1': 'Operating leases included in income statement', 'header2': 'Profit before income tax includes the following specific expenses:', 'header3': 'US$000', 'header4': '2019', 'header5': 'Consolidated', 'header6': 'Consolidated', 'header7': 'Profit before income tax includes the following specific expenses:', 'header8': 'Operating leases included in income statement'}, {'number_value': 3650.0, 'scale': '', 'category': 'Total expense relating to operating leases', 'header1': 'Operating leases included in income statement', 'header2': 'Profit before income tax includes the following specific expenses:', 'header3': 'US$000', 'header4': '2018', 'header5': 'Consolidated', 'header6': 'Consolidated', 'header7': 'Profit before income tax includes the following specific expenses:', 'header8': 'Operating leases included in income statement'}, {'number_value': 2169.0, 'scale': '', 'category': 'Post-employment benefits: defined contribution', 'header1': 'Post-employment benefits', 'header2': 'Profit before income tax includes the following specific expenses:', 'header3': 'US$000', 'header4': '2019', 'header5': 'Consolidated', 'header6': 'Consolidated', 'header7': 'Profit before income tax includes the following specific expenses:', 'header8': 'Post-employment benefits'}, {'number_value': 1870.0, 'scale': '', 'category': 'Post-employment benefits: defined contribution', 'header1': 'Post-employment benefits', 'header2': 'Profit before income tax includes the following specific expenses:', 'header3': 'US$000', 'header4': '2018', 'header5': 'Consolidated', 'header6': 'Consolidated', 'header7': 'Profit before income tax includes the following specific expenses:', 'header8': 'Post-employment benefits'}, {'number_value': 18478.0, 'scale': '', 'category': 'Research and development costs incurred', 'header1': 'Research and development costs expensed', 'header2': 'Profit before income tax includes the following specific expenses:', 'header3': 'US$000', 'header4': '2019', 'header5': 'Consolidated', 'header6': 'Consolidated', 'header7': 'Profit before income tax includes the following specific expenses:', 'header8': 'Research and development costs expensed'}, {'number_value': 17793.0, 'scale': '', 'category': 'Research and development costs incurred', 'header1': 'Research and development costs expensed', 'header2': 'Profit before income tax includes the following specific expenses:', 'header3': 'US$000', 'header4': '2018', 'header5': 'Consolidated', 'header6': 'Consolidated', 'header7': 'Profit before income tax includes the following specific expenses:', 'header8': 'Research and development costs expensed'}]","def run(value_list):
+    """"""
+    Calculates the percentage change in research and development costs incurred from 2018 to 2019.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple containing the percentage change as a float (rounded to two decimal places) and the scale.
+    """"""
+    
+    cost_2018 = None
+    cost_2019 = None
+
+    for item in value_list:
+        if item['category'] == 'Research and development costs incurred' and item['header4'] == '2018':
+            cost_2018 = item['number_value']
+        if item['category'] == 'Research and development costs incurred' and item['header4'] == '2019':
+            cost_2019 = item['number_value']
+
+    if cost_2018 is not None and cost_2019 is not None:
+        percentage_change = ((cost_2019 - cost_2018) / cost_2018) * 100
+        return (round(percentage_change, 2), '')
+    else:
+        return (None, '')
+","[17793.0, 18478.0, 3.849828584274715]","[18478.0, 17793.0, 17793.0]",False,scale_error,0.9999999997402598,0,True,False,False,37
+298,298,1771425536.1969185,06dfc869-b3e2-446e-9b9a-1b2374c63c04,What is the percentage change in cash provided by financing activities between 2018 and 2019?,"(5,798-3,624)/3,624 ",(#-#)/#,nan,59.99,,59.99,percent,0,True,False,True,False,,"[{'number_value': -426.0, 'scale': '', 'category': 'Operating activities', 'header1': 'Cash (used in) provided by:', 'header2': '2019', 'header3': 'Years Ended December 31,', 'header4': 'Cash (used in) provided by:'}, {'number_value': -2694.0, 'scale': '', 'category': 'Operating activities', 'header1': 'Cash (used in) provided by:', 'header2': '2018', 'header3': 'Years Ended December 31,', 'header4': 'Cash (used in) provided by:'}, {'number_value': 14314.0, 'scale': '', 'category': 'Operating activities', 'header1': 'Cash (used in) provided by:', 'header2': '2017', 'header3': 'Years Ended December 31,', 'header4': 'Cash (used in) provided by:'}, {'number_value': -251.0, 'scale': '', 'category': 'Investing activities', 'header1': 'Cash (used in) provided by:', 'header2': '2019', 'header3': 'Years Ended December 31,', 'header4': 'Cash (used in) provided by:'}, {'number_value': -6876.0, 'scale': '', 'category': 'Investing activities', 'header1': 'Cash (used in) provided by:', 'header2': '2018', 'header3': 'Years Ended December 31,', 'header4': 'Cash (used in) provided by:'}, {'number_value': -5142.0, 'scale': '', 'category': 'Investing activities', 'header1': 'Cash (used in) provided by:', 'header2': '2017', 'header3': 'Years Ended December 31,', 'header4': 'Cash (used in) provided by:'}, {'number_value': 5798.0, 'scale': '', 'category': 'Financing activities', 'header1': 'Cash (used in) provided by:', 'header2': '2019', 'header3': 'Years Ended December 31,', 'header4': 'Cash (used in) provided by:'}, {'number_value': 3624.0, 'scale': '', 'category': 'Financing activities', 'header1': 'Cash (used in) provided by:', 'header2': '2018', 'header3': 'Years Ended December 31,', 'header4': 'Cash (used in) provided by:'}, {'number_value': 8420.0, 'scale': '', 'category': 'Financing activities', 'header1': 'Cash (used in) provided by:', 'header2': '2017', 'header3': 'Years Ended December 31,', 'header4': 'Cash (used in) provided by:'}, {'number_value': 5121.0, 'scale': '', 'category': 'Net increase (decrease) in cash and cash equivalents', 'header1': 'Cash (used in) provided by:', 'header2': '2019', 'header3': 'Years Ended December 31,', 'header4': 'Cash (used in) provided by:'}, {'number_value': -5946.0, 'scale': '', 'category': 'Net increase (decrease) in cash and cash equivalents', 'header1': 'Cash (used in) provided by:', 'header2': '2018', 'header3': 'Years Ended December 31,', 'header4': 'Cash (used in) provided by:'}, {'number_value': 17592.0, 'scale': '', 'category': 'Net increase (decrease) in cash and cash equivalents', 'header1': 'Cash (used in) provided by:', 'header2': '2017', 'header3': 'Years Ended December 31,', 'header4': 'Cash (used in) provided by:'}]","def run(value_list):
+    """"""
+    Calculates the percentage change in cash provided by financing activities between 2018 and 2019.
+
+    Args:
+        value_list: A list of dictionaries, where each dictionary represents a financial value.
+
+    Returns:
+        A tuple containing the percentage change as a float (rounded to two decimal places) and the scale.
+    """"""
+
+    financing_2019 = None
+    financing_2018 = None
+
+    for item in value_list:
+        if item['category'] == 'Financing activities' and item['header2'] == '2019':
+            financing_2019 = item['number_value']
+        if item['category'] == 'Financing activities' and item['header2'] == '2018':
+            financing_2018 = item['number_value']
+
+    if financing_2019 is not None and financing_2018 is not None:
+        if financing_2018 == 0:
+            return (float('inf'), '')
+        percentage_change = ((financing_2019 - financing_2018) / financing_2018) * 100
+        return (round(percentage_change, 2), '')
+    else:
+        return (None, '')
+","[5798.0, 3624.0, 59.98896247240618]","[5798.0, 3624.0, 3624.0]",False,scale_error,0.9999999999833307,0,True,False,False,37
+336,336,1771425702.455767,5c487c82-e20a-4c76-9f52-7831ab15075e,What was the percentage change in the amount Outstanding at 1 April in 2019 from 2018?,"(3,104,563-2,682,738)/2,682,738",(#-#)/#,nan,15.72,,15.72,percent,0,True,False,True,False,,"[{'number_value': 3104563.0, 'scale': '', 'category': 'Outstanding at 1 April', 'header1': 'Number', 'header2': '2019'}, {'number_value': 2682738.0, 'scale': '', 'category': 'Outstanding at 1 April', 'header1': 'Number', 'header2': '2018'}, {'number_value': 452695.0, 'scale': '', 'category': 'Options granted in the year', 'header1': 'Number', 'header2': '2019'}, {'number_value': 1188149.0, 'scale': '', 'category': 'Options granted in the year', 'header1': 'Number', 'header2': '2018'}, {'number_value': 9749.0, 'scale': '', 'category': 'Dividend shares awarded', 'header1': 'Number', 'header2': '2019'}, {'number_value': -105213.0, 'scale': '', 'category': 'Options forfeited in the year', 'header1': 'Number', 'header2': '2019'}, {'number_value': -766324.0, 'scale': '', 'category': 'Options forfeited in the year', 'header1': 'Number', 'header2': '2018'}, {'number_value': -483316.0, 'scale': '', 'category': 'Options exercised in the year', 'header1': 'Number', 'header2': '2019'}, {'number_value': 2.978, 'scale': '', 'category': 'Outstanding at 31 March', 'header1': 'Number', 'header2': '2019'}, {'number_value': 3104563.0, 'scale': '', 'category': 'Outstanding at 31 March', 'header1': 'Number', 'header2': '2018'}, {'number_value': 721269.0, 'scale': '', 'category': 'Exercisable at 31 March', 'header1': 'Number', 'header2': '2019'}]","def run(value_list):
+    """"""
+    Calculates the percentage change in the amount Outstanding at 1 April in 2019 from 2018.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple containing the calculated percentage change (float with two decimal places) and the scale (string).
+    """"""
+    outstanding_2019 = None
+    outstanding_2018 = None
+
+    for item in value_list:
+        if item['category'] == 'Outstanding at 1 April' and item['header2'] == '2019':
+            outstanding_2019 = item['number_value']
+        elif item['category'] == 'Outstanding at 1 April' and item['header2'] == '2018':
+            outstanding_2018 = item['number_value']
+
+    if outstanding_2019 is not None and outstanding_2018 is not None:
+        if outstanding_2018 != 0:
+            percentage_change = ((outstanding_2019 - outstanding_2018) / outstanding_2018) * 100
+        else:
+            percentage_change = float('inf') if outstanding_2019 > 0 else 0.0
+        
+        scale = """"  # No specific scale is mentioned in the question
+        return (round(percentage_change, 2), scale)
+    else:
+        return (None, """")
+","[3104563.0, 2682738.0, 15.723674842642108]","[3104563.0, 2682738.0, 2682738.0]",False,scale_error,0.9999999999363868,0,True,False,False,37
+367,367,1771425850.6218882,babee4bb-4861-4918-9a8e-dbadec47fe94,What was the percentage change in the amount Outstanding at 31 March in 2019 from 2018?,"(320,872-690,791)/690,791",(#-#)/#,nan,-53.55,,-53.55,percent,0,True,False,True,False,,"[{'number_value': 690791.0, 'scale': '', 'category': 'Outstanding at 1 April', 'header1': 'Number', 'header2': '2019'}, {'number_value': 776045.0, 'scale': '', 'category': 'Outstanding at 1 April', 'header1': 'Number', 'header2': '2018'}, {'number_value': 4518.0, 'scale': '', 'category': 'Dividend shares awarded', 'header1': 'Number', 'header2': '2019'}, {'number_value': 9778.0, 'scale': '', 'category': 'Dividend shares awarded', 'header1': 'Number', 'header2': '2018'}, {'number_value': -9275.0, 'scale': '', 'category': 'Forfeited', 'header1': 'Number', 'header2': '2019'}, {'number_value': -75986.0, 'scale': '', 'category': 'Forfeited', 'header1': 'Number', 'header2': '2018'}, {'number_value': -365162.0, 'scale': '', 'category': 'Released', 'header1': 'Number', 'header2': '2019'}, {'number_value': -19046.0, 'scale': '', 'category': 'Released', 'header1': 'Number', 'header2': '2018'}, {'number_value': 320872.0, 'scale': '', 'category': 'Outstanding at 31 March', 'header1': 'Number', 'header2': '2019'}, {'number_value': 690791.0, 'scale': '', 'category': 'Outstanding at 31 March', 'header1': 'Number', 'header2': '2018'}, {'number_value': 320872.0, 'scale': '', 'category': 'Vested and outstanding at 31 March', 'header1': 'Number', 'header2': '2019'}]","def run(value_list):
+    """"""
+    Calculates the percentage change in the amount Outstanding at 31 March in 2019 from 2018.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple containing the percentage change as a float (rounded to two decimal places) and the scale.
+    """"""
+    outstanding_2019 = None
+    outstanding_2018 = None
+
+    for item in value_list:
+        if item['category'] == 'Outstanding at 31 March' and item['header2'] == '2019':
+            outstanding_2019 = item['number_value']
+        if item['category'] == 'Outstanding at 31 March' and item['header2'] == '2018':
+            outstanding_2018 = item['number_value']
+
+    if outstanding_2019 is not None and outstanding_2018 is not None:
+        if outstanding_2018 != 0:
+            percentage_change = ((outstanding_2019 - outstanding_2018) / outstanding_2018) * 100
+        else:
+            percentage_change = float('inf') if outstanding_2019 > 0 else 0.0
+        
+        scale = """"  # No specific scale mentioned in the question
+        return (round(percentage_change, 2), scale)
+    else:
+        return (None, """")
+","[320872.0, 690791.0, -53.55006072748487]","[320872.0, 690791.0, 690791.0]",False,scale_error,1.0000000000186742,0,True,False,False,37
+409,409,1771426059.7478192,bb5be96c-78ed-4453-92cc-d07a3bf0b6ff,What is the percentage change in net cash provided by operating activities between 2017 and 2018?,"($90,253-$67,510)/$67,510",(#-#)/#,nan,33.69,,33.69,percent,0,True,False,True,False,,"[{'number_value': 115549.0, 'scale': '', 'category': 'Net cash provided by operating activities', 'header1': '2019', 'header2': 'Year Ended December 31,'}, {'number_value': 90253.0, 'scale': '', 'category': 'Net cash provided by operating activities', 'header1': '2018', 'header2': 'Year Ended December 31,'}, {'number_value': 67510.0, 'scale': '', 'category': 'Net cash provided by operating activities', 'header1': '2017', 'header2': 'Year Ended December 31,'}, {'number_value': -97727.0, 'scale': '', 'category': 'Net cash used in investing activities', 'header1': '2019', 'header2': 'Year Ended December 31,'}, {'number_value': -20876.0, 'scale': '', 'category': 'Net cash used in investing activities', 'header1': '2018', 'header2': 'Year Ended December 31,'}, {'number_value': -36666.0, 'scale': '', 'category': 'Net cash used in investing activities', 'header1': '2017', 'header2': 'Year Ended December 31,'}, {'number_value': 14775.0, 'scale': '', 'category': 'Net cash provided by (used in) financing activities', 'header1': '2019', 'header2': 'Year Ended December 31,'}, {'number_value': -278016.0, 'scale': '', 'category': 'Net cash provided by (used in) financing activities', 'header1': '2018', 'header2': 'Year Ended December 31,'}, {'number_value': 276852.0, 'scale': '', 'category': 'Net cash provided by (used in) financing activities', 'header1': '2017', 'header2': 'Year Ended December 31,'}]","def run(value_list):
+    """"""
+    Calculates the percentage change in net cash provided by operating activities between 2017 and 2018.
+
+    Args:
+        value_list: A list of dictionaries, where each dictionary represents a financial value.
+
+    Returns:
+        A tuple containing the percentage change (float with two decimal places) and the scale (string).
+    """"""
+    
+    operating_2017 = None
+    operating_2018 = None
+
+    for item in value_list:
+        if item['category'] == 'Net cash provided by operating activities' and item['header1'] == '2017':
+            operating_2017 = item['number_value']
+        if item['category'] == 'Net cash provided by operating activities' and item['header1'] == '2018':
+            operating_2018 = item['number_value']
+
+    if operating_2017 is not None and operating_2018 is not None:
+        if operating_2018 == 0:
+            return (float('inf'), '')
+        percentage_change = ((operating_2018 - operating_2017) / operating_2017) * 100
+        return (round(percentage_change, 2), '')
+    else:
+        return (None, '')
+","[67510.0, 90253.0, 33.68834246778255]","[90253.0, 67510.0, 67510.0]",False,scale_error,0.9999999999703177,0,True,False,False,37
+459,459,1771426282.1959703,86f8addb-85de-4f61-86d5-da4b6eca413a,What is the percentage change of  Total Revenue from 2018 to 2019?," ($3,037,000 - $22,106,000 )/ $22,106,000 ",(#-#)/#,nan,-86.26,,-86.26,percent,0,True,False,False,False,,"[{'number_value': -130000.0, 'scale': '', 'category': 'Fully-Paid Licenses', 'header1': '2019', 'header2': 'Years Ended December 31,'}, {'number_value': 12700000.0, 'scale': '', 'category': 'Fully-Paid Licenses', 'header1': '2018', 'header2': 'Years Ended December 31,'}, {'number_value': 2907000.0, 'scale': '', 'category': 'Royalty Bearing Licenses', 'header1': '2019', 'header2': 'Years Ended December 31,'}, {'number_value': 3086000.0, 'scale': '', 'category': 'Royalty Bearing Licenses', 'header1': '2018', 'header2': 'Years Ended December 31,'}, {'number_value': -6320000.0, 'scale': '', 'category': 'Other Revenue', 'header1': '2018', 'header2': 'Years Ended December 31,'}, {'number_value': 3037000.0, 'scale': '', 'category': 'Total Revenue', 'header1': '2019', 'header2': 'Years Ended December 31,'}, {'number_value': 22106000.0, 'scale': '', 'category': 'Total Revenue', 'header1': '2018', 'header2': 'Years Ended December 31,'}]","def run(value_list):
+    """"""
+    Calculates the percentage change of Total Revenue from 2018 to 2019.
+
+    Args:
+        value_list: A list of dictionaries, where each dictionary represents a financial value.
+
+    Returns:
+        A tuple containing the percentage change as a float (rounded to two decimal places) and the scale.
+    """"""
+    total_revenue_2019 = None
+    total_revenue_2018 = None
+
+    for item in value_list:
+        if item['category'] == 'Total Revenue' and item['header1'] == '2019':
+            total_revenue_2019 = item['number_value']
+        if item['category'] == 'Total Revenue' and item['header1'] == '2018':
+            total_revenue_2018 = item['number_value']
+
+    if total_revenue_2019 is not None and total_revenue_2018 is not None:
+        percentage_change = ((total_revenue_2019 - total_revenue_2018) / total_revenue_2018) * 100
+        scale = """"  # No specific scale for percentage change
+        return (round(percentage_change, 2), scale)
+    else:
+        return (None, """")
+","[3037000.0, 22106000.0, -86.2616484212431]","[3037000.0, 22106000.0, 22106000.0]",False,scale_error,1.000000000011593,0,True,False,False,37
+475,475,1771426359.2721815,12a99674-3d7b-43b8-acce-98a83bd7c70e,"What is the percentage change of revenue from Hong Kong from 2017 to 2018, based on the geographic location of the customer’s headquarters?","(1,761-1,429)/1,429 ",(#-#)/#,nan,23.23,,23.23,percent,0,True,False,False,False,,"[{'number_value': 12451.0, 'scale': '', 'category': 'United States', 'header1': '2019', 'header2': 'For the year ended'}, {'number_value': 17116.0, 'scale': '', 'category': 'United States', 'header1': '2018', 'header2': 'For the year ended'}, {'number_value': 11359.0, 'scale': '', 'category': 'United States', 'header1': '2017', 'header2': 'For the year ended'}, {'number_value': 3595.0, 'scale': '', 'category': 'Mainland China (excluding Hong Kong)', 'header1': '2019', 'header2': 'For the year ended'}, {'number_value': 3607.0, 'scale': '', 'category': 'Mainland China (excluding Hong Kong)', 'header1': '2018', 'header2': 'For the year ended'}, {'number_value': 1539.0, 'scale': '', 'category': 'Mainland China (excluding Hong Kong)', 'header1': '2017', 'header2': 'For the year ended'}, {'number_value': 2703.0, 'scale': '', 'category': 'Taiwan', 'header1': '2019', 'header2': 'For the year ended'}, {'number_value': 3918.0, 'scale': '', 'category': 'Taiwan', 'header1': '2018', 'header2': 'For the year ended'}, {'number_value': 2892.0, 'scale': '', 'category': 'Taiwan', 'header1': '2017', 'header2': 'For the year ended'}, {'number_value': 1614.0, 'scale': '', 'category': 'Hong Kong', 'header1': '2019', 'header2': 'For the year ended'}, {'number_value': 1761.0, 'scale': '', 'category': 'Hong Kong', 'header1': '2018', 'header2': 'For the year ended'}, {'number_value': 1429.0, 'scale': '', 'category': 'Hong Kong', 'header1': '2017', 'header2': 'For the year ended'}, {'number_value': 1032.0, 'scale': '', 'category': 'Other Asia Pacific', 'header1': '2019', 'header2': 'For the year ended'}, {'number_value': 1458.0, 'scale': '', 'category': 'Other Asia Pacific', 'header1': '2018', 'header2': 'For the year ended'}, {'number_value': 1078.0, 'scale': '', 'category': 'Other Asia Pacific', 'header1': '2017', 'header2': 'For the year ended'}, {'number_value': 958.0, 'scale': '', 'category': 'Japan', 'header1': '2019', 'header2': 'For the year ended'}, {'number_value': 1265.0, 'scale': '', 'category': 'Japan', 'header1': '2018', 'header2': 'For the year ended'}, {'number_value': 1042.0, 'scale': '', 'category': 'Japan', 'header1': '2017', 'header2': 'For the year ended'}, {'number_value': 1053.0, 'scale': '', 'category': 'Other', 'header1': '2019', 'header2': 'For the year ended'}, {'number_value': 1266.0, 'scale': '', 'category': 'Other', 'header1': '2018', 'header2': 'For the year ended'}, {'number_value': 983.0, 'scale': '', 'category': 'Other', 'header1': '2017', 'header2': 'For the year ended'}, {'number_value': 23406.0, 'scale': '', 'category': '', 'header1': '2019', 'header2': 'For the year ended'}, {'number_value': 30391.0, 'scale': '', 'category': '', 'header1': '2018', 'header2': 'For the year ended'}, {'number_value': 20322.0, 'scale': '', 'category': '', 'header1': '2017', 'header2': 'For the year ended'}]","def run(value_list):
+    """"""
+    Calculates the percentage change of revenue from Hong Kong from 2017 to 2018.
+
+    Args:
+        value_list: A list of dictionaries, where each dictionary represents a financial data point.
+
+    Returns:
+        A tuple containing the percentage change (float with two decimal places) and the scale (string).
+    """"""
+    try:
+        hong_kong_2017 = None
+        hong_kong_2018 = None
+
+        for item in value_list:
+            if item['category'] == 'Hong Kong' and item['header1'] == '2017':
+                hong_kong_2017 = item['number_value']
+            if item['category'] == 'Hong Kong' and item['header1'] == '2018':
+                hong_kong_2018 = item['number_value']
+
+        if hong_kong_2017 is not None and hong_kong_2018 is not None:
+            if hong_kong_2017 == 0:
+                return (float('inf'), '')
+            percentage_change = ((hong_kong_2018 - hong_kong_2017) / hong_kong_2017) * 100
+            return (round(percentage_change, 2), '')
+        else:
+            return (0.0, '')
+
+    except Exception as e:
+        return (0.0, '')
+","[1429.0, 1761.0, 23.233030090972708]","[1761.0, 1429.0, 1429.0]",False,scale_error,0.9999999999569522,0,True,False,False,37

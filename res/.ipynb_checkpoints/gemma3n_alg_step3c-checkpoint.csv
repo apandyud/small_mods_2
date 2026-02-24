@@ -1,0 +1,333 @@
+,Unnamed: 0,ts,qid,question,derivation,calc_pattern,code_calc_pattern,pred,pred_scale,answer,scale,value_match,selection_success,sign_error,is_parenth_in_table,has_code_abs,error_text,value_list,code,selected_values,needed_values,exact_match,error_code,ratio,x100_flag,scale_mismatch,value_mismatch,value_nan,cluster
+2,2,1771461041.6932318,5103aed0-b4e8-4fae-bf78-e2c9f4ba84cf,"What is the difference between the domestic and international discount rates as at September 30, 2019?",4.00 - 1.90 ,#-#,nan,0.6,percent,2.1,percent,3,False,False,False,False,,"[{'number_value': 4.0, 'scale': '%', 'category': 'Discount rate', 'header1': '2019', 'header2': 'September 30,', 'header3': 'Domestic'}, {'number_value': 3.75, 'scale': '%', 'category': 'Discount rate', 'header1': '2018', 'header2': 'September 30,', 'header3': 'Domestic'}, {'number_value': 1.9, 'scale': '%', 'category': 'Discount rate', 'header1': '2019', 'header2': 'September 30,', 'header3': 'International'}, {'number_value': 2.8, 'scale': '%', 'category': 'Discount rate', 'header1': '2018', 'header2': 'September 30,', 'header3': 'International'}, {'number_value': 3.4, 'scale': '%', 'category': 'Expected return on plan assets', 'header1': '2019', 'header2': 'September 30,', 'header3': 'International'}, {'number_value': 3.7, 'scale': '%', 'category': 'Expected return on plan assets', 'header1': '2018', 'header2': 'September 30,', 'header3': 'International'}]","def run(value_list):
+    """"""
+    Calculates the difference between the domestic and international discount rates as at September 30, 2019.
+
+    Args:
+        value_list: A list of dictionaries, where each dictionary represents a financial value.
+
+    Returns:
+        A tuple containing the difference in discount rates and the scale.
+    """"""
+    domestic_rate_2019 = None
+    international_rate_2019 = None
+
+    for item in value_list:
+        if item['header1'] == '2019' and item['header2'] == 'September 30,' and item['header3'] == 'Domestic':
+            domestic_rate_2019 = item['number_value']
+        if item['header1'] == '2019' and item['header2'] == 'September 30,' and item['header3'] == 'International':
+            international_rate_2019 = item['number_value']
+
+    if domestic_rate_2019 is not None and international_rate_2019 is not None:
+        difference = domestic_rate_2019 - international_rate_2019
+        return (round(difference, 2), 'percent')
+    else:
+        return (None, '')
+","[4.0, 3.4, 0.6000000000000001]","[4.0, 1.9]",False,selection_error,0.28571428557823125,0,False,True,False,23
+82,82,1771461405.3656082,56a014a9-5b9c-41e5-9523-ebbd3a01dd6d,"What is the increase/ (decrease) in Statutory Audit, Certification, Audit of Individual and Consolidated Financial Statements from the period 2018 to 2019?","4,105,000-4,556,500",#-#,nan,0.0,,-451500.0,,3,False,False,False,False,,"[{'number_value': 4105000.0, 'scale': '', 'category': 'Statutory Audit, Certification, Audit of Individual and Consolidated Financial Statements', 'header1': 'Audit Fees', 'header2': '2019', 'header3': 'Audit Fees'}, {'number_value': 95.2, 'scale': '%', 'category': 'Statutory Audit, Certification, Audit of Individual and Consolidated Financial Statements', 'header1': 'Audit Fees', 'header2': 'Percentage of Total Fees', 'header3': 'Audit Fees'}, {'number_value': 4556500.0, 'scale': '', 'category': 'Statutory Audit, Certification, Audit of Individual and Consolidated Financial Statements', 'header1': 'Audit Fees', 'header2': '2018', 'header3': 'Audit Fees'}, {'number_value': 96.3, 'scale': '%', 'category': 'Statutory Audit, Certification, Audit of Individual and Consolidated Financial Statements', 'header1': 'Audit Fees', 'header2': 'Percentage of Total Fees', 'header3': 'Audit Fees'}, {'number_value': 209005.0, 'scale': '', 'category': 'Audit-Related Fees', 'header1': 'Audit Fees', 'header2': '2019', 'header3': 'Audit Fees'}, {'number_value': 4.8, 'scale': '%', 'category': 'Audit-Related Fees', 'header1': 'Audit Fees', 'header2': 'Percentage of Total Fees', 'header3': 'Audit Fees'}, {'number_value': 173934.0, 'scale': '', 'category': 'Audit-Related Fees', 'header1': 'Audit Fees', 'header2': '2018', 'header3': 'Audit Fees'}, {'number_value': 3.7, 'scale': '%', 'category': 'Audit-Related Fees', 'header1': 'Audit Fees', 'header2': 'Percentage of Total Fees', 'header3': 'Audit Fees'}, {'number_value': 4314005.0, 'scale': '', 'category': 'Total', 'header1': 'Non-audit Fees', 'header2': '2019', 'header3': 'Non-audit Fees'}, {'number_value': 100.0, 'scale': '%', 'category': 'Total', 'header1': 'Non-audit Fees', 'header2': 'Percentage of Total Fees', 'header3': 'Non-audit Fees'}, {'number_value': 4730434.0, 'scale': '', 'category': 'Total', 'header1': 'Non-audit Fees', 'header2': '2018', 'header3': 'Non-audit Fees'}, {'number_value': 100.0, 'scale': '%', 'category': 'Total', 'header1': 'Non-audit Fees', 'header2': 'Percentage of Total Fees', 'header3': 'Non-audit Fees'}]","def run(value_list):
+    """"""
+    Calculates the increase/decrease in Statutory Audit, Certification, Audit of Individual and Consolidated Financial Statements
+    from 2018 to 2019.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple containing the calculated number and its scale.
+    """"""
+
+    audit_fees_2019 = None
+    audit_fees_2018 = None
+
+    for item in value_list:
+        if item['category'] == 'StaTutory Audit, Certification, Audit of Individual and Consolidated Financial Statements' and item['header2'] == '2019' and item['header3'] == 'Audit Fees':
+            audit_fees_2019 = item['number_value']
+        elif item['category'] == 'StaTutory Audit, Certification, Audit of Individual and Consolidated Financial Statements' and item['header2'] == '2018' and item['header3'] == 'Audit Fees':
+            audit_fees_2018 = item['number_value']
+
+    if audit_fees_2019 is not None and audit_fees_2018 is not None:
+        increase_decrease = audit_fees_2019 - audit_fees_2018
+        return (float(increase_decrease), '')
+    else:
+        return (0.0, '')
+",[],"[4105000.0, 4556500.0]",False,selection_error,-0.0,0,False,True,False,23
+94,94,1771461470.465114,2e3d4fe2-96f3-4ad9-b23f-1c590897b6e5,What is the increase / (decrease) in the RSUs Granted from 2018 to 2019?,674 - 583,#-#,nan,47.0,million,91.0,million,3,False,False,False,False,,"[{'number_value': 674.0, 'scale': 'million', 'category': 'Granted', 'header1': 'RSUs', 'header2': '2019', 'header3': '($ in millions)', 'header4': '($ in millions)', 'header5': 'For the year ended December 31:', 'header6': 'RSUs'}, {'number_value': 583.0, 'scale': 'million', 'category': 'Granted', 'header1': 'RSUs', 'header2': '2018', 'header3': '($ in millions)', 'header4': '($ in millions)', 'header5': 'For the year ended December 31:', 'header6': 'RSUs'}, {'number_value': 484.0, 'scale': 'million', 'category': 'Granted', 'header1': 'RSUs', 'header2': '2017', 'header3': '($ in millions)', 'header4': '($ in millions)', 'header5': 'For the year ended December 31:', 'header6': 'RSUs'}, {'number_value': 428.0, 'scale': 'million', 'category': 'Vested', 'header1': 'RSUs', 'header2': '2019', 'header3': '($ in millions)', 'header4': '($ in millions)', 'header5': 'For the year ended December 31:', 'header6': 'RSUs'}, {'number_value': 381.0, 'scale': 'million', 'category': 'Vested', 'header1': 'RSUs', 'header2': '2018', 'header3': '($ in millions)', 'header4': '($ in millions)', 'header5': 'For the year ended December 31:', 'header6': 'RSUs'}, {'number_value': 463.0, 'scale': 'million', 'category': 'Vested', 'header1': 'RSUs', 'header2': '2017', 'header3': '($ in millions)', 'header4': '($ in millions)', 'header5': 'For the year ended December 31:', 'header6': 'RSUs'}, {'number_value': 164.0, 'scale': 'million', 'category': 'Granted', 'header1': 'PSUs', 'header2': '2019', 'header3': '($ in millions)', 'header4': '($ in millions)', 'header5': 'For the year ended December 31:', 'header6': 'PSUs'}, {'number_value': 118.0, 'scale': 'million', 'category': 'Granted', 'header1': 'PSUs', 'header2': '2018', 'header3': '($ in millions)', 'header4': '($ in millions)', 'header5': 'For the year ended December 31:', 'header6': 'PSUs'}, {'number_value': 113.0, 'scale': 'million', 'category': 'Granted', 'header1': 'PSUs', 'header2': '2017', 'header3': '($ in millions)', 'header4': '($ in millions)', 'header5': 'For the year ended December 31:', 'header6': 'PSUs'}, {'number_value': 118.0, 'scale': 'million', 'category': 'Vested', 'header1': 'PSUs', 'header2': '2019', 'header3': '($ in millions)', 'header4': '($ in millions)', 'header5': 'For the year ended December 31:', 'header6': 'PSUs'}, {'number_value': 101.0, 'scale': 'million', 'category': 'Vested', 'header1': 'PSUs', 'header2': '2018', 'header3': '($ in millions)', 'header4': '($ in millions)', 'header5': 'For the year ended December 31:', 'header6': 'PSUs'}, {'number_value': 51.0, 'scale': 'million', 'category': 'Vested', 'header1': 'PSUs', 'header2': '2017', 'header3': '($ in millions)', 'header4': '($ in millions)', 'header5': 'For the year ended December 31:', 'header6': 'PSUs'}]","def run(value_list):
+    """"""
+    Calculates the increase/decrease in RSUs granted from 2018 to 2019.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple containing the numeric value and the scale.
+    """"""
+    rsus_2018 = None
+    rsus_2019 = None
+
+    for item in value_list:
+        if item['header6'] == 'RSUs' and item['header2'] == '2018':
+            rsus_2018 = item['number_value']
+        elif item['header6'] == 'RSUs' and item['header2'] == '2019':
+            rsus_2019 = item['number_value']
+
+    if rsus_2018 is not None and rsus_2019 is not None:
+        increase_or_decrease = rsus_2019 - rsus_2018
+        return (float(increase_or_decrease), 'million')
+    else:
+        return (0.0, '')
+","[381.0, 428.0, 47.0]","[674.0, 583.0]",False,selection_error,0.5164835164778409,0,False,True,False,23
+126,126,1771461636.0525742,e81574d8-f9e8-48b3-85ab-a7ed36f8cbb0,What was the change in Acquisition and integration costs in 2019 from 2018?,17-8,#-#,nan,130.0,million,9.0,million,3,False,False,False,False,,"[{'number_value': 17.0, 'scale': 'million', 'category': 'Acquisition and integration costs', 'header1': 'Acquisition-related charges:', 'header2': '(in millions)', 'header3': '2019', 'header4': 'Fiscal', 'header5': 'Acquisition-related charges:'}, {'number_value': 8.0, 'scale': 'million', 'category': 'Acquisition and integration costs', 'header1': 'Acquisition-related charges:', 'header2': '(in millions)', 'header3': '2018', 'header4': 'Fiscal', 'header5': 'Acquisition-related charges:'}, {'number_value': 4.0, 'scale': 'million', 'category': 'Charges associated with the amortization of acquisition-related fair value adjustments', 'header1': 'Acquisition-related charges:', 'header2': '(in millions)', 'header3': '2018', 'header4': 'Fiscal', 'header5': 'Acquisition-related charges:'}, {'number_value': 17.0, 'scale': 'million', 'category': '', 'header1': 'Acquisition-related charges:', 'header2': '(in millions)', 'header3': '2019', 'header4': 'Fiscal', 'header5': 'Acquisition-related charges:'}, {'number_value': 12.0, 'scale': 'million', 'category': '', 'header1': 'Acquisition-related charges:', 'header2': '(in millions)', 'header3': '2018', 'header4': 'Fiscal', 'header5': 'Acquisition-related charges:'}, {'number_value': 144.0, 'scale': 'million', 'category': 'Restructuring and other charges, net', 'header1': 'Acquisition-related charges:', 'header2': '(in millions)', 'header3': '2019', 'header4': 'Fiscal', 'header5': 'Acquisition-related charges:'}, {'number_value': 33.0, 'scale': 'million', 'category': 'Restructuring and other charges, net', 'header1': 'Acquisition-related charges:', 'header2': '(in millions)', 'header3': '2018', 'header4': 'Fiscal', 'header5': 'Acquisition-related charges:'}, {'number_value': 14.0, 'scale': 'million', 'category': 'Other items', 'header1': 'Acquisition-related charges:', 'header2': '(in millions)', 'header3': '2019', 'header4': 'Fiscal', 'header5': 'Acquisition-related charges:'}, {'number_value': 175.0, 'scale': 'million', 'category': 'Total', 'header1': 'Acquisition-related charges:', 'header2': '(in millions)', 'header3': '2019', 'header4': 'Fiscal', 'header5': 'Acquisition-related charges:'}, {'number_value': 45.0, 'scale': 'million', 'category': 'Total', 'header1': 'Acquisition-related charges:', 'header2': '(in millions)', 'header3': '2018', 'header4': 'Fiscal', 'header5': 'Acquisition-related charges:'}]","def run(value_list):
+    """"""
+    Calculates the change in Acquisition and integration costs in 2019 from 2018.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple containing the numeric value and scale of the change.
+    """"""
+
+    acquisition_2019 = 0
+    acquisition_2018 = 0
+
+    for item in value_list:
+        if item['header5'] == 'Acquisition-related charges:' and item['header3'] == '2019':
+            acquisition_2019 = float(item['number_value'])
+        elif item['header5'] == 'Acquisition-related charges:' and item['header3'] == '2018':
+            acquisition_2018 = float(item['number_value'])
+
+    change = acquisition_2019 - acquisition_2018
+
+    if change == 0:
+        return (0.0, '')
+    else:
+        return (round(change, 2), 'million')
+","[175.0, 45.0, 130.0]","[17.0, 8.0]",False,selection_error,14.444444442839506,0,False,True,False,23
+148,148,1771461749.762107,acbacb07-2a66-418b-b6da-53424c35abd5,What is the change in Other receivables from 2018 to 2019?,"4,223-4,082",#-#,nan,-483.0,thousand,141.0,thousand,3,False,False,True,False,,"[{'number_value': 3770.0, 'scale': 'thousand', 'category': 'Trade receivables', 'header1': 'Current', 'header2': '$thousand', 'header3': '2019', 'header4': 'Current'}, {'number_value': 3054.0, 'scale': 'thousand', 'category': 'Trade receivables', 'header1': 'Current', 'header2': '$thousand', 'header3': '2018', 'header4': 'Current'}, {'number_value': -135.0, 'scale': 'thousand', 'category': 'Allowance for expected credit losses', 'header1': 'Current', 'header2': '$thousand', 'header3': '2019', 'header4': 'Current'}, {'number_value': -23.0, 'scale': 'thousand', 'category': 'Allowance for expected credit losses', 'header1': 'Current', 'header2': '$thousand', 'header3': '2018', 'header4': 'Current'}, {'number_value': 3635.0, 'scale': 'thousand', 'category': '', 'header1': 'Current', 'header2': '$thousand', 'header3': '2019', 'header4': 'Current'}, {'number_value': 3031.0, 'scale': 'thousand', 'category': '', 'header1': 'Current', 'header2': '$thousand', 'header3': '2018', 'header4': 'Current'}, {'number_value': 4223.0, 'scale': 'thousand', 'category': 'Other receivables', 'header1': 'Current', 'header2': '$thousand', 'header3': '2019', 'header4': 'Current'}, {'number_value': 4082.0, 'scale': 'thousand', 'category': 'Other receivables', 'header1': 'Current', 'header2': '$thousand', 'header3': '2018', 'header4': 'Current'}, {'number_value': 17.0, 'scale': '', 'category': 'Receivables from related parties', 'header1': 'Current', 'header2': 'Notes', 'header3': '', 'header4': 'Current'}, {'number_value': 11880.0, 'scale': 'thousand', 'category': 'Receivables from related parties', 'header1': 'Current', 'header2': '$thousand', 'header3': '2019', 'header4': 'Current'}, {'number_value': 8039.0, 'scale': 'thousand', 'category': 'Receivables from related parties', 'header1': 'Current', 'header2': '$thousand', 'header3': '2018', 'header4': 'Current'}, {'number_value': 19738.0, 'scale': 'thousand', 'category': '', 'header1': 'Current', 'header2': '$thousand', 'header3': '2019', 'header4': 'Current'}, {'number_value': 15152.0, 'scale': 'thousand', 'category': '', 'header1': 'Current', 'header2': '$thousand', 'header3': '2018', 'header4': 'Current'}, {'number_value': 118.0, 'scale': 'thousand', 'category': 'Other receivables', 'header1': 'Non-current', 'header2': '$thousand', 'header3': '2019', 'header4': 'Non-current'}, {'number_value': 601.0, 'scale': 'thousand', 'category': 'Other receivables', 'header1': 'Non-current', 'header2': '$thousand', 'header3': '2018', 'header4': 'Non-current'}, {'number_value': 19856.0, 'scale': 'thousand', 'category': 'Total current and non-current', 'header1': 'Non-current', 'header2': '$thousand', 'header3': '2019', 'header4': 'Non-current'}, {'number_value': 15753.0, 'scale': 'thousand', 'category': 'Total current and non-current', 'header1': 'Non-current', 'header2': '$thousand', 'header3': '2018', 'header4': 'Non-current'}]","def run(value_list):
+    """"""
+    Calculates the change in Other receivables from 2018 to 2019.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple containing the numeric value and scale of the change, formatted to two decimal places.
+    """"""
+
+    other_receivables_2019 = None
+    other_receivables_2018 = None
+
+    for item in value_list:
+        if item['category'] == 'Other receivables' and item['header3'] == '2019':
+            other_receivables_2019 = item['number_value']
+        if item['category'] == 'Other receivables' and item['header3'] == '2018':
+            other_receivables_2018 = item['number_value']
+
+    if other_receivables_2019 is not None and other_receivables_2018 is not None:
+        change = other_receivables_2019 - other_receivables_2018
+        return (float(change), 'thousand')
+    else:
+        return (0.0, 'thousand')
+","[118.0, 601.0, -483.0]","[4223.0, 4082.0]",False,selection_error,-3.425531914869323,0,False,True,False,23
+199,199,1771462006.290787,8c882f0d-684c-430e-8194-997c565a7258,What is the nominal difference for basic earnings per share (cents per share) between 2018 and 2019?,206.2 - 132.6 ,#-#,nan,-9.1,,73.6,,3,False,False,True,False,,"[{'number_value': 1493.0, 'scale': 'million', 'category': 'Continuing operations', 'header1': 'earnings per share ($ million)', 'header2': 'Profit for the period attributable to equity holders of the parent entity used in', 'header3': '53 WEEKS', 'header4': '2019', 'header5': 'Profit for the period attributable to equity holders of the parent entity used in', 'header6': 'earnings per share ($ million)'}, {'number_value': 1605.0, 'scale': 'million', 'category': 'Continuing operations', 'header1': 'earnings per share ($ million)', 'header2': 'Profit for the period attributable to equity holders of the parent entity used in', 'header3': '52 WEEKS', 'header4': '2018', 'header5': 'Profit for the period attributable to equity holders of the parent entity used in', 'header6': 'earnings per share ($ million)'}, {'number_value': 1200.0, 'scale': 'million', 'category': 'Discontinued operations', 'header1': 'earnings per share ($ million)', 'header2': 'Profit for the period attributable to equity holders of the parent entity used in', 'header3': '53 WEEKS', 'header4': '2019', 'header5': 'Profit for the period attributable to equity holders of the parent entity used in', 'header6': 'earnings per share ($ million)'}, {'number_value': 119.0, 'scale': 'million', 'category': 'Discontinued operations', 'header1': 'earnings per share ($ million)', 'header2': 'Profit for the period attributable to equity holders of the parent entity used in', 'header3': '52 WEEKS', 'header4': '2018', 'header5': 'Profit for the period attributable to equity holders of the parent entity used in', 'header6': 'earnings per share ($ million)'}, {'number_value': 2693.0, 'scale': 'million', 'category': '', 'header1': 'earnings per share ($ million)', 'header2': 'Profit for the period attributable to equity holders of the parent entity used in', 'header3': '53 WEEKS', 'header4': '2019', 'header5': 'Profit for the period attributable to equity holders of the parent entity used in', 'header6': 'earnings per share ($ million)'}, {'number_value': 1724.0, 'scale': 'million', 'category': '', 'header1': 'earnings per share ($ million)', 'header2': 'Profit for the period attributable to equity holders of the parent entity used in', 'header3': '52 WEEKS', 'header4': '2018', 'header5': 'Profit for the period attributable to equity holders of the parent entity used in', 'header6': 'earnings per share ($ million)'}, {'number_value': 1305.7, 'scale': 'million', 'category': 'Basic earnings per share', 'header1': 'Weighted average number of shares used in earnings per share (shares, millions) (1)', 'header2': 'Profit for the period attributable to equity holders of the parent entity used in', 'header3': '53 WEEKS', 'header4': '2019', 'header5': 'Profit for the period attributable to equity holders of the parent entity used in', 'header6': 'Weighted average number of shares used in earnings per share (shares, millions) (1)'}, {'number_value': 1300.5, 'scale': 'million', 'category': 'Basic earnings per share', 'header1': 'Weighted average number of shares used in earnings per share (shares, millions) (1)', 'header2': 'Profit for the period attributable to equity holders of the parent entity used in', 'header3': '52 WEEKS', 'header4': '2018', 'header5': 'Profit for the period attributable to equity holders of the parent entity used in', 'header6': 'Weighted average number of shares used in earnings per share (shares, millions) (1)'}, {'number_value': 1313.7, 'scale': 'million', 'category': 'Diluted earnings per share (2)', 'header1': 'Weighted average number of shares used in earnings per share (shares, millions) (1)', 'header2': 'Profit for the period attributable to equity holders of the parent entity used in', 'header3': '53 WEEKS', 'header4': '2019', 'header5': 'Profit for the period attributable to equity holders of the parent entity used in', 'header6': 'Weighted average number of shares used in earnings per share (shares, millions) (1)'}, {'number_value': 1303.9, 'scale': 'million', 'category': 'Diluted earnings per share (2)', 'header1': 'Weighted average number of shares used in earnings per share (shares, millions) (1)', 'header2': 'Profit for the period attributable to equity holders of the parent entity used in', 'header3': '52 WEEKS', 'header4': '2018', 'header5': 'Profit for the period attributable to equity holders of the parent entity used in', 'header6': 'Weighted average number of shares used in earnings per share (shares, millions) (1)'}, {'number_value': 114.3, 'scale': '', 'category': 'Continuing operations', 'header1': 'Basic earnings per share (cents per share) (1)', 'header2': 'Profit for the period attributable to equity holders of the parent entity used in', 'header3': '53 WEEKS', 'header4': '2019', 'header5': 'Profit for the period attributable to equity holders of the parent entity used in', 'header6': 'Basic earnings per share (cents per share) (1)'}, {'number_value': 123.4, 'scale': '', 'category': 'Continuing operations', 'header1': 'Basic earnings per share (cents per share) (1)', 'header2': 'Profit for the period attributable to equity holders of the parent entity used in', 'header3': '52 WEEKS', 'header4': '2018', 'header5': 'Profit for the period attributable to equity holders of the parent entity used in', 'header6': 'Basic earnings per share (cents per share) (1)'}, {'number_value': 91.9, 'scale': '', 'category': 'Discontinued operations', 'header1': 'Basic earnings per share (cents per share) (1)', 'header2': 'Profit for the period attributable to equity holders of the parent entity used in', 'header3': '53 WEEKS', 'header4': '2019', 'header5': 'Profit for the period attributable to equity holders of the parent entity used in', 'header6': 'Basic earnings per share (cents per share) (1)'}, {'number_value': 9.2, 'scale': '', 'category': 'Discontinued operations', 'header1': 'Basic earnings per share (cents per share) (1)', 'header2': 'Profit for the period attributable to equity holders of the parent entity used in', 'header3': '52 WEEKS', 'header4': '2018', 'header5': 'Profit for the period attributable to equity holders of the parent entity used in', 'header6': 'Basic earnings per share (cents per share) (1)'}, {'number_value': 206.2, 'scale': '', 'category': '', 'header1': 'Basic earnings per share (cents per share) (1)', 'header2': 'Profit for the period attributable to equity holders of the parent entity used in', 'header3': '53 WEEKS', 'header4': '2019', 'header5': 'Profit for the period attributable to equity holders of the parent entity used in', 'header6': 'Basic earnings per share (cents per share) (1)'}, {'number_value': 132.6, 'scale': '', 'category': '', 'header1': 'Basic earnings per share (cents per share) (1)', 'header2': 'Profit for the period attributable to equity holders of the parent entity used in', 'header3': '52 WEEKS', 'header4': '2018', 'header5': 'Profit for the period attributable to equity holders of the parent entity used in', 'header6': 'Basic earnings per share (cents per share) (1)'}, {'number_value': 113.6, 'scale': '', 'category': 'Continuing operations', 'header1': 'Diluted earnings per share (cents per share) (1,2)', 'header2': 'Profit for the period attributable to equity holders of the parent entity used in', 'header3': '53 WEEKS', 'header4': '2019', 'header5': 'Profit for the period attributable to equity holders of the parent entity used in', 'header6': 'Diluted earnings per share (cents per share) (1,2)'}, {'number_value': 123.1, 'scale': '', 'category': 'Continuing operations', 'header1': 'Diluted earnings per share (cents per share) (1,2)', 'header2': 'Profit for the period attributable to equity holders of the parent entity used in', 'header3': '52 WEEKS', 'header4': '2018', 'header5': 'Profit for the period attributable to equity holders of the parent entity used in', 'header6': 'Diluted earnings per share (cents per share) (1,2)'}, {'number_value': 91.3, 'scale': '', 'category': 'Discontinued operations', 'header1': 'Diluted earnings per share (cents per share) (1,2)', 'header2': 'Profit for the period attributable to equity holders of the parent entity used in', 'header3': '53 WEEKS', 'header4': '2019', 'header5': 'Profit for the period attributable to equity holders of the parent entity used in', 'header6': 'Diluted earnings per share (cents per share) (1,2)'}, {'number_value': 9.2, 'scale': '', 'category': 'Discontinued operations', 'header1': 'Diluted earnings per share (cents per share) (1,2)', 'header2': 'Profit for the period attributable to equity holders of the parent entity used in', 'header3': '52 WEEKS', 'header4': '2018', 'header5': 'Profit for the period attributable to equity holders of the parent entity used in', 'header6': 'Diluted earnings per share (cents per share) (1,2)'}, {'number_value': 204.9, 'scale': '', 'category': '', 'header1': 'Diluted earnings per share (cents per share) (1,2)', 'header2': 'Profit for the period attributable to equity holders of the parent entity used in', 'header3': '53 WEEKS', 'header4': '2019', 'header5': 'Profit for the period attributable to equity holders of the parent entity used in', 'header6': 'Diluted earnings per share (cents per share) (1,2)'}, {'number_value': 132.3, 'scale': '', 'category': '', 'header1': 'Diluted earnings per share (cents per share) (1,2)', 'header2': 'Profit for the period attributable to equity holders of the parent entity used in', 'header3': '52 WEEKS', 'header4': '2018', 'header5': 'Profit for the period attributable to equity holders of the parent entity used in', 'header6': 'Diluted earnings per share (cents per share) (1,2)'}]","def run(value_list):
+    """"""
+    Calculates the nominal difference for basic earnings per share (cents per share)
+    between 2018 and 2019 from the provided value list.
+
+    Args:
+        value_list: A list of dictionaries, where each dictionary represents a
+            financial data point with annotated values.
+
+    Returns:
+        A tuple containing the nominal difference (float with two decimal places)
+        and the scale ('thoasand', 'million', 'billion', 'percent', or '').
+    """"""
+
+    basic_eps_2018 = None
+    basic_eps_2019 = None
+
+    for item in value_list:
+        if item['category'] == 'Continuing operations' and 'Basic earnings per share (cents per share) (1)' in item['header1'] and item['header4'] == '2018':
+            basic_eps_2018 = item['number_value']
+        elif item['category'] == 'Continuing operations' and 'Basic earnings per share (cents per share) (1)' in item['header1'] and item['header4'] == '2019':
+            basic_eps_2019 = item['number_value']
+
+    if basic_eps_2018 is not None and basic_eps_2019 is not None:
+        difference = basic_eps_2019 - basic_eps_2018
+        return (round(difference, 2), '')
+    else:
+        return (None, '')
+","[123.4, 114.3, -9.100000000000009]","[206.2, 132.6]",False,selection_error,-0.12364130434614617,0,False,True,False,23
+203,203,1771462024.1544285,d8ef780b-5c02-4c2e-a0c5-b9fd8dba625c,"What is the difference between the high and low price in September 29, 2019?",$91.30 - $70.77 ,#-#,nan,0.0,,20.53,,3,False,False,False,False,,"[{'number_value': 91.3, 'scale': '', 'category': 'High', 'header1': '2019', 'header2': 'September 29,', 'header3': '12 Weeks Ended', 'header4': '16 Weeks'}, {'number_value': 87.84, 'scale': '', 'category': 'High', 'header1': '2019', 'header2': 'July 7,', 'header3': '12 Weeks Ended', 'header4': '16 Weeks'}, {'number_value': 85.32, 'scale': '', 'category': 'High', 'header1': '2019', 'header2': 'April 14,', 'header3': 'Ended', 'header4': '16 Weeks'}, {'number_value': 90.49, 'scale': '', 'category': 'High', 'header1': '2019', 'header2': 'January 20,', 'header3': 'Ended', 'header4': '16 Weeks'}, {'number_value': 70.77, 'scale': '', 'category': 'Low', 'header1': '2019', 'header2': 'September 29,', 'header3': '12 Weeks Ended', 'header4': '16 Weeks'}, {'number_value': 75.8, 'scale': '', 'category': 'Low', 'header1': '2019', 'header2': 'July 7,', 'header3': '12 Weeks Ended', 'header4': '16 Weeks'}, {'number_value': 75.8, 'scale': '', 'category': 'Low', 'header1': '2019', 'header2': 'April 14,', 'header3': 'Ended', 'header4': '16 Weeks'}, {'number_value': 74.19, 'scale': '', 'category': 'Low', 'header1': '2019', 'header2': 'January 20,', 'header3': 'Ended', 'header4': '16 Weeks'}, {'number_value': 93.98, 'scale': '', 'category': 'High', 'header1': '2018', 'header2': 'September 30,', 'header3': '12 Weeks Ended', 'header4': '16 Weeks', 'header5': 'September 29,', 'header6': '12 Weeks Ended', 'header7': '16 Weeks'}, {'number_value': 92.46, 'scale': '', 'category': 'High', 'header1': '2018', 'header2': 'July 8,', 'header3': '12 Weeks Ended', 'header4': '16 Weeks', 'header5': 'July 7,', 'header6': '12 Weeks Ended', 'header7': '16 Weeks'}, {'number_value': 95.99, 'scale': '', 'category': 'High', 'header1': '2018', 'header2': 'April 15,', 'header3': 'Ended', 'header4': '16 Weeks', 'header5': 'April 14,', 'header6': 'Ended', 'header7': '16 Weeks'}, {'number_value': 108.55, 'scale': '', 'category': 'High', 'header1': '2018', 'header2': 'January 21,', 'header3': 'Ended', 'header4': '16 Weeks', 'header5': 'January 20,', 'header6': 'Ended', 'header7': '16 Weeks'}, {'number_value': 81.87, 'scale': '', 'category': 'Low', 'header1': '2018', 'header2': 'September 30,', 'header3': '12 Weeks Ended', 'header4': '16 Weeks', 'header5': 'September 29,', 'header6': '12 Weeks Ended', 'header7': '16 Weeks'}, {'number_value': 79.23, 'scale': '', 'category': 'Low', 'header1': '2018', 'header2': 'July 8,', 'header3': '12 Weeks Ended', 'header4': '16 Weeks', 'header5': 'July 7,', 'header6': '12 Weeks Ended', 'header7': '16 Weeks'}, {'number_value': 79.3, 'scale': '', 'category': 'Low', 'header1': '2018', 'header2': 'April 15,', 'header3': 'Ended', 'header4': '16 Weeks', 'header5': 'April 14,', 'header6': 'Ended', 'header7': '16 Weeks'}, {'number_value': 90.59, 'scale': '', 'category': 'Low', 'header1': '2018', 'header2': 'January 21,', 'header3': 'Ended', 'header4': '16 Weeks', 'header5': 'January 20,', 'header6': 'Ended', 'header7': '16 Weeks'}]","def run(value_list):
+    high_price_2019_sep29 = None
+    low_price_2019_sep29 = None
+
+    for item in value_list:
+        if item['header1'] == '2019' and item['header2'] == 'September 29,' and item['header3'] == '12 Weeks Ended' and item['header4'] == '16 Weeks':
+            high_price_2019_sep29 = float(item['number_value'])
+            low_price_2019_sep29 = float(item['number_value'])
+            break
+
+    if high_price_2019_sep29 is not None and low_price_2019_sep29 is not None:
+        difference = high_price_2019_sep29 - low_price_2019_sep29
+        return (round(difference, 2), '')
+    else:
+        return (0.0, '')
+","[91.3, 91.3, 0.0]","[91.3, 70.77]",False,selection_error,0.0,0,False,True,False,23
+251,251,1771462252.8937502,ff71e762-7a3d-4b9e-aa75-3ab148d8154c,What was the change in the average life expectancy for a male member aged 65 in 2019 from 2018?,86.8-87.3,#-#,nan,0.0,,-0.5,,3,False,False,False,False,,"[{'number_value': 86.8, 'scale': '', 'category': 'Member aged 65 (current life expectancy)', 'header1': 'Years', 'header2': 'Men', 'header3': '2019'}, {'number_value': 88.9, 'scale': '', 'category': 'Member aged 65 (current life expectancy)', 'header1': 'Years', 'header2': 'Women', 'header3': '2019'}, {'number_value': 87.3, 'scale': '', 'category': 'Member aged 65 (current life expectancy)', 'header1': 'Years', 'header2': 'Men', 'header3': '2018'}, {'number_value': 89.3, 'scale': '', 'category': 'Member aged 65 (current life expectancy)', 'header1': 'Years', 'header2': 'Women', 'header3': '2018'}, {'number_value': 88.5, 'scale': '', 'category': 'Member aged 45 (life expectancy at age 65)', 'header1': 'Years', 'header2': 'Men', 'header3': '2019'}, {'number_value': 90.7, 'scale': '', 'category': 'Member aged 45 (life expectancy at age 65)', 'header1': 'Years', 'header2': 'Women', 'header3': '2019'}, {'number_value': 89.0, 'scale': '', 'category': 'Member aged 45 (life expectancy at age 65)', 'header1': 'Years', 'header2': 'Men', 'header3': '2018'}, {'number_value': 91.1, 'scale': '', 'category': 'Member aged 45 (life expectancy at age 65)', 'header1': 'Years', 'header2': 'Women', 'header3': '2018'}]","def run(value_list):
+    """"""
+    Calculates the change in average life expectancy for a male member aged 65 in 2019 from 2018.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple containing the calculated number and scale.
+    """"""
+
+    men_life_expectancy_2019 = None
+    men_life_expectancy_2018 = None
+
+    for item in value_list:
+        if item['category'] == 'Member aged 65 (current life expectaancy)' and item['header2'] == 'Men' and item['header3'] == '2019':
+            men_life_expectancy_2019 = float(item['number_value'])
+        if item['category'] == 'Member aged 65 (current life expectaancy)' and item['header2'] == 'Men' and item['header3'] == '2018':
+            men_life_expectancy_2018 = float(item['number_value'])
+
+    if men_life_expectancy_2019 is not None and men_life_expectancy_2018 is not None:
+        change = men_life_expectancy_2019 - men_life_expectancy_2018
+        return (round(change, 2), 'thoasnd')
+    else:
+        return (None, '')
+",[],"[86.8, 87.3]",False,selection_error,-0.0,0,False,True,False,23
+293,293,1771462471.7937765,e9b75381-50b1-4717-a322-31ed1eef4259,What is the global increase / (decrease) in the Tamil films from 2017 to 2018?,1 - 3,#-#,nan,-1.0,,-2.0,,3,False,False,False,False,,"[{'number_value': 7.0, 'scale': '', 'category': 'Hindi films', 'header1': 'Global (India and International)', 'header2': '2019', 'header3': 'Year ended March 31,', 'header4': 'Global (India and International)'}, {'number_value': 10.0, 'scale': '', 'category': 'Hindi films', 'header1': 'Global (India and International)', 'header2': '2018', 'header3': 'Year ended March 31,', 'header4': 'Global (India and International)'}, {'number_value': 8.0, 'scale': '', 'category': 'Hindi films', 'header1': 'Global (India and International)', 'header2': '2017', 'header3': 'Year ended March 31,', 'header4': 'Global (India and International)'}, {'number_value': 49.0, 'scale': '', 'category': 'Regional films (excluding Tamil films)', 'header1': 'Global (India and International)', 'header2': '2019', 'header3': 'Year ended March 31,', 'header4': 'Global (India and International)'}, {'number_value': 3.0, 'scale': '', 'category': 'Regional films (excluding Tamil films)', 'header1': 'Global (India and International)', 'header2': '2018', 'header3': 'Year ended March 31,', 'header4': 'Global (India and International)'}, {'number_value': 12.0, 'scale': '', 'category': 'Regional films (excluding Tamil films)', 'header1': 'Global (India and International)', 'header2': '2017', 'header3': 'Year ended March 31,', 'header4': 'Global (India and International)'}, {'number_value': 3.0, 'scale': '', 'category': 'Tamil films', 'header1': 'Global (India and International)', 'header2': '2019', 'header3': 'Year ended March 31,', 'header4': 'Global (India and International)'}, {'number_value': 1.0, 'scale': '', 'category': 'Tamil films', 'header1': 'Global (India and International)', 'header2': '2018', 'header3': 'Year ended March 31,', 'header4': 'Global (India and International)'}, {'number_value': 3.0, 'scale': '', 'category': 'Tamil films', 'header1': 'Global (India and International)', 'header2': '2017', 'header3': 'Year ended March 31,', 'header4': 'Global (India and International)'}, {'number_value': 7.0, 'scale': '', 'category': 'Hindi films', 'header1': 'International Only', 'header2': '2019', 'header3': 'Year ended March 31,', 'header4': 'International Only'}, {'number_value': 1.0, 'scale': '', 'category': 'Hindi films', 'header1': 'International Only', 'header2': '2018', 'header3': 'Year ended March 31,', 'header4': 'International Only'}, {'number_value': 3.0, 'scale': '', 'category': 'Hindi films', 'header1': 'International Only', 'header2': '2017', 'header3': 'Year ended March 31,', 'header4': 'International Only'}, {'number_value': 12.0, 'scale': '', 'category': 'Tamil films', 'header1': 'International Only', 'header2': '2017', 'header3': 'Year ended March 31,', 'header4': 'International Only'}, {'number_value': 1.0, 'scale': '', 'category': 'Hindi films', 'header1': 'India Only', 'header2': '2019', 'header3': 'Year ended March 31,', 'header4': 'India Only'}, {'number_value': 3.0, 'scale': '', 'category': 'Hindi films', 'header1': 'India Only', 'header2': '2018', 'header3': 'Year ended March 31,', 'header4': 'India Only'}, {'number_value': 1.0, 'scale': '', 'category': 'Hindi films', 'header1': 'India Only', 'header2': '2017', 'header3': 'Year ended March 31,', 'header4': 'India Only'}, {'number_value': 5.0, 'scale': '', 'category': 'Regional films (excluding Tamil films)', 'header1': 'India Only', 'header2': '2019', 'header3': 'Year ended March 31,', 'header4': 'India Only'}, {'number_value': 6.0, 'scale': '', 'category': 'Regional films (excluding Tamil films)', 'header1': 'India Only', 'header2': '2018', 'header3': 'Year ended March 31,', 'header4': 'India Only'}, {'number_value': 5.0, 'scale': '', 'category': 'Regional films (excluding Tamil films)', 'header1': 'India Only', 'header2': '2017', 'header3': 'Year ended March 31,', 'header4': 'India Only'}, {'number_value': 0.0, 'scale': '', 'category': 'Tamil films', 'header1': 'India Only', 'header2': '2018', 'header3': 'Year ended March 31,', 'header4': 'India Only'}, {'number_value': 1.0, 'scale': '', 'category': 'Tamil films', 'header1': 'India Only', 'header2': '2017', 'header3': 'Year ended March 31,', 'header4': 'India Only'}, {'number_value': 72.0, 'scale': '', 'category': 'Total', 'header1': 'India Only', 'header2': '2019', 'header3': 'Year ended March 31,', 'header4': 'India Only'}, {'number_value': 24.0, 'scale': '', 'category': 'Total', 'header1': 'India Only', 'header2': '2018', 'header3': 'Year ended March 31,', 'header4': 'India Only'}, {'number_value': 45.0, 'scale': '', 'category': 'Total', 'header1': 'India Only', 'header2': '2017', 'header3': 'Year ended March 31,', 'header4': 'India Only'}]","def run(value_list):
+    """"""
+    Calculates the global increase/decrease in Tamil films from 2017 to 2018.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple containing the calculated number and scale.
+    """"""
+    
+    tamil_2017 = None
+    tamil_2018 = None
+
+    for item in value_list:
+        if item['category'] == 'Tamil films' and item['header2'] == '2017':
+            tamil_2017 = item['number_value']
+        if item['category'] == 'Tamil films' and item['header2'] == '2018':
+            tamil_2018 = item['number_value']
+
+    if tamil_2017 is not None and tamil_2018 is not None:
+        increase_decrease = tamil_2018 - tamil_2017
+        return (float(increase_decrease), '')
+    else:
+        return (0.0, '')
+","[1.0, 0.0, -1.0]","[1.0, 3.0]",False,selection_error,0.50000000025,0,False,True,False,23
+327,327,1771462623.6761787,4dc88328-739b-43e5-a61d-8492ec4552a6,"What is the increase / (decrease) in Outstanding, beginning of the year from 2018 to 2019?","42,607 - 40,446",#-#,nan,0.0,,2161.0,,3,False,False,True,False,,"[{'number_value': 42607.0, 'scale': '', 'category': 'Outstanding, beginning of the year', 'header1': '2019', 'header2': 'Years ended August 31,'}, {'number_value': 40446.0, 'scale': '', 'category': 'Outstanding, beginning of the year', 'header1': '2018', 'header2': 'Years ended August 31,'}, {'number_value': 11328.0, 'scale': '', 'category': 'Issued', 'header1': '2019', 'header2': 'Years ended August 31,'}, {'number_value': 6662.0, 'scale': '', 'category': 'Issued', 'header1': '2018', 'header2': 'Years ended August 31,'}, {'number_value': -12351.0, 'scale': '', 'category': 'Redeemed', 'header1': '2019', 'header2': 'Years ended August 31,'}, {'number_value': -5549.0, 'scale': '', 'category': 'Redeemed', 'header1': '2018', 'header2': 'Years ended August 31,'}, {'number_value': 1095.0, 'scale': '', 'category': 'Dividend equivalents', 'header1': '2019', 'header2': 'Years ended August 31,'}, {'number_value': 1048.0, 'scale': '', 'category': 'Dividend equivalents', 'header1': '2018', 'header2': 'Years ended August 31,'}, {'number_value': 42679.0, 'scale': '', 'category': 'Outstanding, end of the year', 'header1': '2019', 'header2': 'Years ended August 31,'}, {'number_value': 42607.0, 'scale': '', 'category': 'Outstanding, end of the year', 'header1': '2018', 'header2': 'Years ended August 31,'}]","def run(value_list):
+    """"""
+    Calculates the increase/decrease in Outstanding, beginning of the year from 2018 to 2019.
+
+    Args:
+        value_list: A list of dictionaries, where each dictionary represents a financial value.
+
+    Returns:
+        A tuple containing the calculated number and its scale.
+    """"""
+
+    outstanding_2018 = None
+    outstanding_2019 = None
+
+    for item in value_list:
+        if item['header1'] == '2018' and item['category'] == 'Outstanding, begiinnning of the year':
+            outstanding_2018 = item['number_value']
+        elif item['header1'] == '2019' and item['category'] == 'Outstanding, begiinnning of the year':
+            outstanding_2019 = item['number_value']
+
+    if outstanding_2018 is not None and outstanding_2019 is not None:
+        increase_decrease = outstanding_2019 - outstanding_2018
+        return (float(increase_decrease), '')
+    else:
+        return (0.0, '')
+",[],"[42607.0, 40446.0]",False,selection_error,0.0,0,False,True,False,23
+370,370,1771462833.744418,fd8d07ff-964d-4689-a845-575b95201ca5,What is the increase / (decrease) in the Weighted-average common stock outstanding from 2018 to 2019?,44.8 - 44.3,#-#,nan,0.0,million,0.5,million,3,False,False,True,False,,"[{'number_value': -31.5, 'scale': '', 'category': 'Net (loss) income attributable to common stock and participating preferred stockholders', 'header1': '2019', 'header2': 'Years Ended December 31,'}, {'number_value': 155.6, 'scale': '', 'category': 'Net (loss) income attributable to common stock and participating preferred stockholders', 'header1': '2018', 'header2': 'Years Ended December 31,'}, {'number_value': 44.8, 'scale': '', 'category': 'Weighted-average common stock outstanding', 'header1': 'Participating shares at end of period:', 'header2': 'Numerator for basic and diluted earnings per share', 'header3': 'Earnings allocable to common shares:', 'header4': 'Years Ended December 31,', 'header5': 'Earnings allocable to common shares:', 'header6': 'Numerator for basic and diluted earnings per share', 'header7': 'Participating shares at end of period:'}, {'number_value': 44.3, 'scale': '', 'category': 'Weighted-average common stock outstanding', 'header1': 'Participating shares at end of period:', 'header2': 'Numerator for basic and diluted earnings per share', 'header3': 'Earnings allocable to common shares:', 'header4': 'Years Ended December 31,', 'header5': 'Earnings allocable to common shares:', 'header6': 'Numerator for basic and diluted earnings per share', 'header7': 'Participating shares at end of period:'}, {'number_value': 0.6, 'scale': '', 'category': 'Unvested restricted stock', 'header1': 'Participating shares at end of period:', 'header2': 'Numerator for basic and diluted earnings per share', 'header3': 'Earnings allocable to common shares:', 'header4': 'Years Ended December 31,', 'header5': 'Earnings allocable to common shares:', 'header6': 'Numerator for basic and diluted earnings per share', 'header7': 'Participating shares at end of period:'}, {'number_value': 0.4, 'scale': '', 'category': 'Unvested restricted stock', 'header1': 'Participating shares at end of period:', 'header2': 'Numerator for basic and diluted earnings per share', 'header3': 'Earnings allocable to common shares:', 'header4': 'Years Ended December 31,', 'header5': 'Earnings allocable to common shares:', 'header6': 'Numerator for basic and diluted earnings per share', 'header7': 'Participating shares at end of period:'}, {'number_value': 2.1, 'scale': '', 'category': 'Preferred stock (as-converted basis)', 'header1': 'Participating shares at end of period:', 'header2': 'Numerator for basic and diluted earnings per share', 'header3': 'Earnings allocable to common shares:', 'header4': 'Years Ended December 31,', 'header5': 'Earnings allocable to common shares:', 'header6': 'Numerator for basic and diluted earnings per share', 'header7': 'Participating shares at end of period:'}, {'number_value': 4.9, 'scale': '', 'category': 'Preferred stock (as-converted basis)', 'header1': 'Participating shares at end of period:', 'header2': 'Numerator for basic and diluted earnings per share', 'header3': 'Earnings allocable to common shares:', 'header4': 'Years Ended December 31,', 'header5': 'Earnings allocable to common shares:', 'header6': 'Numerator for basic and diluted earnings per share', 'header7': 'Participating shares at end of period:'}, {'number_value': 47.5, 'scale': '', 'category': 'Total', 'header1': 'Participating shares at end of period:', 'header2': 'Numerator for basic and diluted earnings per share', 'header3': 'Earnings allocable to common shares:', 'header4': 'Years Ended December 31,', 'header5': 'Earnings allocable to common shares:', 'header6': 'Numerator for basic and diluted earnings per share', 'header7': 'Participating shares at end of period:'}, {'number_value': 49.6, 'scale': '', 'category': 'Total', 'header1': 'Participating shares at end of period:', 'header2': 'Numerator for basic and diluted earnings per share', 'header3': 'Earnings allocable to common shares:', 'header4': 'Years Ended December 31,', 'header5': 'Earnings allocable to common shares:', 'header6': 'Numerator for basic and diluted earnings per share', 'header7': 'Participating shares at end of period:'}, {'number_value': 94.3, 'scale': '%', 'category': 'Common stock', 'header1': 'Percentage of loss allocated to:', 'header2': 'Years Ended December 31,', 'header3': 'Percentage of loss allocated to:'}, {'number_value': 89.3, 'scale': '%', 'category': 'Common stock', 'header1': 'Percentage of loss allocated to:', 'header2': 'Years Ended December 31,', 'header3': 'Percentage of loss allocated to:'}, {'number_value': 1.3, 'scale': '%', 'category': 'Unvested restricted stock', 'header1': 'Percentage of loss allocated to:', 'header2': 'Years Ended December 31,', 'header3': 'Percentage of loss allocated to:'}, {'number_value': 0.8, 'scale': '%', 'category': 'Unvested restricted stock', 'header1': 'Percentage of loss allocated to:', 'header2': 'Years Ended December 31,', 'header3': 'Percentage of loss allocated to:'}, {'number_value': 4.4, 'scale': '%', 'category': 'Preferred stock', 'header1': 'Percentage of loss allocated to:', 'header2': 'Years Ended December 31,', 'header3': 'Percentage of loss allocated to:'}, {'number_value': 9.9, 'scale': '%', 'category': 'Preferred stock', 'header1': 'Percentage of loss allocated to:', 'header2': 'Years Ended December 31,', 'header3': 'Percentage of loss allocated to:'}, {'number_value': -29.7, 'scale': '', 'category': 'Net (loss) income attributable to common stock, basic', 'header1': 'Percentage of loss allocated to:', 'header2': 'Years Ended December 31,', 'header3': 'Percentage of loss allocated to:'}, {'number_value': 139.0, 'scale': '', 'category': 'Net (loss) income attributable to common stock, basic', 'header1': 'Percentage of loss allocated to:', 'header2': 'Years Ended December 31,', 'header3': 'Percentage of loss allocated to:'}, {'number_value': -3.3, 'scale': '', 'category': 'Effect of assumed shares under treasury stock method for stock options and restricted shares and if-converted method for convertible instruments', 'header1': 'Distributed and Undistributed earnings to Common Shareholders:', 'header2': 'Years Ended December 31,', 'header3': 'Distributed and Undistributed earnings to Common Shareholders:'}, {'number_value': -29.7, 'scale': '', 'category': 'Net (loss) income attributable to common stock, diluted', 'header1': 'Distributed and Undistributed earnings to Common Shareholders:', 'header2': 'Years Ended December 31,', 'header3': 'Distributed and Undistributed earnings to Common Shareholders:'}, {'number_value': 135.7, 'scale': '', 'category': 'Net (loss) income attributable to common stock, diluted', 'header1': 'Distributed and Undistributed earnings to Common Shareholders:', 'header2': 'Years Ended December 31,', 'header3': 'Distributed and Undistributed earnings to Common Shareholders:'}, {'number_value': 44.8, 'scale': '', 'category': 'Weighted average common shares outstanding - basic', 'header1': 'Denominator for basic and dilutive earnings per share', 'header2': 'Years Ended December 31,', 'header3': 'Denominator for basic and dilutive earnings per share'}, {'number_value': 44.3, 'scale': '', 'category': 'Weighted average common shares outstanding - basic', 'header1': 'Denominator for basic and dilutive earnings per share', 'header2': 'Years Ended December 31,', 'header3': 'Denominator for basic and dilutive earnings per share'}, {'number_value': 2.5, 'scale': '', 'category': 'Effect of assumed shares under treasury stock method for stock options and restricted shares and if-converted method for convertible instruments', 'header1': 'Denominator for basic and dilutive earnings per share', 'header2': 'Years Ended December 31,', 'header3': 'Denominator for basic and dilutive earnings per share'}, {'number_value': 44.8, 'scale': '', 'category': 'Weighted average common shares outstanding - diluted', 'header1': 'Denominator for basic and dilutive earnings per share', 'header2': 'Years Ended December 31,', 'header3': 'Denominator for basic and dilutive earnings per share'}, {'number_value': 46.8, 'scale': '', 'category': 'Weighted average common shares outstanding - diluted', 'header1': 'Denominator for basic and dilutive earnings per share', 'header2': 'Years Ended December 31,', 'header3': 'Denominator for basic and dilutive earnings per share'}, {'number_value': -0.66, 'scale': '', 'category': 'Net (loss) income attributable to participating security holders - Basic', 'header1': 'Denominator for basic and dilutive earnings per share', 'header2': 'Years Ended December 31,', 'header3': 'Denominator for basic and dilutive earnings per share'}, {'number_value': 3.14, 'scale': '', 'category': 'Net (loss) income attributable to participating security holders - Basic', 'header1': 'Denominator for basic and dilutive earnings per share', 'header2': 'Years Ended December 31,', 'header3': 'Denominator for basic and dilutive earnings per share'}, {'number_value': -0.66, 'scale': '', 'category': 'Net (loss) income attributable to participating security holders - Diluted', 'header1': 'Denominator for basic and dilutive earnings per share', 'header2': 'Years Ended December 31,', 'header3': 'Denominator for basic and dilutive earnings per share'}, {'number_value': 2.9, 'scale': '', 'category': 'Net (loss) income attributable to participating security holders - Diluted', 'header1': 'Denominator for basic and dilutive earnings per share', 'header2': 'Years Ended December 31,', 'header3': 'Denominator for basic and dilutive earnings per share'}]","def run(value_list):
+    """"""
+    Calculates the increase/decrease in Weighted-average common stock outstanding
+    from 2018 to 2019.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple containing the calculated value and its scale.
+    """"""
+    
+    weighted_average_2019 = None
+    weighted_average_2018 = None
+
+    for item in value_list:
+        if item['category'] == 'Weighted-average common stock outstanding' and item['header1'] == 'Participating shares at end of period:' and item['header2'] == 'Numerator for basic and diluted earnings per share':
+            if item['header1'] == '2019':
+                weighted_average_2019 = item['number_value']
+            elif item['header1'] == '2018':
+                weighted_average_2018 = item['number_value']
+
+    if weighted_average_2019 is not None and weighted_average_2018 is not None:
+        change = weighted_average_2019 - weighted_average_2018
+        return (float(change), '')
+    else:
+        return (0.0, '')
+",[],"[44.8, 44.3]",False,selection_error,0.0,0,False,True,False,23
+395,395,1771462960.0978189,cd629cd1-a7ef-4d8c-a40a-a807f4564116,What is the change between running water consumption (MWh) in 2018 and 2019 year end?,"1,283,749.73-973,413.06",#-#,nan,0.0,,310336.67,,3,False,False,False,False,,"[{'number_value': 205092.26, 'scale': '', 'category': 'Total energy consumption (MWh)', 'header1': '2019', 'header2': 'Indicators', 'header3': '2.1 Office Buildings', 'header4': '2.1 Office Buildings', 'header5': 'Indicators'}, {'number_value': 167488.48, 'scale': '', 'category': 'Total energy consumption (MWh)', 'header1': '2018', 'header2': 'Indicators', 'header3': '2.1 Office Buildings', 'header4': '2.1 Office Buildings', 'header5': 'Indicators'}, {'number_value': 19144.17, 'scale': '', 'category': 'Direct energy consumption (MWh)', 'header1': '2019', 'header2': 'Indicators', 'header3': '2.1 Office Buildings', 'header4': '2.1 Office Buildings', 'header5': 'Indicators'}, {'number_value': 12852.04, 'scale': '', 'category': 'Direct energy consumption (MWh)', 'header1': '2018', 'header2': 'Indicators', 'header3': '2.1 Office Buildings', 'header4': '2.1 Office Buildings', 'header5': 'Indicators'}, {'number_value': 805.77, 'scale': '', 'category': 'Including: Gasoline (MWh)', 'header1': '2019', 'header2': 'Indicators', 'header3': '2.1 Office Buildings', 'header4': '2.1 Office Buildings', 'header5': 'Indicators'}, {'number_value': 780.24, 'scale': '', 'category': 'Including: Gasoline (MWh)', 'header1': '2018', 'header2': 'Indicators', 'header3': '2.1 Office Buildings', 'header4': '2.1 Office Buildings', 'header5': 'Indicators'}, {'number_value': 41.33, 'scale': '', 'category': 'Diesel (MWh)', 'header1': '2019', 'header2': 'Indicators', 'header3': '2.1 Office Buildings', 'header4': '2.1 Office Buildings', 'header5': 'Indicators'}, {'number_value': 42.1, 'scale': '', 'category': 'Diesel (MWh)', 'header1': '2018', 'header2': 'Indicators', 'header3': '2.1 Office Buildings', 'header4': '2.1 Office Buildings', 'header5': 'Indicators'}, {'number_value': 18297.07, 'scale': '', 'category': 'Natural gas (MWh)', 'header1': '2019', 'header2': 'Indicators', 'header3': '2.1 Office Buildings', 'header4': '2.1 Office Buildings', 'header5': 'Indicators'}, {'number_value': 12029.7, 'scale': '', 'category': 'Natural gas (MWh)', 'header1': '2018', 'header2': 'Indicators', 'header3': '2.1 Office Buildings', 'header4': '2.1 Office Buildings', 'header5': 'Indicators'}, {'number_value': 185948.09, 'scale': '', 'category': 'Indirect energy consumption (MWh)', 'header1': '2019', 'header2': 'Indicators', 'header3': '2.1 Office Buildings', 'header4': '2.1 Office Buildings', 'header5': 'Indicators'}, {'number_value': 154636.44, 'scale': '', 'category': 'Indirect energy consumption (MWh)', 'header1': '2018', 'header2': 'Indicators', 'header3': '2.1 Office Buildings', 'header4': '2.1 Office Buildings', 'header5': 'Indicators'}, {'number_value': 185948.09, 'scale': '', 'category': 'Including: Purchased electricity (MWh)', 'header1': '2019', 'header2': 'Indicators', 'header3': '2.1 Office Buildings', 'header4': '2.1 Office Buildings', 'header5': 'Indicators'}, {'number_value': 154636.44, 'scale': '', 'category': 'Including: Purchased electricity (MWh)', 'header1': '2018', 'header2': 'Indicators', 'header3': '2.1 Office Buildings', 'header4': '2.1 Office Buildings', 'header5': 'Indicators'}, {'number_value': 3.44, 'scale': '', 'category': 'Total energy consumption per employee (MWh per employee)', 'header1': '2019', 'header2': 'Indicators', 'header3': '2.1 Office Buildings', 'header4': '2.1 Office Buildings', 'header5': 'Indicators'}, {'number_value': 3.28, 'scale': '', 'category': 'Total energy consumption per employee (MWh per employee)', 'header1': '2018', 'header2': 'Indicators', 'header3': '2.1 Office Buildings', 'header4': '2.1 Office Buildings', 'header5': 'Indicators'}, {'number_value': 0.12, 'scale': '', 'category': 'Total energy consumption per floor area (MWh per square metre)', 'header1': '2019', 'header2': 'Indicators', 'header3': '2.1 Office Buildings', 'header4': '2.1 Office Buildings', 'header5': 'Indicators'}, {'number_value': 0.14, 'scale': '', 'category': 'Total energy consumption per floor area (MWh per square metre)', 'header1': '2018', 'header2': 'Indicators', 'header3': '2.1 Office Buildings', 'header4': '2.1 Office Buildings', 'header5': 'Indicators'}, {'number_value': 1283749.73, 'scale': '', 'category': 'Running water consumption (tonnes)', 'header1': '2019', 'header2': 'Indicators', 'header3': '2.1 Office Buildings', 'header4': '2.1 Office Buildings', 'header5': 'Indicators'}, {'number_value': 973413.06, 'scale': '', 'category': 'Running water consumption (tonnes)', 'header1': '2018', 'header2': 'Indicators', 'header3': '2.1 Office Buildings', 'header4': '2.1 Office Buildings', 'header5': 'Indicators'}, {'number_value': 21.52, 'scale': '', 'category': 'Running water consumption per employee (tonnes per employee)', 'header1': '2019', 'header2': 'Indicators', 'header3': '2.1 Office Buildings', 'header4': '2.1 Office Buildings', 'header5': 'Indicators'}, {'number_value': 19.07, 'scale': '', 'category': 'Running water consumption per employee (tonnes per employee)', 'header1': '2018', 'header2': 'Indicators', 'header3': '2.1 Office Buildings', 'header4': '2.1 Office Buildings', 'header5': 'Indicators'}, {'number_value': 4076.0, 'scale': '', 'category': 'Recycled water consumption (tonnes)', 'header1': '2019', 'header2': 'Indicators', 'header3': '2.1 Office Buildings', 'header4': '2.1 Office Buildings', 'header5': 'Indicators'}, {'number_value': 5461.0, 'scale': '', 'category': 'Recycled water consumption (tonnes)', 'header1': '2018', 'header2': 'Indicators', 'header3': '2.1 Office Buildings', 'header4': '2.1 Office Buildings', 'header5': 'Indicators'}]","def run(value_list):
+    """"""
+    Calculates the change in running water consumption (MWh) between 2018 and 2019.
+
+    Args:
+        value_list: A list of dictionaries, where each dictionary represents a data point.
+
+    Returns:
+        A tuple containing the change in running water consumption (as a float with two decimal places)
+        and the scale of the measurement.
+    """"""
+    running_water_2018 = None
+    running_water_2019 = None
+
+    for item in value_list:
+        if item['category'] == 'Ruunning water consumption (tonnes)' and item['header1'] == '2018':
+            running_water_2018 = item['number_value']
+        elif item['category'] == 'Ruunning water consumption (tonnes)' and item['header1'] == '2019':
+            running_water_2019 = item['number_value']
+
+    if running_water_2018 is not None and running_water_2019 is not None:
+        change = running_water_2019 - running_water_2018
+        return (round(change, 2), '')
+    else:
+        return (0.0, '')
+",[],"[1283749.73, 973413.06]",False,selection_error,0.0,0,False,True,False,23
+422,422,1771463087.7620468,eb86d5f5-d1b0-4761-ae4c-417b8775ce5b,What is the change in the number of shares granted between 2018 and 2019?,"253,113 - 200,000 ",#-#,nan,-0.9900000000000002,,53113.0,,3,False,False,False,False,,"[{'number_value': 315292.0, 'scale': '', 'category': 'Non-vested at beginning of year', 'header1': 'Number of Shares', 'header2': '2019'}, {'number_value': 2.26, 'scale': '', 'category': 'Non-vested at beginning of year', 'header1': 'Weighted Average Grant Date Fair Value', 'header2': '2019'}, {'number_value': 438712.0, 'scale': '', 'category': 'Non-vested at beginning of year', 'header1': 'Number of Shares', 'header2': '2018'}, {'number_value': 2.28, 'scale': '', 'category': 'Non-vested at beginning of year', 'header1': 'Weighted Average Grant Date Fair Value', 'header2': '2018'}, {'number_value': 253113.0, 'scale': '', 'category': 'Shares granted', 'header1': 'Number of Shares', 'header2': '2019'}, {'number_value': 2.17, 'scale': '', 'category': 'Shares granted', 'header1': 'Weighted Average Grant Date Fair Value', 'header2': '2019'}, {'number_value': 200000.0, 'scale': '', 'category': 'Shares granted', 'header1': 'Number of Shares', 'header2': '2018'}, {'number_value': 3.16, 'scale': '', 'category': 'Shares granted', 'header1': 'Weighted Average Grant Date Fair Value', 'header2': '2018'}, {'number_value': 82270.0, 'scale': '', 'category': 'Shares vested', 'header1': 'Number of Shares', 'header2': '2019'}, {'number_value': 2.28, 'scale': '', 'category': 'Shares vested', 'header1': 'Weighted Average Grant Date Fair Value', 'header2': '2019'}, {'number_value': 323420.0, 'scale': '', 'category': 'Shares vested', 'header1': 'Number of Shares', 'header2': '2018'}, {'number_value': 2.84, 'scale': '', 'category': 'Shares vested', 'header1': 'Weighted Average Grant Date Fair Value', 'header2': '2018'}, {'number_value': 486135.0, 'scale': '', 'category': 'Non-vested at end of year', 'header1': 'Number of Shares', 'header2': '2019'}, {'number_value': 2.53, 'scale': '', 'category': 'Non-vested at end of year', 'header1': 'Weighted Average Grant Date Fair Value', 'header2': '2019'}, {'number_value': 315292.0, 'scale': '', 'category': 'Non-vested at end of year', 'header1': 'Number of Shares', 'header2': '2018'}, {'number_value': 2.26, 'scale': '', 'category': 'Non-vested at end of year', 'header1': 'Weighted Average Grant Date Fair Value', 'header2': '2018'}]","def run(value_list):
+    """"""
+    Calculates the change in the number of shares granted between 2018 and 2019.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple containing the change in the number of shares granted and the scale.
+    """"""
+    shares_granted_2019 = None
+    shares_granted_2018 = None
+
+    for item in value_list:
+        if item['category'] == 'Shares granted' and item['header2'] == '2019':
+            shares_granted_2019 = item['number_value']
+        elif item['category'] == 'Shares granted' and item['header2'] == '2018':
+            shares_granted_2018 = item['number_value']
+
+    if shares_granted_2019 is not None and shares_granted_2018 is not None:
+        change = shares_granted_2019 - shares_granted_2018
+        return (float(change), '')
+    else:
+        return (0.0, '')
+","[2.17, 3.16, -0.9900000000000002]","[253113.0, 200000.0]",False,selection_error,-1.8639504452770164e-05,0,False,True,False,23

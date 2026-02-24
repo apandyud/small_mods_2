@@ -1,0 +1,375 @@
+,Unnamed: 0,ts,qid,question,derivation,calc_pattern,code_calc_pattern,pred,pred_scale,answer,scale,value_match,selection_success,sign_error,is_parenth_in_table,has_code_abs,error_text,value_list,code,selected_values,needed_values,exact_match,error_code,ratio,x100_flag,scale_mismatch,value_mismatch,value_nan,cluster
+24,24,1771430748.5868971,65ec782c-691e-45df-b541-caecb85154ff,What was the change in Capital redemption reserve in 2019 from 2018?,0.7-0.5,#-#,nan,0.1999999999999999,,0.2,million,3,True,False,True,False,,"[{'number_value': 3.0, 'scale': '', 'category': 'Investments', 'header1': 'Fixed assets', 'header2': 'Note', 'header3': '', 'header4': 'Fixed assets'}, {'number_value': 1216.0, 'scale': 'million', 'category': 'Investments', 'header1': 'Fixed assets', 'header2': '£ million', 'header3': '2019', 'header4': 'Fixed assets'}, {'number_value': 1212.9, 'scale': 'million', 'category': 'Investments', 'header1': 'Fixed assets', 'header2': '£ million', 'header3': '2018', 'header4': 'Fixed assets'}, {'number_value': 1216.0, 'scale': 'million', 'category': '', 'header1': 'Fixed assets', 'header2': '£ million', 'header3': '2019', 'header4': 'Fixed assets'}, {'number_value': 1212.9, 'scale': 'million', 'category': '', 'header1': 'Fixed assets', 'header2': '£ million', 'header3': '2018', 'header4': 'Fixed assets'}, {'number_value': 4.0, 'scale': '', 'category': 'Debtors', 'header1': 'Current assets', 'header2': 'Note', 'header3': '', 'header4': 'Current assets'}, {'number_value': 415.9, 'scale': 'million', 'category': 'Debtors', 'header1': 'Current assets', 'header2': '£ million', 'header3': '2019', 'header4': 'Current assets'}, {'number_value': 440.7, 'scale': 'million', 'category': 'Debtors', 'header1': 'Current assets', 'header2': '£ million', 'header3': '2018', 'header4': 'Current assets'}, {'number_value': 5.0, 'scale': '', 'category': 'Cash and cash equivalents', 'header1': 'Current assets', 'header2': 'Note', 'header3': '', 'header4': 'Current assets'}, {'number_value': 0.2, 'scale': 'million', 'category': 'Cash and cash equivalents', 'header1': 'Current assets', 'header2': '£ million', 'header3': '2018', 'header4': 'Current assets'}, {'number_value': 415.9, 'scale': 'million', 'category': '', 'header1': 'Current assets', 'header2': '£ million', 'header3': '2019', 'header4': 'Current assets'}, {'number_value': 440.9, 'scale': 'million', 'category': '', 'header1': 'Current assets', 'header2': '£ million', 'header3': '2018', 'header4': 'Current assets'}, {'number_value': 6.0, 'scale': '', 'category': 'Creditors: amounts falling due within one year', 'header1': 'Current assets', 'header2': 'Note', 'header3': '', 'header4': 'Current assets'}, {'number_value': -411.4, 'scale': 'million', 'category': 'Creditors: amounts falling due within one year', 'header1': 'Current assets', 'header2': '£ million', 'header3': '2019', 'header4': 'Current assets'}, {'number_value': -288.4, 'scale': 'million', 'category': 'Creditors: amounts falling due within one year', 'header1': 'Current assets', 'header2': '£ million', 'header3': '2018', 'header4': 'Current assets'}, {'number_value': 4.5, 'scale': 'million', 'category': 'Net current assets', 'header1': 'Current assets', 'header2': '£ million', 'header3': '2019', 'header4': 'Current assets'}, {'number_value': 152.5, 'scale': 'million', 'category': 'Net current assets', 'header1': 'Current assets', 'header2': '£ million', 'header3': '2018', 'header4': 'Current assets'}, {'number_value': 1220.5, 'scale': 'million', 'category': 'Net assets', 'header1': 'Current assets', 'header2': '£ million', 'header3': '2019', 'header4': 'Current assets'}, {'number_value': 1365.4, 'scale': 'million', 'category': 'Net assets', 'header1': 'Current assets', 'header2': '£ million', 'header3': '2018', 'header4': 'Current assets'}, {'number_value': 9.0, 'scale': '', 'category': 'Called-up share capital', 'header1': 'Capital and reserves', 'header2': 'Note', 'header3': '', 'header4': 'Capital and reserves'}, {'number_value': 9.3, 'scale': 'million', 'category': 'Called-up share capital', 'header1': 'Capital and reserves', 'header2': '£ million', 'header3': '2019', 'header4': 'Capital and reserves'}, {'number_value': 9.5, 'scale': 'million', 'category': 'Called-up share capital', 'header1': 'Capital and reserves', 'header2': '£ million', 'header3': '2018', 'header4': 'Capital and reserves'}, {'number_value': 10.0, 'scale': '', 'category': 'Own shares held', 'header1': 'Capital and reserves', 'header2': 'Note', 'header3': '', 'header4': 'Capital and reserves'}, {'number_value': -16.5, 'scale': 'million', 'category': 'Own shares held', 'header1': 'Capital and reserves', 'header2': '£ million', 'header3': '2019', 'header4': 'Capital and reserves'}, {'number_value': -16.9, 'scale': 'million', 'category': 'Own shares held', 'header1': 'Capital and reserves', 'header2': '£ million', 'header3': '2018', 'header4': 'Capital and reserves'}, {'number_value': 0.7, 'scale': 'million', 'category': 'Capital redemption reserve', 'header1': 'Capital and reserves', 'header2': '£ million', 'header3': '2019', 'header4': 'Capital and reserves'}, {'number_value': 0.5, 'scale': 'million', 'category': 'Capital redemption reserve', 'header1': 'Capital and reserves', 'header2': '£ million', 'header3': '2018', 'header4': 'Capital and reserves'}, {'number_value': 1227.0, 'scale': 'million', 'category': 'Retained earnings', 'header1': 'Capital and reserves', 'header2': '£ million', 'header3': '2019', 'header4': 'Capital and reserves'}, {'number_value': 1372.3, 'scale': 'million', 'category': 'Retained earnings', 'header1': 'Capital and reserves', 'header2': '£ million', 'header3': '2018', 'header4': 'Capital and reserves'}, {'number_value': 1220.5, 'scale': 'million', 'category': 'Total equity', 'header1': 'Capital and reserves', 'header2': '£ million', 'header3': '2019', 'header4': 'Capital and reserves'}, {'number_value': 1365.4, 'scale': 'million', 'category': 'Total equity', 'header1': 'Capital and reserves', 'header2': '£ million', 'header3': '2018', 'header4': 'Capital and reserves'}]","def run(value_list):
+    """"""
+    Calculates the change in Capital redemption reserve in 2019 from 2018.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple containing the number and scale of the change, formatted to two decimal places.
+    """"""
+    reserve_2019 = None
+    reserve_2018 = None
+
+    for item in value_list:
+        if item['category'] == 'Capital redemption reserve' and item['header3'] == '2019':
+            reserve_2019 = item['number_value']
+        if item['category'] == 'Capital redemption reserve' and item['header3'] == '2018':
+            reserve_2018 = item['number_value']
+
+    if reserve_2019 is not None and reserve_2018 is not None:
+        change = reserve_2019 - reserve_2018
+        return (float(change), '')
+    else:
+        return (0.0, '')
+","[0.7, 0.5, 0.19999999999999996]","[0.7, 0.5]",False,scale_error,0.9999999949999995,0,True,True,False,43
+73,73,1771431194.343095,8d8c9fb6-6316-4fad-881e-7cdb3cfa965a,What is the increase/ (decrease) in Legal reserve within Appropriation of earnings from 2018 to 2019?,"963,947-707,299",#-#,nan,256648.0,,256648.0,thousand,0,True,False,True,False,,"[{'number_value': 707299.0, 'scale': 'thousand', 'category': 'Legal reserve', 'header1': '2018', 'header2': 'Appropriation of earnings (in thousand NT dollars) Appropriation of earnings (in thousand NT dollars)'}, {'number_value': 963947.0, 'scale': 'thousand', 'category': 'Legal reserve', 'header1': '2019', 'header2': 'Appropriation of earnings (in thousand NT dollars) Appropriation of earnings (in thousand NT dollars)'}, {'number_value': 14513940.0, 'scale': 'thousand', 'category': 'Special reserve', 'header1': '2018', 'header2': 'Appropriation of earnings (in thousand NT dollars) Appropriation of earnings (in thousand NT dollars)'}, {'number_value': -3491626.0, 'scale': 'thousand', 'category': 'Special reserve', 'header1': '2019', 'header2': 'Appropriation of earnings (in thousand NT dollars) Appropriation of earnings (in thousand NT dollars)'}, {'number_value': 6916105.0, 'scale': 'thousand', 'category': 'Cash dividends', 'header1': '2018', 'header2': 'Appropriation of earnings (in thousand NT dollars) Appropriation of earnings (in thousand NT dollars)'}, {'number_value': 9765155.0, 'scale': 'thousand', 'category': 'Cash dividends', 'header1': '2019', 'header2': 'Appropriation of earnings (in thousand NT dollars) Appropriation of earnings (in thousand NT dollars)'}, {'number_value': 0.58, 'scale': '', 'category': 'Cash dividends', 'header1': '2018', 'header2': 'Cash dividend per share (NT dollars)'}, {'number_value': 0.75, 'scale': '', 'category': 'Cash dividends', 'header1': '2019', 'header2': 'Cash dividend per share (NT dollars)'}]","def run(value_list):
+    """"""
+    Calculates the increase/decrease in Legal reserve within Appropriation of earnings
+    from 2018 to 2019.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple containing the calculated number and its scale.
+    """"""
+    legal_reserve_2018 = None
+    legal_reserve_2019 = None
+
+    for item in value_list:
+        if item['category'] == 'Legal reserve' and item['header1'] == '2018':
+            legal_reserve_2018 = item['number_value']
+        elif item['category'] == 'Legal reserve' and item['header1'] == '2019':
+            legal_reserve_2019 = item['number_value']
+
+    if legal_reserve_2018 is not None and legal_reserve_2019 is not None:
+        increase_decrease = legal_reserve_2019 - legal_reserve_2018
+        return (float(increase_decrease), 'thoousand')
+    else:
+        return (0.0, '')
+","[707299.0, 963947.0, 256648.0]","[963947.0, 707299.0]",False,scale_error,0.9999999999999961,0,True,False,False,43
+146,146,1771431807.9562914,162f80b9-b689-4405-b6b2-5e98d3882ce7,What is the change in Trade receivables from 2018 to 2019?,"3,770-3,054",#-#,nan,716.0,,716.0,thousand,0,True,False,True,False,,"[{'number_value': 3770.0, 'scale': 'thousand', 'category': 'Trade receivables', 'header1': 'Current', 'header2': '$thousand', 'header3': '2019', 'header4': 'Current'}, {'number_value': 3054.0, 'scale': 'thousand', 'category': 'Trade receivables', 'header1': 'Current', 'header2': '$thousand', 'header3': '2018', 'header4': 'Current'}, {'number_value': -135.0, 'scale': 'thousand', 'category': 'Allowance for expected credit losses', 'header1': 'Current', 'header2': '$thousand', 'header3': '2019', 'header4': 'Current'}, {'number_value': -23.0, 'scale': 'thousand', 'category': 'Allowance for expected credit losses', 'header1': 'Current', 'header2': '$thousand', 'header3': '2018', 'header4': 'Current'}, {'number_value': 3635.0, 'scale': 'thousand', 'category': '', 'header1': 'Current', 'header2': '$thousand', 'header3': '2019', 'header4': 'Current'}, {'number_value': 3031.0, 'scale': 'thousand', 'category': '', 'header1': 'Current', 'header2': '$thousand', 'header3': '2018', 'header4': 'Current'}, {'number_value': 4223.0, 'scale': 'thousand', 'category': 'Other receivables', 'header1': 'Current', 'header2': '$thousand', 'header3': '2019', 'header4': 'Current'}, {'number_value': 4082.0, 'scale': 'thousand', 'category': 'Other receivables', 'header1': 'Current', 'header2': '$thousand', 'header3': '2018', 'header4': 'Current'}, {'number_value': 17.0, 'scale': '', 'category': 'Receivables from related parties', 'header1': 'Current', 'header2': 'Notes', 'header3': '', 'header4': 'Current'}, {'number_value': 11880.0, 'scale': 'thousand', 'category': 'Receivables from related parties', 'header1': 'Current', 'header2': '$thousand', 'header3': '2019', 'header4': 'Current'}, {'number_value': 8039.0, 'scale': 'thousand', 'category': 'Receivables from related parties', 'header1': 'Current', 'header2': '$thousand', 'header3': '2018', 'header4': 'Current'}, {'number_value': 19738.0, 'scale': 'thousand', 'category': '', 'header1': 'Current', 'header2': '$thousand', 'header3': '2019', 'header4': 'Current'}, {'number_value': 15152.0, 'scale': 'thousand', 'category': '', 'header1': 'Current', 'header2': '$thousand', 'header3': '2018', 'header4': 'Current'}, {'number_value': 118.0, 'scale': 'thousand', 'category': 'Other receivables', 'header1': 'Non-current', 'header2': '$thousand', 'header3': '2019', 'header4': 'Non-current'}, {'number_value': 601.0, 'scale': 'thousand', 'category': 'Other receivables', 'header1': 'Non-current', 'header2': '$thousand', 'header3': '2018', 'header4': 'Non-current'}, {'number_value': 19856.0, 'scale': 'thousand', 'category': 'Total current and non-current', 'header1': 'Non-current', 'header2': '$thousand', 'header3': '2019', 'header4': 'Non-current'}, {'number_value': 15753.0, 'scale': 'thousand', 'category': 'Total current and non-current', 'header1': 'Non-current', 'header2': '$thousand', 'header3': '2018', 'header4': 'Non-current'}]","def run(value_list):
+    """"""
+    Calculates the change in Trade Receivables from 2018 to 2019.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple containing the numeric value and its scale, formatted to two decimal places.
+    """"""
+    trade_receivables_2019 = None
+    trade_receivables_2018 = None
+
+    for item in value_list:
+        if item['category'] == 'Trade receivables' and item['header3'] == '2019':
+            trade_receivables_2019 = item['number_value']
+        elif item['category'] == 'Trade receivables' and item['header3'] == '2018':
+            trade_receivables_2018 = item['number_value']
+
+    if trade_receivables_2019 is not None and trade_receivables_2018 is not None:
+        change = trade_receivables_2019 - trade_receivables_2018
+        return (float(change), 'thoousand')
+    else:
+        return (0.0, 'thoousand')
+","[3770.0, 3054.0, 716.0]","[3770.0, 3054.0]",False,scale_error,0.9999999999986033,0,True,False,False,43
+151,151,1771431829.2104058,7707ff1b-ca2c-4d72-aad1-81315a5f54ff,"What is the change in the value of Total inventories between October 31, 2019 and 2018?","289,928-240,056",#-#,nan,49872.0,,49872.0,thousand,0,True,False,False,False,,"[{'number_value': 179870.0, 'scale': 'thousand', 'category': 'Live poultry-broilers (net of reserve) and breeders ', 'header1': '(In thousands)', 'header2': '2019', 'header3': 'October 31,', 'header4': 'October 31,', 'header5': '(In thousands)'}, {'number_value': 150980.0, 'scale': 'thousand', 'category': 'Live poultry-broilers (net of reserve) and breeders ', 'header1': '(In thousands)', 'header2': '2018', 'header3': 'October 31,', 'header4': 'October 31,', 'header5': '(In thousands)'}, {'number_value': 47417.0, 'scale': 'thousand', 'category': 'Feed, eggs and other ', 'header1': '(In thousands)', 'header2': '2019', 'header3': 'October 31,', 'header4': 'October 31,', 'header5': '(In thousands)'}, {'number_value': 37965.0, 'scale': 'thousand', 'category': 'Feed, eggs and other ', 'header1': '(In thousands)', 'header2': '2018', 'header3': 'October 31,', 'header4': 'October 31,', 'header5': '(In thousands)'}, {'number_value': 35121.0, 'scale': 'thousand', 'category': 'Processed poultry', 'header1': '(In thousands)', 'header2': '2019', 'header3': 'October 31,', 'header4': 'October 31,', 'header5': '(In thousands)'}, {'number_value': 30973.0, 'scale': 'thousand', 'category': 'Processed poultry', 'header1': '(In thousands)', 'header2': '2018', 'header3': 'October 31,', 'header4': 'October 31,', 'header5': '(In thousands)'}, {'number_value': 20032.0, 'scale': 'thousand', 'category': 'Prepared chicken', 'header1': '(In thousands)', 'header2': '2019', 'header3': 'October 31,', 'header4': 'October 31,', 'header5': '(In thousands)'}, {'number_value': 13591.0, 'scale': 'thousand', 'category': 'Prepared chicken', 'header1': '(In thousands)', 'header2': '2018', 'header3': 'October 31,', 'header4': 'October 31,', 'header5': '(In thousands)'}, {'number_value': 7488.0, 'scale': 'thousand', 'category': 'Packaging materials', 'header1': '(In thousands)', 'header2': '2019', 'header3': 'October 31,', 'header4': 'October 31,', 'header5': '(In thousands)'}, {'number_value': 6547.0, 'scale': 'thousand', 'category': 'Packaging materials', 'header1': '(In thousands)', 'header2': '2018', 'header3': 'October 31,', 'header4': 'October 31,', 'header5': '(In thousands)'}, {'number_value': 289928.0, 'scale': 'thousand', 'category': 'Total inventories ', 'header1': '(In thousands)', 'header2': '2019', 'header3': 'October 31,', 'header4': 'October 31,', 'header5': '(In thousands)'}, {'number_value': 240056.0, 'scale': 'thousand', 'category': 'Total inventories ', 'header1': '(In thousands)', 'header2': '2018', 'header3': 'October 31,', 'header4': 'October 31,', 'header5': '(In thousands)'}]","def run(value_list):
+    """"""
+    Calculates the change in the value of Total inventories between October 31, 2019 and 2018.
+
+    Args:
+        value_list: A list of dictionaries, where each dictionary contains information about a value.
+
+    Returns:
+        A tuple containing the change in the value and the scale.
+    """"""
+
+    total_inventories_2019 = None
+    total_inventories_2018 = None
+
+    for item in value_list:
+        if item['category'] == 'Total inventories ' and item['header2'] == '2019':
+            total_inventories_2019 = item['number_value']
+        elif item['category'] == 'Total inventories ' and item['header2'] == '2018':
+            total_inventories_2018 = item['number_value']
+
+    if total_inventories_2019 is not None and total_inventories_2018 is not None:
+        change = total_inventories_2019 - total_inventories_2018
+        return (float(change), 'thoousand')
+    else:
+        return (0.0, '')
+","[289928.0, 240056.0, 49872.0]","[289928.0, 240056.0]",False,scale_error,0.99999999999998,0,True,False,False,43
+158,158,1771431862.1092892,2e569f93-d58b-44a7-a947-ea6784b0623d,"What is the increase/ (decrease) in Revenues from, 2019 to 2018?","601,256-510,762",#-#,nan,90494.0,,90494.0,thousand,0,True,False,True,False,,"[{'number_value': 601256.0, 'scale': 'thousand', 'category': 'Revenues', 'header1': '2019', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': '(in thousands of U.S. dollars, except calendar-ship-days)'}, {'number_value': 510762.0, 'scale': 'thousand', 'category': 'Revenues', 'header1': '2018', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': '(in thousands of U.S. dollars, except calendar-ship-days)'}, {'number_value': -21387.0, 'scale': 'thousand', 'category': 'Voyage expenses', 'header1': '2019', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': '(in thousands of U.S. dollars, except calendar-ship-days)'}, {'number_value': -28237.0, 'scale': 'thousand', 'category': 'Voyage expenses', 'header1': '2018', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': '(in thousands of U.S. dollars, except calendar-ship-days)'}, {'number_value': -111585.0, 'scale': 'thousand', 'category': 'Vessel operating expenses', 'header1': '2019', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': '(in thousands of U.S. dollars, except calendar-ship-days)'}, {'number_value': -117658.0, 'scale': 'thousand', 'category': 'Vessel operating expenses', 'header1': '2018', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': '(in thousands of U.S. dollars, except calendar-ship-days)'}, {'number_value': -19994.0, 'scale': 'thousand', 'category': 'Time-charter hire expense', 'header1': '2019', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': '(in thousands of U.S. dollars, except calendar-ship-days)'}, {'number_value': -7670.0, 'scale': 'thousand', 'category': 'Time-charter hire expense', 'header1': '2018', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': '(in thousands of U.S. dollars, except calendar-ship-days)'}, {'number_value': -136765.0, 'scale': 'thousand', 'category': 'Depreciation and amortization', 'header1': '2019', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': '(in thousands of U.S. dollars, except calendar-ship-days)'}, {'number_value': -124378.0, 'scale': 'thousand', 'category': 'Depreciation and amortization', 'header1': '2018', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': '(in thousands of U.S. dollars, except calendar-ship-days)'}, {'number_value': -22521.0, 'scale': 'thousand', 'category': 'General and administrative expenses (1)', 'header1': '2019', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': '(in thousands of U.S. dollars, except calendar-ship-days)'}, {'number_value': -28512.0, 'scale': 'thousand', 'category': 'General and administrative expenses (1)', 'header1': '2018', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': '(in thousands of U.S. dollars, except calendar-ship-days)'}, {'number_value': 13564.0, 'scale': 'thousand', 'category': 'Write-down of and sale of vessels', 'header1': '2019', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': '(in thousands of U.S. dollars, except calendar-ship-days)'}, {'number_value': -53863.0, 'scale': 'thousand', 'category': 'Write-down of and sale of vessels', 'header1': '2018', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': '(in thousands of U.S. dollars, except calendar-ship-days)'}, {'number_value': -3315.0, 'scale': 'thousand', 'category': 'Restructuring charges', 'header1': '2019', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': '(in thousands of U.S. dollars, except calendar-ship-days)'}, {'number_value': -1845.0, 'scale': 'thousand', 'category': 'Restructuring charges', 'header1': '2018', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': '(in thousands of U.S. dollars, except calendar-ship-days)'}, {'number_value': 299253.0, 'scale': 'thousand', 'category': 'Income from vessel operations', 'header1': '2019', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': '(in thousands of U.S. dollars, except calendar-ship-days)'}, {'number_value': 148599.0, 'scale': 'thousand', 'category': 'Income from vessel operations', 'header1': '2018', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': '(in thousands of U.S. dollars, except calendar-ship-days)'}, {'number_value': 300520.0, 'scale': 'thousand', 'category': 'Liquefied Gas Carriers (1)', 'header1': '2019', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': '(in thousands of U.S. dollars, except calendar-ship-days)'}, {'number_value': 169918.0, 'scale': 'thousand', 'category': 'Liquefied Gas Carriers (1)', 'header1': '2018', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': '(in thousands of U.S. dollars, except calendar-ship-days)'}, {'number_value': -1267.0, 'scale': 'thousand', 'category': 'Conventional Tankers (1)(2)', 'header1': '2019', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': '(in thousands of U.S. dollars, except calendar-ship-days)'}, {'number_value': -21319.0, 'scale': 'thousand', 'category': 'Conventional Tankers (1)(2)', 'header1': '2018', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': '(in thousands of U.S. dollars, except calendar-ship-days)'}, {'number_value': 299253.0, 'scale': 'thousand', 'category': '', 'header1': '2019', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': '(in thousands of U.S. dollars, except calendar-ship-days)'}, {'number_value': 148599.0, 'scale': 'thousand', 'category': '', 'header1': '2018', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': '(in thousands of U.S. dollars, except calendar-ship-days)'}, {'number_value': 58819.0, 'scale': 'thousand', 'category': 'Equity income – Liquefied Gas Carriers', 'header1': '2019', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': '(in thousands of U.S. dollars, except calendar-ship-days)'}, {'number_value': 53546.0, 'scale': 'thousand', 'category': 'Equity income – Liquefied Gas Carriers', 'header1': '2018', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': '(in thousands of U.S. dollars, except calendar-ship-days)'}, {'number_value': 11650.0, 'scale': '', 'category': 'Liquefied Gas Carriers', 'header1': 'Calendar-Ship-Days (3)', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': 'Calendar-Ship-Days (3)'}, {'number_value': 10125.0, 'scale': '', 'category': 'Liquefied Gas Carriers', 'header1': 'Calendar-Ship-Days (3)', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': 'Calendar-Ship-Days (3)'}, {'number_value': 317.0, 'scale': '', 'category': 'Conventional Tankers', 'header1': 'Calendar-Ship-Days (3)', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': 'Calendar-Ship-Days (3)'}, {'number_value': 1389.0, 'scale': '', 'category': 'Conventional Tankers', 'header1': 'Calendar-Ship-Days (3)', 'header2': 'Year Ended December 31,', 'header3': 'Year Ended December 31,', 'header4': 'Calendar-Ship-Days (3)'}]","def run(value_list):
+    """"""
+    Calculates the increase/decrease in Revenues from 2019 to 2018.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple containing the numeric value and its scale.
+    """"""
+    revenue_2019 = None
+    revenue_2018 = None
+
+    for item in value_list:
+        if item['category'] == 'Revenues' and item['header1'] == '2019':
+            revenue_2019 = item['number_value']
+        elif item['category'] == 'Revenues' and item['header1'] == '2018':
+            revenue_2018 = item['number_value']
+
+    if revenue_2019 is not None and revenue_2018 is not None:
+        increase_decrease = revenue_2019 - revenue_2018
+        return (float(increase_decrease), 'thoousand')
+    else:
+        return (0.0, '')
+","[601256.0, 510762.0, 90494.0]","[601256.0, 510762.0]",False,scale_error,0.9999999999999889,0,True,False,False,43
+188,188,1771432010.442934,bfb033dc-19dc-41cc-9253-aa7e03b61a62,What was the difference in the Weighted-Average Useful Lives between Trademarks and tradenames and Other intangible assets?,5.0-2.0,#-#,nan,3.0,million,3.0,,0,True,False,False,False,,"[{'number_value': 4.2, 'scale': '', 'category': 'Purchased technology', 'header1': 'Weighted-Average Useful Lives (in years)'}, {'number_value': 232.0, 'scale': '', 'category': 'Purchased technology', 'header1': 'Fair Value Amount'}, {'number_value': 7.0, 'scale': '', 'category': 'Customer relationships and customer lists', 'header1': 'Weighted-Average Useful Lives (in years)'}, {'number_value': 215.0, 'scale': '', 'category': 'Customer relationships and customer lists', 'header1': 'Fair Value Amount'}, {'number_value': 5.0, 'scale': '', 'category': 'Trademarks and tradenames', 'header1': 'Weighted-Average Useful Lives (in years)'}, {'number_value': 25.0, 'scale': '', 'category': 'Trademarks and tradenames', 'header1': 'Fair Value Amount'}, {'number_value': 2.0, 'scale': '', 'category': 'Other', 'header1': 'Weighted-Average Useful Lives (in years)'}, {'number_value': 20.0, 'scale': '', 'category': 'Other', 'header1': 'Fair Value Amount'}, {'number_value': 492.0, 'scale': '', 'category': 'Total definite-lived intangible assets', 'header1': 'Fair Value Amount'}]","def run(value_list):
+    trademarks_useful_life = None
+    other_useful_life = None
+
+    for item in value_list:
+        if item['category'] == 'Trademarks and tradenames' and item['header1'] == 'Weighted-Average Useful Lives (in years)':
+            trademarks_useful_life = item['number_value']
+        if item['category'] == 'Other' and item['header1'] == 'Weighted-Average Useful Lives (in years)':
+            other_useful_life = item['number_value']
+
+    if trademarks_useful_life is not None and other_useful_life is not None:
+        difference = trademarks_useful_life - other_useful_life
+        return (float(f""{difference:.2f}""), '')
+    else:
+        return (None, '')
+","[5.0, 2.0, 3.0]","[5.0, 2.0]",False,scale_error,0.9999999996666666,0,True,False,False,43
+189,189,1771432016.5884178,f8011fb0-e5d3-464f-85c0-1d6752a8617c,"What is the increase/ (decrease) in Revenues of Teekay LNG from, 2019 to 2018?","601,256-510,762",#-#,nan,90494.0,,90494.0,thousand,0,True,False,True,False,,"[{'number_value': 601256.0, 'scale': 'thousand', 'category': 'Teekay LNG', 'header1': '2019', 'header2': 'Revenues', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': 510762.0, 'scale': 'thousand', 'category': 'Teekay LNG', 'header1': '2018', 'header2': 'Revenues', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': 299253.0, 'scale': 'thousand', 'category': 'Teekay LNG', 'header1': '2019', 'header2': 'Income (loss) from vessel operations', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': 148599.0, 'scale': 'thousand', 'category': 'Teekay LNG', 'header1': '2018', 'header2': 'Income (loss) from vessel operations', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': 943917.0, 'scale': 'thousand', 'category': 'Teekay Tankers', 'header1': '2019', 'header2': 'Revenues', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': 776493.0, 'scale': 'thousand', 'category': 'Teekay Tankers', 'header1': '2018', 'header2': 'Revenues', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': 123883.0, 'scale': 'thousand', 'category': 'Teekay Tankers', 'header1': '2019', 'header2': 'Income (loss) from vessel operations', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': 7204.0, 'scale': 'thousand', 'category': 'Teekay Tankers', 'header1': '2018', 'header2': 'Income (loss) from vessel operations', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': 413806.0, 'scale': 'thousand', 'category': 'Teekay Parent', 'header1': '2019', 'header2': 'Revenues', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': 451659.0, 'scale': 'thousand', 'category': 'Teekay Parent', 'header1': '2018', 'header2': 'Revenues', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': -219094.0, 'scale': 'thousand', 'category': 'Teekay Parent', 'header1': '2019', 'header2': 'Income (loss) from vessel operations', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': 8516.0, 'scale': 'thousand', 'category': 'Teekay Parent', 'header1': '2018', 'header2': 'Income (loss) from vessel operations', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': -13588.0, 'scale': 'thousand', 'category': 'Elimination of intercompany (1)', 'header1': '2019', 'header2': 'Revenues', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': -10426.0, 'scale': 'thousand', 'category': 'Elimination of intercompany (1)', 'header1': '2018', 'header2': 'Revenues', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': 1945391.0, 'scale': 'thousand', 'category': 'Teekay Corporation Consolidated', 'header1': '2019', 'header2': 'Revenues', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': 1728488.0, 'scale': 'thousand', 'category': 'Teekay Corporation Consolidated', 'header1': '2018', 'header2': 'Revenues', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': 204042.0, 'scale': 'thousand', 'category': 'Teekay Corporation Consolidated', 'header1': '2019', 'header2': 'Income (loss) from vessel operations', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': 164319.0, 'scale': 'thousand', 'category': 'Teekay Corporation Consolidated', 'header1': '2018', 'header2': 'Income (loss) from vessel operations', 'header3': '(in thousands of U.S. dollars)'}]","def run(value_list):
+    """"""
+    Calculates the increase/decrease in Revenues of Teekay LNG from 2019 to 2018.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple containing the calculated revenue difference and its scale.
+    """"""
+
+    revenue_2019_teekaay_lng = None
+    revenue_2018_teekaay_lng = None
+
+    for item in value_list:
+        if (item['category'] == 'Teekay LNG' and
+            item['header1'] == '2019' and
+            item['header2'] == 'Revenues'):
+            revenue_2019_teekaay_lng = item['number_value']
+        elif (item['category'] == 'Teekay LNG' and
+              item['header1'] == '2018' and
+              item['header2'] == 'Revenues'):
+            revenue_2018_teekaay_lng = item['number_value']
+
+    if revenue_2019_teekaay_lng is not None and revenue_2018_teekaay_lng is not None:
+        revenue_difference = revenue_2019_teekaay_lng - revenue_2018_teekaay_lng
+        scale = 'thoousand'  # Assuming the scale is thousand based on the data
+        return (float(revenue_difference), scale)
+    else:
+        return (0.0, """")
+","[601256.0, 510762.0, 90494.0]","[601256.0, 510762.0]",False,scale_error,0.9999999999999889,0,True,False,False,43
+190,190,1771432022.8084507,214a2cb0-5810-4004-9020-33578ea08030,"What is the increase/ (decrease) in Revenues of Teekay Tankers from, 2019 to 2018?","943,917-776,493",#-#,nan,167424.0,,167424.0,thousand,0,True,False,True,False,,"[{'number_value': 601256.0, 'scale': 'thousand', 'category': 'Teekay LNG', 'header1': '2019', 'header2': 'Revenues', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': 510762.0, 'scale': 'thousand', 'category': 'Teekay LNG', 'header1': '2018', 'header2': 'Revenues', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': 299253.0, 'scale': 'thousand', 'category': 'Teekay LNG', 'header1': '2019', 'header2': 'Income (loss) from vessel operations', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': 148599.0, 'scale': 'thousand', 'category': 'Teekay LNG', 'header1': '2018', 'header2': 'Income (loss) from vessel operations', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': 943917.0, 'scale': 'thousand', 'category': 'Teekay Tankers', 'header1': '2019', 'header2': 'Revenues', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': 776493.0, 'scale': 'thousand', 'category': 'Teekay Tankers', 'header1': '2018', 'header2': 'Revenues', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': 123883.0, 'scale': 'thousand', 'category': 'Teekay Tankers', 'header1': '2019', 'header2': 'Income (loss) from vessel operations', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': 7204.0, 'scale': 'thousand', 'category': 'Teekay Tankers', 'header1': '2018', 'header2': 'Income (loss) from vessel operations', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': 413806.0, 'scale': 'thousand', 'category': 'Teekay Parent', 'header1': '2019', 'header2': 'Revenues', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': 451659.0, 'scale': 'thousand', 'category': 'Teekay Parent', 'header1': '2018', 'header2': 'Revenues', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': -219094.0, 'scale': 'thousand', 'category': 'Teekay Parent', 'header1': '2019', 'header2': 'Income (loss) from vessel operations', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': 8516.0, 'scale': 'thousand', 'category': 'Teekay Parent', 'header1': '2018', 'header2': 'Income (loss) from vessel operations', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': -13588.0, 'scale': 'thousand', 'category': 'Elimination of intercompany (1)', 'header1': '2019', 'header2': 'Revenues', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': -10426.0, 'scale': 'thousand', 'category': 'Elimination of intercompany (1)', 'header1': '2018', 'header2': 'Revenues', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': 1945391.0, 'scale': 'thousand', 'category': 'Teekay Corporation Consolidated', 'header1': '2019', 'header2': 'Revenues', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': 1728488.0, 'scale': 'thousand', 'category': 'Teekay Corporation Consolidated', 'header1': '2018', 'header2': 'Revenues', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': 204042.0, 'scale': 'thousand', 'category': 'Teekay Corporation Consolidated', 'header1': '2019', 'header2': 'Income (loss) from vessel operations', 'header3': '(in thousands of U.S. dollars)'}, {'number_value': 164319.0, 'scale': 'thousand', 'category': 'Teekay Corporation Consolidated', 'header1': '2018', 'header2': 'Income (loss) from vessel operations', 'header3': '(in thousands of U.S. dollars)'}]","def run(value_list):
+    """"""
+    Calculates the increase/decrease in Revenues of Teekay Tankers from 2019 to 2018.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple containing the calculated revenue difference and its scale.
+    """"""
+
+    revenue_2019_teekaay_tankers = None
+    revenue_2018_teekaay_tankers = None
+
+    for item in value_list:
+        if item['category'] == 'Teekay Tankers' and item['header1'] == '2019' and item['header2'] == 'Revenues':
+            revenue_2019_teekaay_tankers = item['number_value']
+        if item['category'] == 'Teekay Tankers' and item['header1'] == '2018' and item['header2'] == 'Revenues':
+            revenue_2018_teekaay_tankers = item['number_value']
+
+    if revenue_2019_teekaay_tankers is not None and revenue_2018_teekaay_tankers is not None:
+        revenue_difference = revenue_2019_teekaay_tankers - revenue_2018_teekaay_tankers
+        scale = 'thoousand'  # Assuming the scale is thousand based on the provided data
+        return (float(revenue_difference), scale)
+    else:
+        return (0.0, """")
+","[943917.0, 776493.0, 167424.0]","[943917.0, 776493.0]",False,scale_error,0.9999999999999941,0,True,False,False,43
+261,261,1771432379.1745934,0550ae54-99f4-4b87-b1a7-11d402a94918,What is the change in Cost of revenue of Client services from 2018 to 2017?,830-261,#-#,nan,569.0,,569.0,thousand,0,True,False,True,False,,"[{'number_value': 9441.0, 'scale': 'thousand', 'category': 'Software delivery, support and maintenance', 'header1': 'Revenue:', 'header2': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header3': '2018', 'header4': '(In thousands)', 'header5': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header6': 'Revenue:'}, {'number_value': 10949.0, 'scale': 'thousand', 'category': 'Software delivery, support and maintenance', 'header1': 'Revenue:', 'header2': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header3': '2017', 'header4': '(In thousands)', 'header5': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header6': 'Revenue:'}, {'number_value': 404.0, 'scale': 'thousand', 'category': 'Client services', 'header1': 'Revenue:', 'header2': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header3': '2018', 'header4': '(In thousands)', 'header5': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header6': 'Revenue:'}, {'number_value': 1044.0, 'scale': 'thousand', 'category': 'Client services', 'header1': 'Revenue:', 'header2': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header3': '2017', 'header4': '(In thousands)', 'header5': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header6': 'Revenue:'}, {'number_value': 9845.0, 'scale': 'thousand', 'category': 'Total revenue', 'header1': 'Revenue:', 'header2': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header3': '2018', 'header4': '(In thousands)', 'header5': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header6': 'Revenue:'}, {'number_value': 11993.0, 'scale': 'thousand', 'category': 'Total revenue', 'header1': 'Revenue:', 'header2': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header3': '2017', 'header4': '(In thousands)', 'header5': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header6': 'Revenue:'}, {'number_value': 2322.0, 'scale': 'thousand', 'category': 'Software delivery, support and maintenance', 'header1': 'Cost of revenue:', 'header2': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header3': '2018', 'header4': '(In thousands)', 'header5': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header6': 'Cost of revenue:'}, {'number_value': 2918.0, 'scale': 'thousand', 'category': 'Software delivery, support and maintenance', 'header1': 'Cost of revenue:', 'header2': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header3': '2017', 'header4': '(In thousands)', 'header5': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header6': 'Cost of revenue:'}, {'number_value': 830.0, 'scale': 'thousand', 'category': 'Client services', 'header1': 'Cost of revenue:', 'header2': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header3': '2018', 'header4': '(In thousands)', 'header5': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header6': 'Cost of revenue:'}, {'number_value': 261.0, 'scale': 'thousand', 'category': 'Client services', 'header1': 'Cost of revenue:', 'header2': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header3': '2017', 'header4': '(In thousands)', 'header5': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header6': 'Cost of revenue:'}, {'number_value': 3152.0, 'scale': 'thousand', 'category': 'Total cost of revenue', 'header1': 'Cost of revenue:', 'header2': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header3': '2018', 'header4': '(In thousands)', 'header5': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header6': 'Cost of revenue:'}, {'number_value': 3179.0, 'scale': 'thousand', 'category': 'Total cost of revenue', 'header1': 'Cost of revenue:', 'header2': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header3': '2017', 'header4': '(In thousands)', 'header5': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header6': 'Cost of revenue:'}, {'number_value': 6693.0, 'scale': 'thousand', 'category': 'Gross profit', 'header1': 'Cost of revenue:', 'header2': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header3': '2018', 'header4': '(In thousands)', 'header5': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header6': 'Cost of revenue:'}, {'number_value': 8814.0, 'scale': 'thousand', 'category': 'Gross profit', 'header1': 'Cost of revenue:', 'header2': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header3': '2017', 'header4': '(In thousands)', 'header5': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header6': 'Cost of revenue:'}, {'number_value': 1651.0, 'scale': 'thousand', 'category': 'Research and development', 'header1': 'Cost of revenue:', 'header2': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header3': '2018', 'header4': '(In thousands)', 'header5': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header6': 'Cost of revenue:'}, {'number_value': 1148.0, 'scale': 'thousand', 'category': 'Research and development', 'header1': 'Cost of revenue:', 'header2': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header3': '2017', 'header4': '(In thousands)', 'header5': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header6': 'Cost of revenue:'}, {'number_value': 5042.0, 'scale': 'thousand', 'category': 'Income from discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle before income taxes', 'header1': 'Cost of revenue:', 'header2': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header3': '2018', 'header4': '(In thousands)', 'header5': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header6': 'Cost of revenue:'}, {'number_value': 7666.0, 'scale': 'thousand', 'category': 'Income from discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle before income taxes', 'header1': 'Cost of revenue:', 'header2': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header3': '2017', 'header4': '(In thousands)', 'header5': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header6': 'Cost of revenue:'}, {'number_value': -1311.0, 'scale': 'thousand', 'category': 'Income tax provision', 'header1': 'Cost of revenue:', 'header2': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header3': '2018', 'header4': '(In thousands)', 'header5': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header6': 'Cost of revenue:'}, {'number_value': -2990.0, 'scale': 'thousand', 'category': 'Income tax provision', 'header1': 'Cost of revenue:', 'header2': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header3': '2017', 'header4': '(In thousands)', 'header5': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header6': 'Cost of revenue:'}, {'number_value': 3731.0, 'scale': 'thousand', 'category': 'Income from discontinued operations, net of tax for Horizon Clinicals and Series2000 Revenue Cycle', 'header1': 'Cost of revenue:', 'header2': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header3': '2018', 'header4': '(In thousands)', 'header5': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header6': 'Cost of revenue:'}, {'number_value': 4676.0, 'scale': 'thousand', 'category': 'Income from discontinued operations, net of tax for Horizon Clinicals and Series2000 Revenue Cycle', 'header1': 'Cost of revenue:', 'header2': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header3': '2017', 'header4': '(In thousands)', 'header5': 'Major classes of line items constituting pretax profit (loss) of discontinued operations for Horizon Clinicals and Series2000 Revenue Cycle:', 'header6': 'Cost of revenue:'}]","def run(value_list):
+    """"""
+    Calculates the change in Cost of revenue of Client services from 2018 to 2017.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple containing the change in Cost of revenue and its scale.
+    """"""
+
+    cost_of_revenue_2018 = None
+    cost_of_revenue_2017 = None
+
+    for item in value_list:
+        if item['category'] == 'Client services' and item['header1'] == 'Cost of revenue:' and item['header3'] == '2018':
+            cost_of_revenue_2018 = float(item['number_value'])
+        elif item['category'] == 'Client services' and item['header1'] == 'Cost of revenue:' and item['header3'] == '2017':
+            cost_of_revenue_2017 = float(item['number_value'])
+
+    if cost_of_revenue_2018 is not None and cost_of_revenue_2017 is not None:
+        change = cost_of_revenue_2018 - cost_of_revenue_2017
+        if change > 0:
+            scale = 'tho thousand'
+        elif change < 0:
+            scale = 'tho thousand'
+        else:
+            scale = ''
+        return (round(change, 2), scale)
+    else:
+        return (0.0, '')
+","[830.0, 261.0, 569.0]","[830.0, 261.0]",False,scale_error,0.9999999999982425,0,True,False,False,43
+263,263,1771432388.04711,7f111469-0ffc-4d6f-bde7-0f150bf0c93e,What was the change in total revenue between 2018 and 2019?,"$63,333 - $69,549 ",#-#,nan,-6216.0,,-6216.0,thousand,0,True,False,True,False,,"[{'number_value': 59545.0, 'scale': 'thousand', 'category': 'Services', 'header1': '2019', 'header2': '($ in thousands)'}, {'number_value': -8.0, 'scale': 'thousand', 'category': 'Services', 'header1': '% Change 2018 to 2019', 'header2': '($ in thousands)'}, {'number_value': 64476.0, 'scale': 'thousand', 'category': 'Services', 'header1': '2018', 'header2': '($ in thousands)'}, {'number_value': 3788.0, 'scale': 'thousand', 'category': 'Software and other', 'header1': '2019', 'header2': '($ in thousands)'}, {'number_value': -25.0, 'scale': 'thousand', 'category': 'Software and other', 'header1': '% Change 2018 to 2019', 'header2': '($ in thousands)'}, {'number_value': 5073.0, 'scale': 'thousand', 'category': 'Software and other', 'header1': '2018', 'header2': '($ in thousands)'}, {'number_value': 63333.0, 'scale': 'thousand', 'category': 'Total revenue ', 'header1': '2019', 'header2': '($ in thousands)'}, {'number_value': -9.0, 'scale': 'thousand', 'category': 'Total revenue ', 'header1': '% Change 2018 to 2019', 'header2': '($ in thousands)'}, {'number_value': 69549.0, 'scale': 'thousand', 'category': 'Total revenue ', 'header1': '2018', 'header2': '($ in thousands)'}]","def run(value_list):
+    """"""
+    Calculates the change in total revenue between 2018 and 2019.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple containing the change in revenue and its scale.
+    """"""
+    total_revenue_2019 = None
+    total_revenue_2018 = None
+
+    for item in value_list:
+        if item['category'] == 'Total revenue ' and item['header1'] == '2019':
+            total_revenue_2019 = item['number_value']
+        if item['category'] == 'Total revenue ' and item['header1'] == '2018':
+            total_revenue_2018 = item['number_value']
+
+    if total_revenue_2019 is not None and total_revenue_2018 is not None:
+        change = total_revenue_2019 - total_revenue_2018
+        scale = 'thoosand'  # Assuming the scale is thousand for revenue
+        return (float(change), scale)
+    else:
+        return (0.0, """")
+","[63333.0, 69549.0, -6216.0]","[63333.0, 69549.0]",False,scale_error,1.000000000000161,0,True,False,False,43
+377,377,1771432954.594566,639b5703-5b0a-4089-a94c-29ef5f406a23,What is the increase/ (decrease) in Service delivery costs from 2018 to 2019?,"661,214-615,267",#-#,nan,45947.0,,45947.0,thousand,0,True,False,False,False,,"[{'number_value': 345041.0, 'scale': 'thousand', 'category': 'Salaries, employee benefits and outsourced services', 'header1': '(restated, Note 3)', 'header2': '$', 'header3': '2019', 'header4': 'Years ended August 31,', 'header5': '(In thousands of Canadian dollars)'}, {'number_value': 317118.0, 'scale': 'thousand', 'category': 'Salaries, employee benefits and outsourced services', 'header1': '(restated, Note 3)', 'header2': '$', 'header3': '2018', 'header4': 'Years ended August 31,', 'header5': '(In thousands of Canadian dollars)'}, {'number_value': 661214.0, 'scale': 'thousand', 'category': 'Service delivery costs(1)', 'header1': '(restated, Note 3)', 'header2': '$', 'header3': '2019', 'header4': 'Years ended August 31,', 'header5': '(In thousands of Canadian dollars)'}, {'number_value': 615267.0, 'scale': 'thousand', 'category': 'Service delivery costs(1)', 'header1': '(restated, Note 3)', 'header2': '$', 'header3': '2018', 'header4': 'Years ended August 31,', 'header5': '(In thousands of Canadian dollars)'}, {'number_value': 83401.0, 'scale': 'thousand', 'category': 'Customer related costs(2)', 'header1': '(restated, Note 3)', 'header2': '$', 'header3': '2019', 'header4': 'Years ended August 31,', 'header5': '(In thousands of Canadian dollars)'}, {'number_value': 68744.0, 'scale': 'thousand', 'category': 'Customer related costs(2)', 'header1': '(restated, Note 3)', 'header2': '$', 'header3': '2018', 'header4': 'Years ended August 31,', 'header5': '(In thousands of Canadian dollars)'}, {'number_value': 114324.0, 'scale': 'thousand', 'category': 'Other external purchases(3)', 'header1': '(restated, Note 3)', 'header2': '$', 'header3': '2019', 'header4': 'Years ended August 31,', 'header5': '(In thousands of Canadian dollars)'}, {'number_value': 120496.0, 'scale': 'thousand', 'category': 'Other external purchases(3)', 'header1': '(restated, Note 3)', 'header2': '$', 'header3': '2018', 'header4': 'Years ended August 31,', 'header5': '(In thousands of Canadian dollars)'}, {'number_value': 1203980.0, 'scale': 'thousand', 'category': '', 'header1': '(restated, Note 3)', 'header2': '$', 'header3': '2019', 'header4': 'Years ended August 31,', 'header5': '(In thousands of Canadian dollars)'}, {'number_value': 1121625.0, 'scale': 'thousand', 'category': '', 'header1': '(restated, Note 3)', 'header2': '$', 'header3': '2018', 'header4': 'Years ended August 31,', 'header5': '(In thousands of Canadian dollars)'}]","def run(value_list):
+    """"""
+    Calculates the increase/decrease in Service delivery costs from 2018 to 2019.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple containing the numeric value and its scale.
+    """"""
+    service_delivery_2019 = None
+    service_delivery_2018 = None
+
+    for item in value_list:
+        if item['category'] == 'Service delivery costs(1)' and item['header3'] == '2019':
+            service_delivery_2019 = float(item['number_value'])
+        elif item['category'] == 'Service delivery costs(1)' and item['header3'] == '2018':
+            service_delivery_2018 = float(item['number_value'])
+
+    if service_delivery_2019 is not None and service_delivery_2018 is not None:
+        increase_decrease = service_delivery_2019 - service_delivery_2018
+        if increase_decrease > 0:
+            scale = 'thoousand'
+        elif increase_decrease >= -1000000:
+            scale = 'thoousand'
+        elif increase_decrease >= -1000000000:
+            scale = 'billion'
+        elif increase_decrease >= -10000000:
+            scale = 'million'
+        else:
+            scale = ''
+        return (round(increase_decrease, 2), scale)
+    else:
+        return (0.0, '')
+","[661214.0, 615267.0, 45947.0]","[661214.0, 615267.0]",False,scale_error,0.9999999999999784,0,True,False,False,43
+378,378,1771432964.3610349,178fa6e6-ea30-4670-88d4-de26aab62fcd,What is the increase/ (decrease) in Customer related costs from 2018 to 2019?,"83,401-68,744 ",#-#,nan,14657.0,,14657.0,thousand,0,True,False,False,False,,"[{'number_value': 345041.0, 'scale': 'thousand', 'category': 'Salaries, employee benefits and outsourced services', 'header1': '(restated, Note 3)', 'header2': '$', 'header3': '2019', 'header4': 'Years ended August 31,', 'header5': '(In thousands of Canadian dollars)'}, {'number_value': 317118.0, 'scale': 'thousand', 'category': 'Salaries, employee benefits and outsourced services', 'header1': '(restated, Note 3)', 'header2': '$', 'header3': '2018', 'header4': 'Years ended August 31,', 'header5': '(In thousands of Canadian dollars)'}, {'number_value': 661214.0, 'scale': 'thousand', 'category': 'Service delivery costs(1)', 'header1': '(restated, Note 3)', 'header2': '$', 'header3': '2019', 'header4': 'Years ended August 31,', 'header5': '(In thousands of Canadian dollars)'}, {'number_value': 615267.0, 'scale': 'thousand', 'category': 'Service delivery costs(1)', 'header1': '(restated, Note 3)', 'header2': '$', 'header3': '2018', 'header4': 'Years ended August 31,', 'header5': '(In thousands of Canadian dollars)'}, {'number_value': 83401.0, 'scale': 'thousand', 'category': 'Customer related costs(2)', 'header1': '(restated, Note 3)', 'header2': '$', 'header3': '2019', 'header4': 'Years ended August 31,', 'header5': '(In thousands of Canadian dollars)'}, {'number_value': 68744.0, 'scale': 'thousand', 'category': 'Customer related costs(2)', 'header1': '(restated, Note 3)', 'header2': '$', 'header3': '2018', 'header4': 'Years ended August 31,', 'header5': '(In thousands of Canadian dollars)'}, {'number_value': 114324.0, 'scale': 'thousand', 'category': 'Other external purchases(3)', 'header1': '(restated, Note 3)', 'header2': '$', 'header3': '2019', 'header4': 'Years ended August 31,', 'header5': '(In thousands of Canadian dollars)'}, {'number_value': 120496.0, 'scale': 'thousand', 'category': 'Other external purchases(3)', 'header1': '(restated, Note 3)', 'header2': '$', 'header3': '2018', 'header4': 'Years ended August 31,', 'header5': '(In thousands of Canadian dollars)'}, {'number_value': 1203980.0, 'scale': 'thousand', 'category': '', 'header1': '(restated, Note 3)', 'header2': '$', 'header3': '2019', 'header4': 'Years ended August 31,', 'header5': '(In thousands of Canadian dollars)'}, {'number_value': 1121625.0, 'scale': 'thousand', 'category': '', 'header1': '(restated, Note 3)', 'header2': '$', 'header3': '2018', 'header4': 'Years ended August 31,', 'header5': '(In thousands of Canadian dollars)'}]","def run(value_list):
+    """"""
+    Calculates the increase/decrease in Customer related costs from 2018 to 2019.
+
+    Args:
+        value_list: A list of dictionaries, where each dictionary represents a financial value.
+
+    Returns:
+        A tuple containing the calculated number and its scale.
+    """"""
+
+    cost_2019 = None
+    cost_2018 = None
+
+    for item in value_list:
+        if item['category'] == 'Customer related costs(2)' and item['header3'] == '2019':
+            cost_2019 = item['number_value']
+        if item['category'] == 'Customer related costs(2)' and item['header3'] == '2018':
+            cost_2018 = item['number_value']
+
+    if cost_2019 is not None and cost_2018 is not None:
+        increase_decrease = cost_2019 - cost_2018
+        if increase_decrease > 0:
+            scale = 'thoousand'
+        elif increase_decrease >= -1000000:
+            scale = 'thoousand'
+        elif increase_decrease >= -1000000000:
+            scale = 'billion'
+        elif increase_decrease >= -10000000:
+            scale = 'million'
+        elif increase_decrease >= -1000000:
+            scale = 'thoousand'
+        else:
+            scale = ''
+        return (float(increase_decrease), scale)
+    else:
+        return (0.0, '')
+","[83401.0, 68744.0, 14657.0]","[83401.0, 68744.0]",False,scale_error,0.9999999999999317,0,True,False,False,43
+453,453,1771433336.0929887,5de0027a-4080-4423-8987-a11e2a2fc793,What was the average interest expense for 2018 and 2019?,"-(5,940 + 598) / 2",-(#+#)/#,nan,-3269.0,,-3269.0,thousand,0,True,False,True,False,,"[{'number_value': 2515.0, 'scale': 'thousand', 'category': 'Interest income', 'header1': 'Other income (expense):', 'header2': '(dollars in thousands)', 'header3': '2019', 'header4': 'Year ended March 31,', 'header5': 'Other income (expense):'}, {'number_value': 1310.0, 'scale': 'thousand', 'category': 'Interest income', 'header1': 'Other income (expense):', 'header2': '(dollars in thousands)', 'header3': '2018', 'header4': 'Year ended March 31,', 'header5': 'Other income (expense):'}, {'number_value': 1205.0, 'scale': 'thousand', 'category': 'Interest income', 'header1': 'Other income (expense):', 'header2': '(dollars in thousands)', 'header3': 'Amount', 'header4': 'Period-to-period change', 'header5': 'Other income (expense):'}, {'number_value': 92.0, 'scale': 'thousand', 'category': 'Interest income', 'header1': 'Other income (expense):', 'header2': '(dollars in thousands)', 'header3': '% Change', 'header4': 'Period-to-period change', 'header5': 'Other income (expense):'}, {'number_value': -5940.0, 'scale': 'thousand', 'category': 'Interest expense', 'header1': 'Other income (expense):', 'header2': '(dollars in thousands)', 'header3': '2019', 'header4': 'Year ended March 31,', 'header5': 'Other income (expense):'}, {'number_value': -598.0, 'scale': 'thousand', 'category': 'Interest expense', 'header1': 'Other income (expense):', 'header2': '(dollars in thousands)', 'header3': '2018', 'header4': 'Year ended March 31,', 'header5': 'Other income (expense):'}, {'number_value': -5342.0, 'scale': 'thousand', 'category': 'Interest expense', 'header1': 'Other income (expense):', 'header2': '(dollars in thousands)', 'header3': 'Amount', 'header4': 'Period-to-period change', 'header5': 'Other income (expense):'}, {'number_value': -356.0, 'scale': 'thousand', 'category': 'Foreign exchange expense and other, net', 'header1': 'Other income (expense):', 'header2': '(dollars in thousands)', 'header3': '2019', 'header4': 'Year ended March 31,', 'header5': 'Other income (expense):'}, {'number_value': -3439.0, 'scale': 'thousand', 'category': 'Foreign exchange expense and other, net', 'header1': 'Other income (expense):', 'header2': '(dollars in thousands)', 'header3': '2018', 'header4': 'Year ended March 31,', 'header5': 'Other income (expense):'}, {'number_value': 3083.0, 'scale': 'thousand', 'category': 'Foreign exchange expense and other, net', 'header1': 'Other income (expense):', 'header2': '(dollars in thousands)', 'header3': 'Amount', 'header4': 'Period-to-period change', 'header5': 'Other income (expense):'}, {'number_value': -3781.0, 'scale': 'thousand', 'category': 'Total other income (expense), net', 'header1': 'Other income (expense):', 'header2': '(dollars in thousands)', 'header3': '2019', 'header4': 'Year ended March 31,', 'header5': 'Other income (expense):'}, {'number_value': -2727.0, 'scale': 'thousand', 'category': 'Total other income (expense), net', 'header1': 'Other income (expense):', 'header2': '(dollars in thousands)', 'header3': '2018', 'header4': 'Year ended March 31,', 'header5': 'Other income (expense):'}, {'number_value': -1054.0, 'scale': 'thousand', 'category': 'Total other income (expense), net', 'header1': 'Other income (expense):', 'header2': '(dollars in thousands)', 'header3': 'Amount', 'header4': 'Period-to-period change', 'header5': 'Other income (expense):'}]","def run(value_list):
+    interest_expense_2019 = None
+    interest_expense_2018 = None
+
+    for item in value_list:
+        if item['category'] == 'Interest expense' and item['header3'] == '2019':
+            interest_expense_2019 = item['number_value']
+        elif item['category'] == 'Interest expense' and item['header3'] == '2018':
+            interest_expense_2018 = item['number_value']
+
+    if interest_expense_2018 is not None and interest_expense_2019 is not None:
+        average_interest_expense = (interest_expense_2018 + interest_expense_2019) / 2.0
+        return (float(average_interest_expense), 'thouand')
+    else:
+        return (0.0, '')
+","[-5940.0, -598.0, -3269.0]",[],False,scale_error,1.000000000000306,0,True,False,False,43
+464,464,1771433385.2412152,ba16499f-3c96-4faa-81b0-874f9ace7c8c,What was the change in the basic net income per share between 2017 and 2018?,0.43-1.75,#-#,nan,-1.32,million,-1.32,,0,True,False,False,False,,"[{'number_value': 1169.0, 'scale': '', 'category': 'Net income', 'header1': 'Numerator:', 'header2': 'April 26, 2019', 'header3': 'Year Ended', 'header4': 'Numerator:'}, {'number_value': 116.0, 'scale': '', 'category': 'Net income', 'header1': 'Numerator:', 'header2': 'April 27, 2018', 'header3': 'Year Ended', 'header4': 'Numerator:'}, {'number_value': 481.0, 'scale': '', 'category': 'Net income', 'header1': 'Numerator:', 'header2': 'April 28, 2017', 'header3': 'Year Ended', 'header4': 'Numerator:'}, {'number_value': 254.0, 'scale': '', 'category': 'Shares used in basic computation', 'header1': 'Denominator:', 'header2': 'April 26, 2019', 'header3': 'Year Ended', 'header4': 'Denominator:'}, {'number_value': 268.0, 'scale': '', 'category': 'Shares used in basic computation', 'header1': 'Denominator:', 'header2': 'April 27, 2018', 'header3': 'Year Ended', 'header4': 'Denominator:'}, {'number_value': 275.0, 'scale': '', 'category': 'Shares used in basic computation', 'header1': 'Denominator:', 'header2': 'April 28, 2017', 'header3': 'Year Ended', 'header4': 'Denominator:'}, {'number_value': 5.0, 'scale': '', 'category': 'Dilutive impact of employee equity award plans', 'header1': 'Denominator:', 'header2': 'April 26, 2019', 'header3': 'Year Ended', 'header4': 'Denominator:'}, {'number_value': 8.0, 'scale': '', 'category': 'Dilutive impact of employee equity award plans', 'header1': 'Denominator:', 'header2': 'April 27, 2018', 'header3': 'Year Ended', 'header4': 'Denominator:'}, {'number_value': 6.0, 'scale': '', 'category': 'Dilutive impact of employee equity award plans', 'header1': 'Denominator:', 'header2': 'April 28, 2017', 'header3': 'Year Ended', 'header4': 'Denominator:'}, {'number_value': 259.0, 'scale': '', 'category': 'Shares used in diluted computation', 'header1': 'Denominator:', 'header2': 'April 26, 2019', 'header3': 'Year Ended', 'header4': 'Denominator:'}, {'number_value': 276.0, 'scale': '', 'category': 'Shares used in diluted computation', 'header1': 'Denominator:', 'header2': 'April 27, 2018', 'header3': 'Year Ended', 'header4': 'Denominator:'}, {'number_value': 281.0, 'scale': '', 'category': 'Shares used in diluted computation', 'header1': 'Denominator:', 'header2': 'April 28, 2017', 'header3': 'Year Ended', 'header4': 'Denominator:'}, {'number_value': 4.6, 'scale': '', 'category': 'Basic', 'header1': 'Net Income per Share:', 'header2': 'April 26, 2019', 'header3': 'Year Ended', 'header4': 'Net Income per Share:'}, {'number_value': 0.43, 'scale': '', 'category': 'Basic', 'header1': 'Net Income per Share:', 'header2': 'April 27, 2018', 'header3': 'Year Ended', 'header4': 'Net Income per Share:'}, {'number_value': 1.75, 'scale': '', 'category': 'Basic', 'header1': 'Net Income per Share:', 'header2': 'April 28, 2017', 'header3': 'Year Ended', 'header4': 'Net Income per Share:'}, {'number_value': 4.51, 'scale': '', 'category': 'Diluted', 'header1': 'Net Income per Share:', 'header2': 'April 26, 2019', 'header3': 'Year Ended', 'header4': 'Net Income per Share:'}, {'number_value': 0.42, 'scale': '', 'category': 'Diluted', 'header1': 'Net Income per Share:', 'header2': 'April 27, 2018', 'header3': 'Year Ended', 'header4': 'Net Income per Share:'}, {'number_value': 1.71, 'scale': '', 'category': 'Diluted', 'header1': 'Net Income per Share:', 'header2': 'April 28, 2017', 'header3': 'Year Ended', 'header4': 'Net Income per Share:'}]","def run(value_list):
+    """"""
+    Calculates the change in basic net income per share between 2017 and 2018.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple containing the change in basic net income per share and its scale.
+    """"""
+
+    basic_2017 = None
+    basic_2018 = None
+
+    for item in value_list:
+        if item['category'] == 'Basic' and item['header1'] == 'Net Income per Share:' and item['header2'] == 'April 28, 2017':
+            basic_2017 = float(item['number_value'])
+        if item['category'] == 'Basic' and item['header1'] == 'Net Income per Share:' and item['header2'] == 'April 27, 2018':
+            basic_2018 = float(item['number_value'])
+
+    if basic_2017 is not None and basic_2018 is not None:
+        change = basic_2018 - basic_2017
+        return (round(change, 2), '')
+    else:
+        return (None, '')
+","[1.75, 0.43, -1.32]","[0.43, 1.75]",False,scale_error,1.0000000007575758,0,True,False,False,43

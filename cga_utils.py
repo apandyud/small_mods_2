@@ -220,9 +220,9 @@ def execute_dataset_predictions(llm, messages, selected_qids=None, trace_message
                             print(q_text, end='')
     
                         r = []
-                       
+                        predt = time.time()    
                         (pred_value, pred_scale, trace) = get_answer_with_trace(llm, messages, table,q_block)
-                        
+                        ellapsed = time.time() - predt
                                             
                         
                         if 'in millions' in text.lower() and pred_scale == '':
@@ -232,15 +232,15 @@ def execute_dataset_predictions(llm, messages, selected_qids=None, trace_message
                         ans = {"answer_type":q_block["answer_type"], "answer": q_block["answer"], 'scale': q_block["scale"]}                        
                         tmetrics = TaTQAEmAndF1()
                         tmetrics(ans, pred_value, pred_scale)                                 
-                        pred_em, _, _, _ = metrics.get_overall_metric(reset=False)
+                        pred_em, _, _, _ = tmetrics.get_overall_metric(reset=False)
 
                         if pred_em:
                         #if value_match:
                             if (trace_messages):
-                                print("\033[92m Success: " + str(pred_value)+'\033[0m')
+                                print("\033[92m Success: " + str(pred_value)+'\033[0m ' + f"{ellapsed:.3f}s" )
                         else:    
                             if (trace_messages):
-                                print("\033[91m failure: " + str(pred_value), 'good answer: ', q_block['answer'],'\033[0m' )
+                                print("\033[91m failure: " + str(pred_value), 'good answer: ', q_block['answer'],'\033[0m '+ f"{ellapsed:.3f}s"  )
                         
                         if isinstance(pred_value, tuple) and len(pred_value) == 2:
                             print('$$$$')

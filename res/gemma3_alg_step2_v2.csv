@@ -1,0 +1,285 @@
+,Unnamed: 0,ts,qid,question,derivation,calc_pattern,code_calc_pattern,pred,pred_scale,answer,scale,value_match,selection_success,sign_error,is_parenth_in_table,has_code_abs,error_text,value_list,code,selected_values,needed_values,exact_match,error_code,ratio,x100_flag,scale_mismatch,value_mismatch,value_nan,cluster
+82,82,1771357359.068264,56a014a9-5b9c-41e5-9523-ebbd3a01dd6d,"What is the increase/ (decrease) in Statutory Audit, Certification, Audit of Individual and Consolidated Financial Statements from the period 2018 to 2019?","4,105,000-4,556,500",#-#,nan,-451500.0,thousand,-451500.0,,0,True,False,False,False,,"[{'number_value': 4105000.0, 'scale': '', 'category': 'Statutory Audit, Certification, Audit of Individual and Consolidated Financial Statements', 'header1': 'Audit Fees', 'header2': '2019', 'header3': 'Audit Fees'}, {'number_value': 95.2, 'scale': '%', 'category': 'Statutory Audit, Certification, Audit of Individual and Consolidated Financial Statements', 'header1': 'Audit Fees', 'header2': 'Percentage of Total Fees', 'header3': 'Audit Fees'}, {'number_value': 4556500.0, 'scale': '', 'category': 'Statutory Audit, Certification, Audit of Individual and Consolidated Financial Statements', 'header1': 'Audit Fees', 'header2': '2018', 'header3': 'Audit Fees'}, {'number_value': 96.3, 'scale': '%', 'category': 'Statutory Audit, Certification, Audit of Individual and Consolidated Financial Statements', 'header1': 'Audit Fees', 'header2': 'Percentage of Total Fees', 'header3': 'Audit Fees'}, {'number_value': 209005.0, 'scale': '', 'category': 'Audit-Related Fees', 'header1': 'Audit Fees', 'header2': '2019', 'header3': 'Audit Fees'}, {'number_value': 4.8, 'scale': '%', 'category': 'Audit-Related Fees', 'header1': 'Audit Fees', 'header2': 'Percentage of Total Fees', 'header3': 'Audit Fees'}, {'number_value': 173934.0, 'scale': '', 'category': 'Audit-Related Fees', 'header1': 'Audit Fees', 'header2': '2018', 'header3': 'Audit Fees'}, {'number_value': 3.7, 'scale': '%', 'category': 'Audit-Related Fees', 'header1': 'Audit Fees', 'header2': 'Percentage of Total Fees', 'header3': 'Audit Fees'}, {'number_value': 4314005.0, 'scale': '', 'category': 'Total', 'header1': 'Non-audit Fees', 'header2': '2019', 'header3': 'Non-audit Fees'}, {'number_value': 100.0, 'scale': '%', 'category': 'Total', 'header1': 'Non-audit Fees', 'header2': 'Percentage of Total Fees', 'header3': 'Non-audit Fees'}, {'number_value': 4730434.0, 'scale': '', 'category': 'Total', 'header1': 'Non-audit Fees', 'header2': '2018', 'header3': 'Non-audit Fees'}, {'number_value': 100.0, 'scale': '%', 'category': 'Total', 'header1': 'Non-audit Fees', 'header2': 'Percentage of Total Fees', 'header3': 'Non-audit Fees'}]","def run(value_list):
+    """"""
+    Calculates the increase/decrease in Statutory Audit, Certification, Audit of Individual and Consolidated Financial Statements from 2018 to 2019.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple (number, scale).
+    """"""
+    
+    audit_2018 = None
+    audit_2019 = None
+
+    for item in value_list:
+        if item['category'] == 'Statutory Audit, Certification, Audit of Individual and Consolidated Financial Statements' and item['header2'] == '2018':
+            audit_2018 = item['number_value']
+        elif item['category'] == 'Statutory Audit, Certification, Audit of Individual and Consolidated Financial Statements' and item['header2'] == '2019':
+            audit_2019 = item['number_value']
+
+    if audit_2018 is not None and audit_2019 is not None:
+        increase = audit_2019 - audit_2018
+        return (round(increase, 2), 'thousand')
+    else:
+        return (None, None)
+","[4556500.0, 4105000.0, -451500.0]","[4105000.0, 4556500.0]",False,scale_error,1.0000000000000022,0,True,False,False,12
+83,83,1771357361.5947013,2af4c7cf-79a2-4bdf-81b8-dbaff5081bc3,What is the increase/ (decrease) in Audit-Related Fees from the period 2018 to 2019?,"209,005-173,934",#-#,nan,35071.0,thousand,35071.0,,0,True,False,False,False,,"[{'number_value': 4105000.0, 'scale': '', 'category': 'Statutory Audit, Certification, Audit of Individual and Consolidated Financial Statements', 'header1': 'Audit Fees', 'header2': '2019', 'header3': 'Audit Fees'}, {'number_value': 95.2, 'scale': '%', 'category': 'Statutory Audit, Certification, Audit of Individual and Consolidated Financial Statements', 'header1': 'Audit Fees', 'header2': 'Percentage of Total Fees', 'header3': 'Audit Fees'}, {'number_value': 4556500.0, 'scale': '', 'category': 'Statutory Audit, Certification, Audit of Individual and Consolidated Financial Statements', 'header1': 'Audit Fees', 'header2': '2018', 'header3': 'Audit Fees'}, {'number_value': 96.3, 'scale': '%', 'category': 'Statutory Audit, Certification, Audit of Individual and Consolidated Financial Statements', 'header1': 'Audit Fees', 'header2': 'Percentage of Total Fees', 'header3': 'Audit Fees'}, {'number_value': 209005.0, 'scale': '', 'category': 'Audit-Related Fees', 'header1': 'Audit Fees', 'header2': '2019', 'header3': 'Audit Fees'}, {'number_value': 4.8, 'scale': '%', 'category': 'Audit-Related Fees', 'header1': 'Audit Fees', 'header2': 'Percentage of Total Fees', 'header3': 'Audit Fees'}, {'number_value': 173934.0, 'scale': '', 'category': 'Audit-Related Fees', 'header1': 'Audit Fees', 'header2': '2018', 'header3': 'Audit Fees'}, {'number_value': 3.7, 'scale': '%', 'category': 'Audit-Related Fees', 'header1': 'Audit Fees', 'header2': 'Percentage of Total Fees', 'header3': 'Audit Fees'}, {'number_value': 4314005.0, 'scale': '', 'category': 'Total', 'header1': 'Non-audit Fees', 'header2': '2019', 'header3': 'Non-audit Fees'}, {'number_value': 100.0, 'scale': '%', 'category': 'Total', 'header1': 'Non-audit Fees', 'header2': 'Percentage of Total Fees', 'header3': 'Non-audit Fees'}, {'number_value': 4730434.0, 'scale': '', 'category': 'Total', 'header1': 'Non-audit Fees', 'header2': '2018', 'header3': 'Non-audit Fees'}, {'number_value': 100.0, 'scale': '%', 'category': 'Total', 'header1': 'Non-audit Fees', 'header2': 'Percentage of Total Fees', 'header3': 'Non-audit Fees'}]","def run(value_list):
+    """"""
+    Calculates the increase/decrease in Audit-Related Fees from 2018 to 2019.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple (number, scale).
+    """"""
+    
+    audit_related_fees_2018 = None
+    audit_related_fees_2019 = None
+
+    for item in value_list:
+        if item['category'] == 'Audit-Related Fees':
+            if item['header2'] == '2018':
+                audit_related_fees_2018 = item['number_value']
+            elif item['header2'] == '2019':
+                audit_related_fees_2019 = item['number_value']
+
+    if audit_related_fees_2018 is not None and audit_related_fees_2019 is not None:
+        increase = audit_related_fees_2019 - audit_related_fees_2018
+        return (round(increase, 2), 'thousand')
+    else:
+        return (None, None)
+","[173934.0, 209005.0, 35071.0]","[209005.0, 173934.0]",False,scale_error,0.9999999999999716,0,True,False,False,12
+165,165,1771358578.0748928,b8afd327-b836-4276-8556-eac89746b09f,What is the change in the Combustion of fuel and operation of facilities (Scope 1) from FY18 to FY19 for UK and Ireland only?,"59,495 - 66,336",#-#,nan,-6841.0,thousand,-6841.0,,0,True,False,False,False,,"[{'number_value': 59495.0, 'scale': '', 'category': 'Combustion of fuel and operation of facilities (Scope 1)', 'header1': 'FY19**', 'header2': 'Emissions reported in tonnes CO2e*', 'header3': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header4': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header5': 'Emissions from:'}, {'number_value': 66336.0, 'scale': '', 'category': 'Combustion of fuel and operation of facilities (Scope 1)', 'header1': 'FY18**', 'header2': 'Emissions reported in tonnes CO2e*', 'header3': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header4': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header5': 'Emissions from:'}, {'number_value': 75600.0, 'scale': '', 'category': 'Combustion of fuel and operation of facilities (Scope 1)', 'header1': 'FY18***', 'header2': 'Emissions reported in tonnes CO2e*', 'header3': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header4': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header5': 'Emissions from:'}, {'number_value': 27633.0, 'scale': '', 'category': 'Electricity, heat, steam and cooling purchased for own use (Scope 2)', 'header1': 'FY19**', 'header2': 'Emissions reported in tonnes CO2e*', 'header3': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header4': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header5': 'Emissions from:'}, {'number_value': 32389.0, 'scale': '', 'category': 'Electricity, heat, steam and cooling purchased for own use (Scope 2)', 'header1': 'FY18**', 'header2': 'Emissions reported in tonnes CO2e*', 'header3': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header4': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header5': 'Emissions from:'}, {'number_value': 67754.0, 'scale': '', 'category': 'Electricity, heat, steam and cooling purchased for own use (Scope 2)', 'header1': 'FY18***', 'header2': 'Emissions reported in tonnes CO2e*', 'header3': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header4': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header5': 'Emissions from:'}, {'number_value': 87128.0, 'scale': '', 'category': 'Total gross emissions (Scope 1 and 2)', 'header1': 'FY19**', 'header2': 'Emissions reported in tonnes CO2e*', 'header3': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header4': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header5': 'Emissions from:'}, {'number_value': 98725.0, 'scale': '', 'category': 'Total gross emissions (Scope 1 and 2)', 'header1': 'FY18**', 'header2': 'Emissions reported in tonnes CO2e*', 'header3': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header4': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header5': 'Emissions from:'}, {'number_value': 143354.0, 'scale': '', 'category': 'Total gross emissions (Scope 1 and 2)', 'header1': 'FY18***', 'header2': 'Emissions reported in tonnes CO2e*', 'header3': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header4': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header5': 'Emissions from:'}, {'number_value': -27603.0, 'scale': '', 'category': 'Green tariff', 'header1': 'FY19**', 'header2': 'Emissions reported in tonnes CO2e*', 'header3': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header4': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header5': 'Emissions from:'}, {'number_value': 0.0, 'scale': '', 'category': 'Green tariff', 'header1': 'FY18**', 'header2': 'Emissions reported in tonnes CO2e*', 'header3': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header4': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header5': 'Emissions from:'}, {'number_value': 0.0, 'scale': '', 'category': 'Green tariff', 'header1': 'FY18***', 'header2': 'Emissions reported in tonnes CO2e*', 'header3': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header4': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header5': 'Emissions from:'}, {'number_value': 59525.0, 'scale': '', 'category': 'Total net emissions (Scope 1 and 2)', 'header1': 'FY19**', 'header2': 'Emissions reported in tonnes CO2e*', 'header3': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header4': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header5': 'Emissions from:'}, {'number_value': 98725.0, 'scale': '', 'category': 'Total net emissions (Scope 1 and 2)', 'header1': 'FY18**', 'header2': 'Emissions reported in tonnes CO2e*', 'header3': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header4': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header5': 'Emissions from:'}, {'number_value': 143354.0, 'scale': '', 'category': 'Total net emissions (Scope 1 and 2)', 'header1': 'FY18***', 'header2': 'Emissions reported in tonnes CO2e*', 'header3': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header4': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header5': 'Emissions from:'}, {'number_value': 0.06, 'scale': '', 'category': 'Ratio (KgCO2e per £1 sales revenue)', 'header1': 'FY19**', 'header2': 'Emissions reported in tonnes CO2e*', 'header3': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header4': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header5': 'Emissions from:'}, {'number_value': 0.066, 'scale': '', 'category': 'Ratio (KgCO2e per £1 sales revenue)', 'header1': 'FY18**', 'header2': 'Emissions reported in tonnes CO2e*', 'header3': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header4': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header5': 'Emissions from:'}, {'number_value': 0.056, 'scale': '', 'category': 'Ratio (KgCO2e per £1 sales revenue)', 'header1': 'FY18***', 'header2': 'Emissions reported in tonnes CO2e*', 'header3': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header4': 'Emissions are summarised below, all reported as CO2 equivalent (‘CO2e’)', 'header5': 'Emissions from:'}]","def run(value_list):
+    """"""
+    Calculates the change in emissions for Scope 1 (Combustion of fuel and operation of facilities)
+    from FY18 to FY19, considering UK and Ireland only.
+    """"""
+    fy18_value = None
+    fy19_value = None
+
+    for item in value_list:
+        if item['category'] == 'Combustion of fuel and operation of facilities (Scope 1)' and item['header1'] == 'FY18**':
+            fy18_value = item['number_value']
+        elif item['category'] == 'Combustion of fuel and operation of facilities (Scope 1)' and item['header1'] == 'FY19**':
+            fy19_value = item['number_value']
+
+    if fy18_value is not None and fy19_value is not None:
+        change = fy19_value - fy18_value
+        scale = 'thousand'  # Assuming scale is not provided, defaulting to thousand
+        return (round(change, 2), scale)
+    else:
+        return (None, None)
+","[66336.0, 59495.0, -6841.0]","[59495.0, 66336.0]",False,scale_error,1.0000000000001463,0,True,False,False,12
+194,194,1771358652.3089232,4cee3e03-ed30-4e2c-8718-e65ad795d4e8,What is the increase / (decrease) in the Gross Profit from 2018 to 2019?,"222,859 - 361,046",#-#,nan,-138187.0,,-138187.0,thousand,0,True,False,True,False,,"[{'number_value': 54229.0, 'scale': '', 'category': 'Net income (loss) attributable to Cal-Maine Foods, Inc. - (in thousands)', 'header1': 'June 1, 2019', 'header2': 'Fiscal Year ended'}, {'number_value': 125932.0, 'scale': '', 'category': 'Net income (loss) attributable to Cal-Maine Foods, Inc. - (in thousands)', 'header1': 'June 2, 2018', 'header2': 'Fiscal Year ended'}, {'number_value': -74278.0, 'scale': '', 'category': 'Net income (loss) attributable to Cal-Maine Foods, Inc. - (in thousands)', 'header1': 'June 3, 2017', 'header2': 'Fiscal Year ended'}, {'number_value': 222859.0, 'scale': '', 'category': 'Gross profit (in thousands)', 'header1': 'June 1, 2019', 'header2': 'Fiscal Year ended'}, {'number_value': 361046.0, 'scale': '', 'category': 'Gross profit (in thousands)', 'header1': 'June 2, 2018', 'header2': 'Fiscal Year ended'}, {'number_value': 45550.0, 'scale': '', 'category': 'Gross profit (in thousands)', 'header1': 'June 3, 2017', 'header2': 'Fiscal Year ended'}, {'number_value': 1.27, 'scale': '', 'category': 'Net average shell egg selling price (rounded)', 'header1': 'June 1, 2019', 'header2': 'Fiscal Year ended'}, {'number_value': 1.4, 'scale': '', 'category': 'Net average shell egg selling price (rounded)', 'header1': 'June 2, 2018', 'header2': 'Fiscal Year ended'}, {'number_value': 1.01, 'scale': '', 'category': 'Net average shell egg selling price (rounded)', 'header1': 'June 3, 2017', 'header2': 'Fiscal Year ended'}, {'number_value': 1.23, 'scale': '', 'category': 'Average Urner Barry Spot Egg Market Quotations 1', 'header1': 'June 1, 2019', 'header2': 'Fiscal Year ended'}, {'number_value': 1.49, 'scale': '', 'category': 'Average Urner Barry Spot Egg Market Quotations 1', 'header1': 'June 2, 2018', 'header2': 'Fiscal Year ended'}, {'number_value': 0.85, 'scale': '', 'category': 'Average Urner Barry Spot Egg Market Quotations 1', 'header1': 'June 3, 2017', 'header2': 'Fiscal Year ended'}, {'number_value': 0.415, 'scale': '', 'category': 'Feed cost per dozen produced', 'header1': 'June 1, 2019', 'header2': 'Fiscal Year ended'}, {'number_value': 0.394, 'scale': '', 'category': 'Feed cost per dozen produced', 'header1': 'June 2, 2018', 'header2': 'Fiscal Year ended'}, {'number_value': 0.399, 'scale': '', 'category': 'Feed cost per dozen produced', 'header1': 'June 3, 2017', 'header2': 'Fiscal Year ended'}]","def run(value_list):
+    """"""
+    Calculates the increase/decrease in Gross Profit from 2018 to 2019.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple (number, scale).
+    """"""
+    gross_profit_2018 = None
+    gross_profit_2019 = None
+
+    for item in value_list:
+        if item['category'] == 'Gross profit (in thousands)' and item['header1'] == 'June 2, 2018':
+            gross_profit_2018 = float(item['number_value'])
+        elif item['category'] == 'Gross profit (in thousands)' and item['header1'] == 'June 1, 2019':
+            gross_profit_2019 = float(item['number_value'])
+
+    if gross_profit_2019 is not None and gross_profit_2018 is not None:
+        increase_decrease = gross_profit_2019 - gross_profit_2018
+        return (round(increase_decrease, 2), '')
+    else:
+        return (None, '')
+","[361046.0, 222859.0, -138187.0]","[222859.0, 361046.0]",False,scale_error,1.000000000000007,0,True,False,False,12
+208,208,1771358688.3068118,c91ad938-6ad1-4481-8f6b-43ccd2f69926,What is the nominal difference for ROFE between F19 and F18?,17.1 - 15.2 ,#-#,nan,1.9,million,1.9,percent,0,True,False,True,True,,"[{'number_value': 8657.0, 'scale': 'million', 'category': 'Sales', 'header1': '53 WEEKS', 'header2': 'F19', 'header3': '$ MILLION'}, {'number_value': 8244.0, 'scale': 'million', 'category': 'Sales', 'header1': '52 WEEKS', 'header2': 'F18 (3)', 'header3': '$ MILLION'}, {'number_value': 5.0, 'scale': 'million', 'category': 'Sales', 'header1': 'CHANGE', 'header2': '', 'header3': '$ MILLION'}, {'number_value': 3.2, 'scale': 'million', 'category': 'Sales', 'header1': 'NORMALISED', 'header2': 'CHANGE', 'header3': '$ MILLION'}, {'number_value': 579.0, 'scale': 'million', 'category': 'EBITDA', 'header1': '53 WEEKS', 'header2': 'F19', 'header3': '$ MILLION'}, {'number_value': 603.0, 'scale': 'million', 'category': 'EBITDA', 'header1': '52 WEEKS', 'header2': 'F18 (3)', 'header3': '$ MILLION'}, {'number_value': -4.1, 'scale': 'million', 'category': 'EBITDA', 'header1': 'CHANGE', 'header2': '', 'header3': '$ MILLION'}, {'number_value': -5.4, 'scale': 'million', 'category': 'EBITDA', 'header1': 'NORMALISED', 'header2': 'CHANGE', 'header3': '$ MILLION'}, {'number_value': -105.0, 'scale': 'million', 'category': 'Depreciation and amortisation', 'header1': '53 WEEKS', 'header2': 'F19', 'header3': '$ MILLION'}, {'number_value': -87.0, 'scale': 'million', 'category': 'Depreciation and amortisation', 'header1': '52 WEEKS', 'header2': 'F18 (3)', 'header3': '$ MILLION'}, {'number_value': 20.1, 'scale': 'million', 'category': 'Depreciation and amortisation', 'header1': 'CHANGE', 'header2': '', 'header3': '$ MILLION'}, {'number_value': 20.1, 'scale': 'million', 'category': 'Depreciation and amortisation', 'header1': 'NORMALISED', 'header2': 'CHANGE', 'header3': '$ MILLION'}, {'number_value': 474.0, 'scale': 'million', 'category': 'EBIT', 'header1': '53 WEEKS', 'header2': 'F19', 'header3': '$ MILLION'}, {'number_value': 516.0, 'scale': 'million', 'category': 'EBIT', 'header1': '52 WEEKS', 'header2': 'F18 (3)', 'header3': '$ MILLION'}, {'number_value': -8.2, 'scale': 'million', 'category': 'EBIT', 'header1': 'CHANGE', 'header2': '', 'header3': '$ MILLION'}, {'number_value': -9.7, 'scale': 'million', 'category': 'EBIT', 'header1': 'NORMALISED', 'header2': 'CHANGE', 'header3': '$ MILLION'}, {'number_value': 22.9, 'scale': 'million', 'category': 'Gross margin (%)', 'header1': '53 WEEKS', 'header2': 'F19', 'header3': '$ MILLION'}, {'number_value': 23.1, 'scale': 'million', 'category': 'Gross margin (%)', 'header1': '52 WEEKS', 'header2': 'F18 (3)', 'header3': '$ MILLION'}, {'number_value': -16.0, 'scale': 'million', 'category': 'Gross margin (%)', 'header1': 'CHANGE', 'header2': '', 'header3': '$ MILLION'}, {'number_value': -14.0, 'scale': 'million', 'category': 'Gross margin (%)', 'header1': 'NORMALISED', 'header2': 'CHANGE', 'header3': '$ MILLION'}, {'number_value': 17.4, 'scale': 'million', 'category': 'Cost of doing business (%)', 'header1': '53 WEEKS', 'header2': 'F19', 'header3': '$ MILLION'}, {'number_value': 16.8, 'scale': 'million', 'category': 'Cost of doing business (%)', 'header1': '52 WEEKS', 'header2': 'F18 (3)', 'header3': '$ MILLION'}, {'number_value': 63.0, 'scale': 'million', 'category': 'Cost of doing business (%)', 'header1': 'CHANGE', 'header2': '', 'header3': '$ MILLION'}, {'number_value': 64.0, 'scale': 'million', 'category': 'Cost of doing business (%)', 'header1': 'NORMALISED', 'header2': 'CHANGE', 'header3': '$ MILLION'}, {'number_value': 5.5, 'scale': 'million', 'category': 'EBIT to sales (%)', 'header1': '53 WEEKS', 'header2': 'F19', 'header3': '$ MILLION'}, {'number_value': 6.3, 'scale': 'million', 'category': 'EBIT to sales (%)', 'header1': '52 WEEKS', 'header2': 'F18 (3)', 'header3': '$ MILLION'}, {'number_value': -78.0, 'scale': 'million', 'category': 'EBIT to sales (%)', 'header1': 'CHANGE', 'header2': '', 'header3': '$ MILLION'}, {'number_value': -78.0, 'scale': 'million', 'category': 'EBIT to sales (%)', 'header1': 'NORMALISED', 'header2': 'CHANGE', 'header3': '$ MILLION'}, {'number_value': 18675.0, 'scale': 'million', 'category': 'Sales per square metre ($)$)', 'header1': '53 WEEKS', 'header2': 'F19', 'header3': '$ MILLION'}, {'number_value': 18094.0, 'scale': 'million', 'category': 'Sales per square metre ($)$)', 'header1': '52 WEEKS', 'header2': 'F18 (3)', 'header3': '$ MILLION'}, {'number_value': 3.2, 'scale': 'million', 'category': 'Sales per square metre ($)$)', 'header1': 'CHANGE', 'header2': '', 'header3': '$ MILLION'}, {'number_value': 1.4, 'scale': 'million', 'category': 'Sales per square metre ($)$)', 'header1': 'NORMALISED', 'header2': 'CHANGE', 'header3': '$ MILLION'}, {'number_value': 3185.0, 'scale': 'million', 'category': 'Funds employed', 'header1': '53 WEEKS', 'header2': 'F19', 'header3': '$ MILLION'}, {'number_value': 3214.0, 'scale': 'million', 'category': 'Funds employed', 'header1': '52 WEEKS', 'header2': 'F18 (3)', 'header3': '$ MILLION'}, {'number_value': -0.9, 'scale': 'million', 'category': 'Funds employed', 'header1': 'CHANGE', 'header2': '', 'header3': '$ MILLION'}, {'number_value': 15.2, 'scale': 'million', 'category': 'ROFE (%)', 'header1': '53 WEEKS', 'header2': 'F19', 'header3': '$ MILLION'}, {'number_value': 17.1, 'scale': 'million', 'category': 'ROFE (%)', 'header1': '52 WEEKS', 'header2': 'F18 (3)', 'header3': '$ MILLION'}, {'number_value': -190.0, 'scale': 'million', 'category': 'ROFE (%)', 'header1': 'CHANGE', 'header2': '', 'header3': '$ MILLION'}, {'number_value': -215.0, 'scale': 'million', 'category': 'ROFE (%)', 'header1': 'NORMALISED', 'header2': 'CHANGE', 'header3': '$ MILLION'}]","def run(value_list):
+    """"""
+    Calculates the nominal difference for ROFE between F19 and F18.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple (number, scale) representing the difference in ROFE between F19 and F18.
+    """"""
+    f19_rofe = None
+    f18_rofe = None
+
+    for item in value_list:
+        if item['category'] == 'ROFE (%)' and item['header1'] == '53 WEEKS' and item['header2'] == 'F19':
+            f19_rofe = item['number_value']
+        if item['category'] == 'ROFE (%)' and item['header1'] == '52 WEEKS' and item['header2'] == 'F18 (3)':
+            f18_rofe = item['number_value']
+
+    if f19_rofe is not None and f18_rofe is not None:
+        difference = abs(f19_rofe - f18_rofe)
+        return (round(difference, 2), 'million')
+    else:
+        return (None, None)
+","[15.2, 17.1, 1.9000000000000021]","[17.1, 15.2]",False,scale_error,0.9999999994736841,0,True,False,False,12
+240,240,1771359096.4298737,0f6a8eaa-3e1e-4c91-b175-22bcef454b35,What is the average rate of price inflation for 2018 and 2019?,(2.0% + 2.0%)/2 ,(#%+#%)/#,nan,2.0,,2.0,percent,0,True,False,False,False,,"[{'number_value': 2.9, 'scale': '', 'category': 'Discount rate', 'header1': '%', 'header2': '2019'}, {'number_value': 3.8, 'scale': '', 'category': 'Discount rate', 'header1': '%', 'header2': '2018'}, {'number_value': 2.5, 'scale': '', 'category': 'Expected rate of salary increase', 'header1': '%', 'header2': '2019'}, {'number_value': 2.5, 'scale': '', 'category': 'Expected rate of salary increase', 'header1': '%', 'header2': '2018'}, {'number_value': 2.0, 'scale': '', 'category': 'Rate of price inflation', 'header1': '%', 'header2': '2019'}, {'number_value': 2.0, 'scale': '', 'category': 'Rate of price inflation', 'header1': '%', 'header2': '2018'}]","def run(value_list):
+    inflation_2018 = 0
+    inflation_2019 = 0
+    for item in value_list:
+        if item['category'] == 'Rate of price inflation':
+            if item['header2'] == '2018':
+                inflation_2018 = item['number_value']
+            elif item['header2'] == '2019':
+                inflation_2019 = item['number_value']
+    
+    if inflation_2018 != 0 and inflation_2019 != 0:
+        average_inflation = (inflation_2018 + inflation_2019) / 2
+        return (round(average_inflation, 2), '')
+    else:
+        return (0, '')
+","[2.0, 2.0, 2.0]","[2.0, 2.0, 2.0]",False,scale_error,0.9999999995,0,True,False,False,12
+264,264,1771359155.7787223,0339e2bb-4a63-4f23-aaea-b9fa3cb29737,"From fiscal year 2020 - 2024, what is the difference in the number of ground leases and land and building leases expiring?",697 - 381 ,#-#,nan,316.0,thousand,316.0,,0,True,False,False,True,,"[{'number_value': 381.0, 'scale': '', 'category': '2020 – 2024', 'header1': 'Leases', 'header2': 'Ground', 'header3': 'Land and', 'header4': 'Number of Restaurants', 'header5': 'Fiscal Year'}, {'number_value': 697.0, 'scale': '', 'category': '2020 – 2024', 'header1': 'Leases', 'header2': 'Building', 'header3': 'Land and', 'header4': 'Number of Restaurants', 'header5': 'Fiscal Year'}, {'number_value': 198.0, 'scale': '', 'category': '2025 – 2029', 'header1': 'Leases', 'header2': 'Ground', 'header3': 'Land and', 'header4': 'Number of Restaurants', 'header5': 'Fiscal Year'}, {'number_value': 270.0, 'scale': '', 'category': '2025 – 2029', 'header1': 'Leases', 'header2': 'Building', 'header3': 'Land and', 'header4': 'Number of Restaurants', 'header5': 'Fiscal Year'}, {'number_value': 40.0, 'scale': '', 'category': '2030 – 2034', 'header1': 'Leases', 'header2': 'Ground', 'header3': 'Land and', 'header4': 'Number of Restaurants', 'header5': 'Fiscal Year'}, {'number_value': 135.0, 'scale': '', 'category': '2030 – 2034', 'header1': 'Leases', 'header2': 'Building', 'header3': 'Land and', 'header4': 'Number of Restaurants', 'header5': 'Fiscal Year'}]","def run(value_list):
+    ground_leases_2020_2024 = 0
+    land_building_leases_2020_2024 = 0
+    
+    for item in value_list:
+        if item['category'] == '2020 – 2024' and item['header2'] == 'Ground':
+            ground_leases_2020_2024 += item['number_value']
+        if item['category'] == '2020 – 2024' and item['header2'] == 'Building' or item['category'] == '2020 – 2024' and item['header2'] == 'Land':
+            land_building_leases_2020_2024 += item['number_value']
+            
+    difference = abs(land_building_leases_2020_2024 - ground_leases_2020_2024)
+    
+    if difference == 0.0:
+        return (0.00, '')
+    else:
+        scale = 'thousand'
+        return (round(difference, 2), scale)
+","[381.0, 697.0, 316.0]","[697.0, 381.0]",False,scale_error,0.9999999999968355,0,True,False,False,12
+277,277,1771359184.828876,359f9c4c-b405-40e5-88b5-86bfa0069b89,What was the percentage change in the Reductions related to a lapse of applicable statute of limitations between 2017 and 2018?,"(-3,144-(-1,102))/-1,102",other,nan,185.3,,185.3,percent,0,True,False,True,False,,"[{'number_value': 13162.0, 'scale': '', 'category': 'Balance at beginning of period', 'header1': '2019', 'header2': 'Years Ended December 31,'}, {'number_value': 15990.0, 'scale': '', 'category': 'Balance at beginning of period', 'header1': '2018', 'header2': 'Years Ended December 31,'}, {'number_value': 11401.0, 'scale': '', 'category': 'Balance at beginning of period', 'header1': '2017', 'header2': 'Years Ended December 31,'}, {'number_value': 484.0, 'scale': '', 'category': 'Additions based on tax positions taken during a prior period', 'header1': '2019', 'header2': 'Years Ended December 31,'}, {'number_value': 94.0, 'scale': '', 'category': 'Additions based on tax positions taken during a prior period', 'header1': '2018', 'header2': 'Years Ended December 31,'}, {'number_value': 1258.0, 'scale': '', 'category': 'Additions based on tax positions taken during a prior period', 'header1': '2017', 'header2': 'Years Ended December 31,'}, {'number_value': 4479.0, 'scale': '', 'category': 'Additions based on tax positions taken during a prior period - acquisitions', 'header1': '2019', 'header2': 'Years Ended December 31,'}, {'number_value': 757.0, 'scale': '', 'category': 'Additions based on tax positions taken during a prior period - acquisitions', 'header1': '2018', 'header2': 'Years Ended December 31,'}, {'number_value': 4433.0, 'scale': '', 'category': 'Additions based on tax positions taken during the current period', 'header1': '2017', 'header2': 'Years Ended December 31,'}, {'number_value': -4295.0, 'scale': '', 'category': 'Reductions based on tax positions taken during a prior period', 'header1': '2019', 'header2': 'Years Ended December 31,'}, {'number_value': -153.0, 'scale': '', 'category': 'Reductions based on tax positions taken during a prior period', 'header1': '2018', 'header2': 'Years Ended December 31,'}, {'number_value': -821.0, 'scale': '', 'category': 'Reductions related to a lapse of applicable statute of limitations', 'header1': '2019', 'header2': 'Years Ended December 31,'}, {'number_value': -3144.0, 'scale': '', 'category': 'Reductions related to a lapse of applicable statute of limitations', 'header1': '2018', 'header2': 'Years Ended December 31,'}, {'number_value': -1102.0, 'scale': '', 'category': 'Reductions related to a lapse of applicable statute of limitations', 'header1': '2017', 'header2': 'Years Ended December 31,'}, {'number_value': -382.0, 'scale': '', 'category': 'Reductions related to a settlement with taxing authorities', 'header1': '2018', 'header2': 'Years Ended December 31,'}, {'number_value': 13009.0, 'scale': '', 'category': 'Balance at end of period', 'header1': '2019', 'header2': 'Years Ended December 31,'}, {'number_value': 13162.0, 'scale': '', 'category': 'Balance at end of period', 'header1': '2018', 'header2': 'Years Ended December 31,'}, {'number_value': 15990.0, 'scale': '', 'category': 'Balance at end of period', 'header1': '2017', 'header2': 'Years Ended December 31,'}]","def run(value_list):
+    """"""
+    Calculates the percentage change in the Reductions related to a lapse of applicable statute of limitations between 2017 and 2018.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple (number, scale).
+    """"""
+    red_2017 = None
+    red_2018 = None
+
+    for item in value_list:
+        if item['category'] == 'Reductions related to a lapse of applicable statute of limitations':
+            if item['header1'] == '2017':
+                red_2017 = item['number_value']
+            elif item['header1'] == '2018':
+                red_2018 = item['number_value']
+
+    if red_2017 is not None and red_2018 is not None:
+        percentage_change = ((red_2018 - red_2017) / red_2017) * 100
+        return (round(percentage_change, 2), '')
+    else:
+        return (None, '')
+","[-1102.0, -3144.0, 185.2994555353902]",[],False,scale_error,0.9999999999946034,0,True,False,False,12
+327,327,1771359988.6390803,4dc88328-739b-43e5-a61d-8492ec4552a6,"What is the increase / (decrease) in Outstanding, beginning of the year from 2018 to 2019?","42,607 - 40,446",#-#,nan,2161.0,thousand,2161.0,,0,True,False,True,False,,"[{'number_value': 42607.0, 'scale': '', 'category': 'Outstanding, beginning of the year', 'header1': '2019', 'header2': 'Years ended August 31,'}, {'number_value': 40446.0, 'scale': '', 'category': 'Outstanding, beginning of the year', 'header1': '2018', 'header2': 'Years ended August 31,'}, {'number_value': 11328.0, 'scale': '', 'category': 'Issued', 'header1': '2019', 'header2': 'Years ended August 31,'}, {'number_value': 6662.0, 'scale': '', 'category': 'Issued', 'header1': '2018', 'header2': 'Years ended August 31,'}, {'number_value': -12351.0, 'scale': '', 'category': 'Redeemed', 'header1': '2019', 'header2': 'Years ended August 31,'}, {'number_value': -5549.0, 'scale': '', 'category': 'Redeemed', 'header1': '2018', 'header2': 'Years ended August 31,'}, {'number_value': 1095.0, 'scale': '', 'category': 'Dividend equivalents', 'header1': '2019', 'header2': 'Years ended August 31,'}, {'number_value': 1048.0, 'scale': '', 'category': 'Dividend equivalents', 'header1': '2018', 'header2': 'Years ended August 31,'}, {'number_value': 42679.0, 'scale': '', 'category': 'Outstanding, end of the year', 'header1': '2019', 'header2': 'Years ended August 31,'}, {'number_value': 42607.0, 'scale': '', 'category': 'Outstanding, end of the year', 'header1': '2018', 'header2': 'Years ended August 31,'}]","def run(value_list):
+    """"""
+    Calculates the increase/decrease in Outstanding, beginning of the year from 2018 to 2019.
+    """"""
+    beginning_of_year_2018 = 0
+    beginning_of_year_2019 = 0
+    
+    for item in value_list:
+        if item['category'] == 'Outstanding, beginning of the year' and item['header1'] == '2018':
+            beginning_of_year_2018 = item['number_value']
+        if item['category'] == 'Outstanding, beginning of the year' and item['header1'] == '2019':
+            beginning_of_year_2019 = item['number_value']
+            
+    increase_decrease = beginning_of_year_2019 - beginning_of_year_2018
+    
+    if increase_decrease == 0:
+        return (0.00, '')
+    elif increase_decrease > 0:
+        return (round(increase_decrease, 2), 'thousand')
+    else:
+        return (round(increase_decrease, 2), 'thousand')
+","[40446.0, 42607.0, 2161.0]","[42607.0, 40446.0]",False,scale_error,0.9999999999995373,0,True,False,False,12
+396,396,1771360142.2090237,e3121b60-1b2f-4e65-92a2-cf3f02e60b46,What is the increase / (decrease) in the Net cash from operating activities from 2018 to 2019?,"1,869 - 1,845",#-#,nan,24.0,,24.0,million,0,True,False,True,False,,"[{'number_value': 1869.0, 'scale': 'million', 'category': 'Net cash from operating activities', 'header1': '(In millions)', 'header2': '2019', 'header3': 'Year Ended December 31,'}, {'number_value': 1845.0, 'scale': 'million', 'category': 'Net cash from operating activities', 'header1': '(In millions)', 'header2': '2018', 'header3': 'Year Ended December 31,'}, {'number_value': 1677.0, 'scale': 'million', 'category': 'Net cash from operating activities', 'header1': '(In millions)', 'header2': '2017', 'header3': 'Year Ended December 31,'}, {'number_value': -1172.0, 'scale': 'million', 'category': 'Net cash used in investing activities', 'header1': '(In millions)', 'header2': '2019', 'header3': 'Year Ended December 31,'}, {'number_value': -1212.0, 'scale': 'million', 'category': 'Net cash used in investing activities', 'header1': '(In millions)', 'header2': '2018', 'header3': 'Year Ended December 31,'}, {'number_value': -1468.0, 'scale': 'million', 'category': 'Net cash used in investing activities', 'header1': '(In millions)', 'header2': '2017', 'header3': 'Year Ended December 31,'}, {'number_value': -200.0, 'scale': '', 'category': 'Payment for purchase and proceeds from sale of marketable securities, and net cash variation for joint ventures deconsolidation', 'header1': 'Excluding:', 'header2': '2019', 'header3': 'Year Ended December 31,', 'header4': 'Excluding:'}, {'number_value': -100.0, 'scale': '', 'category': 'Payment for purchase and proceeds from sale of marketable securities, and net cash variation for joint ventures deconsolidation', 'header1': 'Excluding:', 'header2': '2018', 'header3': 'Year Ended December 31,', 'header4': 'Excluding:'}, {'number_value': 99.0, 'scale': '', 'category': 'Payment for purchase and proceeds from sale of marketable securities, and net cash variation for joint ventures deconsolidation', 'header1': 'Excluding:', 'header2': '2017', 'header3': 'Year Ended December 31,', 'header4': 'Excluding:'}, {'number_value': -1372.0, 'scale': '', 'category': 'Payment for purchase and proceeds from sale of tangible and intangible assets, payment for business acquisitions(1)', 'header1': 'Excluding:', 'header2': '2019', 'header3': 'Year Ended December 31,', 'header4': 'Excluding:'}, {'number_value': -1312.0, 'scale': '', 'category': 'Payment for purchase and proceeds from sale of tangible and intangible assets, payment for business acquisitions(1)', 'header1': 'Excluding:', 'header2': '2018', 'header3': 'Year Ended December 31,', 'header4': 'Excluding:'}, {'number_value': -1369.0, 'scale': '', 'category': 'Payment for purchase and proceeds from sale of tangible and intangible assets, payment for business acquisitions(1)', 'header1': 'Excluding:', 'header2': '2017', 'header3': 'Year Ended December 31,', 'header4': 'Excluding:'}, {'number_value': 497.0, 'scale': '', 'category': 'Free Cash Flow (non-U.S. GAAP measure)', 'header1': 'Excluding:', 'header2': '2019', 'header3': 'Year Ended December 31,', 'header4': 'Excluding:'}, {'number_value': 533.0, 'scale': '', 'category': 'Free Cash Flow (non-U.S. GAAP measure)', 'header1': 'Excluding:', 'header2': '2018', 'header3': 'Year Ended December 31,', 'header4': 'Excluding:'}, {'number_value': 308.0, 'scale': '', 'category': 'Free Cash Flow (non-U.S. GAAP measure)', 'header1': 'Excluding:', 'header2': '2017', 'header3': 'Year Ended December 31,', 'header4': 'Excluding:'}]","def run(value_list):
+    """"""
+    Calculates the increase/decrease in Net cash from operating activities from 2018 to 2019.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple (number, scale).
+    """"""
+    net_cash_2019 = None
+    net_cash_2018 = None
+
+    for item in value_list:
+        if item['category'] == 'Net cash from operating activities':
+            if item['header2'] == '2019':
+                net_cash_2019 = float(item['number_value'])
+            elif item['header2'] == '2018':
+                net_cash_2018 = float(item['number_value'])
+
+    if net_cash_2018 is not None and net_cash_2019 is not None:
+        increase_decrease = net_cash_2019 - net_cash_2018
+        return (round(increase_decrease, 2), '')
+    else:
+        return (None, '')
+","[1869.0, 1845.0, 24.0]","[1869.0, 1845.0]",False,scale_error,0.9999999999583333,0,True,False,False,12
+492,492,1771361388.2105258,c8ed0bf6-60c5-41e2-97e3-5ece54a1349b,What is the change in total personnel expenses from 2018 to 2019?," 227,727 - 188,503 ",#-#,nan,39224.0,thousand,39224.0,,0,True,False,False,False,,"[{'number_value': 158371.0, 'scale': '', 'category': 'Wages and salaries', 'header1': '2018', 'header2': 'December 31,'}, {'number_value': 191459.0, 'scale': '', 'category': 'Wages and salaries', 'header1': '2019', 'header2': 'December 31,'}, {'number_value': 14802.0, 'scale': '', 'category': 'Social security', 'header1': '2018', 'header2': 'December 31,'}, {'number_value': 17214.0, 'scale': '', 'category': 'Social security', 'header1': '2019', 'header2': 'December 31,'}, {'number_value': 6937.0, 'scale': '', 'category': 'Pension expenses', 'header1': '2018', 'header2': 'December 31,'}, {'number_value': 8408.0, 'scale': '', 'category': 'Pension expenses', 'header1': '2019', 'header2': 'December 31,'}, {'number_value': 8215.0, 'scale': '', 'category': 'Share-based payment expenses', 'header1': '2018', 'header2': 'December 31,'}, {'number_value': 10538.0, 'scale': '', 'category': 'Share-based payment expenses', 'header1': '2019', 'header2': 'December 31,'}, {'number_value': 178.0, 'scale': '', 'category': 'Restructuring expenses', 'header1': '2018', 'header2': 'December 31,'}, {'number_value': 108.0, 'scale': '', 'category': 'Restructuring expenses', 'header1': '2019', 'header2': 'December 31,'}, {'number_value': 188503.0, 'scale': '', 'category': 'Total', 'header1': '2018', 'header2': 'December 31,'}, {'number_value': 227727.0, 'scale': '', 'category': 'Total', 'header1': '2019', 'header2': 'December 31,'}]","def run(value_list):
+    """"""
+    Calculates the change in total personnel expenses from 2018 to 2019.
+
+    Args:
+        value_list: A list of annotated values.
+
+    Returns:
+        A tuple (number, scale).
+    """"""
+    
+    total_2018 = None
+    total_2019 = None
+
+    for item in value_list:
+        if item['category'] == 'Total' and item['header1'] == '2018':
+            total_2018 = item['number_value']
+        elif item['category'] == 'Total' and item['header1'] == '2019':
+            total_2019 = item['number_value']
+
+    if total_2018 is not None and total_2019 is not None:
+        change = total_2019 - total_2018
+        return (round(change, 2), 'thousand')
+    else:
+        return (None, None)
+","[188503.0, 227727.0, 39224.0]","[227727.0, 188503.0]",False,scale_error,0.9999999999999746,0,True,False,False,12
+494,494,1771361392.9417446,ec696158-f93d-4608-903d-a6b9c4e7bfd5,What is the increase / (decrease) in the telecommunication maintenance from 2018 to 2019?,86.8 - 87.0,#-#,nan,-0.2,thousand,-0.2,million,0,True,False,False,False,,"[{'number_value': 86.8, 'scale': '', 'category': 'Telecommunication - Maintenance', 'header1': '2019', 'header2': 'Years Ended December 31,', 'header3': 'Years Ended December 31,'}, {'number_value': 87.0, 'scale': '', 'category': 'Telecommunication - Maintenance', 'header1': '2018', 'header2': 'Years Ended December 31,', 'header3': 'Years Ended December 31,'}, {'number_value': 33.2, 'scale': '', 'category': 'Telecommunication - Installation', 'header1': '2019', 'header2': 'Years Ended December 31,', 'header3': 'Years Ended December 31,'}, {'number_value': 41.5, 'scale': '', 'category': 'Telecommunication - Installation', 'header1': '2018', 'header2': 'Years Ended December 31,', 'header3': 'Years Ended December 31,'}, {'number_value': 19.9, 'scale': '', 'category': 'Power - Operations, Maintenance & Construction Support', 'header1': '2019', 'header2': 'Years Ended December 31,', 'header3': 'Years Ended December 31,'}, {'number_value': 31.0, 'scale': '', 'category': 'Power - Operations, Maintenance & Construction Support', 'header1': '2018', 'header2': 'Years Ended December 31,', 'header3': 'Years Ended December 31,'}, {'number_value': 32.6, 'scale': '', 'category': 'Power - Cable Installation & Repair', 'header1': '2019', 'header2': 'Years Ended December 31,', 'header3': 'Years Ended December 31,'}, {'number_value': 34.8, 'scale': '', 'category': 'Power - Cable Installation & Repair', 'header1': '2018', 'header2': 'Years Ended December 31,', 'header3': 'Years Ended December 31,'}, {'number_value': 172.5, 'scale': '', 'category': 'Total revenue from contracts with customers', 'header1': '2019', 'header2': 'Years Ended December 31,', 'header3': 'Years Ended December 31,'}, {'number_value': 194.3, 'scale': '', 'category': 'Total revenue from contracts with customers', 'header1': '2018', 'header2': 'Years Ended December 31,', 'header3': 'Years Ended December 31,'}, {'number_value': 172.5, 'scale': '', 'category': 'Total Marine Services segment revenue', 'header1': '2019', 'header2': 'Years Ended December 31,', 'header3': 'Years Ended December 31,'}, {'number_value': 194.3, 'scale': '', 'category': 'Total Marine Services segment revenue', 'header1': '2018', 'header2': 'Years Ended December 31,', 'header3': 'Years Ended December 31,'}]","def run(value_list):
+    """"""
+    Calculates the increase/decrease in telecommunication maintenance from 2018 to 2019.
+
+    Args:
+        value_list: A list of dictionaries containing financial data.
+
+    Returns:
+        A tuple (number, scale).
+    """"""
+    telecommunication_maintenance_2018 = None
+    telecommunication_maintenance_2019 = None
+
+    for item in value_list:
+        if item['category'] == 'Telecommunication - Maintenance':
+            if item['header1'] == '2018':
+                telecommunication_maintenance_2018 = item['number_value']
+            elif item['header1'] == '2019':
+                telecommunication_maintenance_2019 = item['number_value']
+
+    if telecommunication_maintenance_2018 is not None and telecommunication_maintenance_2019 is not None:
+        increase_decrease = telecommunication_maintenance_2019 - telecommunication_maintenance_2018
+        return (round(increase_decrease, 2), 'thousand')
+    else:
+        return (None, '')
+","[87.0, 86.8, -0.20000000000000284]","[86.8, 87.0]",False,scale_error,1.000000005,0,True,False,False,12
